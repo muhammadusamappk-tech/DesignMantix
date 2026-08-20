@@ -40,7 +40,7 @@
                 Explore Design Services
             </a>
             <a href="publishing-services.html" class="w-full sm:w-auto border border-purple-500/50 hover:border-purple-400 text-purple-300 hover:bg-purple-500/10 font-semibold px-8 py-3.5 rounded-xl transition">
-                eBook Publishing
+                Explore eBook Services
             </a>
         </div>
     </section>
@@ -53,52 +53,60 @@
         <div class="grid md:grid-cols-2 gap-8">
             <!-- Design Card -->
             <div class="bg-gray-900/60 border border-purple-900/50 hover:border-purple-500/50 p-8 rounded-3xl transition group">
-                <div class="w-14 h-14 bg-purple-600/20 rounded-2xl flex items-center justify-center mb-6 text-purple-400 group-hover:scale-110 transition">
+                <div class="w-14 h-14 bg-purple-600/20 border border-purple-500/30 rounded-2xl flex items-center justify-center mb-6 text-purple-400 group-hover:scale-110 group-hover:bg-purple-600/30 transition">
                     <i class="fas fa-palette text-2xl"></i>
                 </div>
                 <h3 class="text-2xl font-bold mb-3">Design & Marketing</h3>
                 <p class="text-gray-400 text-sm mb-6 leading-relaxed">Graphic Design, Logo Creation, Custom Websites, Social Media Campaigns, and Mobile App UI/UX.</p>
                 <a href="design-services.html" class="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold text-sm">
-                    Browse Design Services <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                    Explore Design Services <i class="fas fa-arrow-right ml-2 text-xs"></i>
                 </a>
             </div>
 
             <!-- Publishing Card -->
             <div class="bg-gray-900/60 border border-purple-900/50 hover:border-purple-500/50 p-8 rounded-3xl transition group">
-                <div class="w-14 h-14 bg-purple-600/20 rounded-2xl flex items-center justify-center mb-6 text-purple-400 group-hover:scale-110 transition">
-                    <i class="fas fa-book-open text-2xl"></i>
+                <div class="w-14 h-14 bg-purple-600/20 border border-purple-500/30 rounded-2xl flex items-center justify-center mb-6 text-purple-400 group-hover:scale-110 group-hover:bg-purple-600/30 transition">
+                    <i class="fas fa-book-bookmark text-2xl"></i>
                 </div>
                 <h3 class="text-2xl font-bold mb-3">eBook & Publishing</h3>
                 <p class="text-gray-400 text-sm mb-6 leading-relaxed">Professional Ghostwriting, Formatting for KDP/PDF/Print, Cover Design & Book Marketing Strategies.</p>
                 <a href="publishing-services.html" class="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold text-sm">
-                    Browse Publishing Services <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                    Explore eBook Services <i class="fas fa-arrow-right ml-2 text-xs"></i>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- 1. STATS COUNTER SECTION -->
-    <section class="py-12 bg-[#060112] border-y border-purple-900/20">
+    <!-- 1. STATS COUNTER SECTION (WITH ANIMATED COUNTER) -->
+    <section id="stats-section" class="py-12 bg-[#060112] border-y border-purple-900/20">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
                 <div class="p-6 bg-white/5 border border-white/10 rounded-2xl">
                     <i class="fas fa-briefcase text-purple-400 text-2xl mb-2"></i>
-                    <h3 class="text-3xl font-extrabold text-white mb-1">1,200+</h3>
+                    <h3 class="text-3xl font-extrabold text-white mb-1">
+                        <span class="counter" data-target="1200">0</span><span class="text-purple-400">+</span>
+                    </h3>
                     <p class="text-gray-400 text-xs">Projects Completed</p>
                 </div>
                 <div class="p-6 bg-white/5 border border-white/10 rounded-2xl">
                     <i class="fas fa-users text-purple-400 text-2xl mb-2"></i>
-                    <h3 class="text-3xl font-extrabold text-white mb-1">850+</h3>
+                    <h3 class="text-3xl font-extrabold text-white mb-1">
+                        <span class="counter" data-target="850">0</span><span class="text-purple-400">+</span>
+                    </h3>
                     <p class="text-gray-400 text-xs">Happy Clients</p>
                 </div>
                 <div class="p-6 bg-white/5 border border-white/10 rounded-2xl">
                     <i class="fas fa-award text-purple-400 text-2xl mb-2"></i>
-                    <h3 class="text-3xl font-extrabold text-white mb-1">4+</h3>
+                    <h3 class="text-3xl font-extrabold text-white mb-1">
+                        <span class="counter" data-target="4">0</span><span class="text-purple-400">+</span>
+                    </h3>
                     <p class="text-gray-400 text-xs">Years Experience</p>
                 </div>
                 <div class="p-6 bg-white/5 border border-white/10 rounded-2xl">
                     <i class="fas fa-smile text-purple-400 text-2xl mb-2"></i>
-                    <h3 class="text-3xl font-extrabold text-white mb-1">100%</h3>
+                    <h3 class="text-3xl font-extrabold text-white mb-1">
+                        <span class="counter" data-target="100">0</span><span class="text-purple-400">%</span>
+                    </h3>
                     <p class="text-gray-400 text-xs">Satisfaction Rate</p>
                 </div>
             </div>
@@ -111,7 +119,6 @@
             <span class="text-purple-400 text-xs font-semibold tracking-wider uppercase">Our Portfolio</span>
             <h2 class="text-3xl md:text-4xl font-bold mt-2">Our Latest Work</h2>
             
-            <!-- Category Filter Buttons -->
             <div class="flex flex-wrap justify-center gap-2 mt-6">
                 <button class="bg-purple-600 text-white text-xs px-4 py-2 rounded-full font-medium">All</button>
                 <button class="bg-gray-800 hover:bg-gray-700 text-gray-300 text-xs px-4 py-2 rounded-full font-medium transition">Logos</button>
@@ -122,7 +129,6 @@
             </div>
         </div>
 
-        <!-- Portfolio Cards Grid -->
         <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
             <div class="bg-gray-900 border border-purple-900/30 rounded-2xl overflow-hidden hover:border-purple-500/50 transition">
                 <img src="images/portfolio-1.jpg" alt="Portfolio Work" class="w-full h-52 object-cover" onerror="this.src='https://via.placeholder.com/400x300/1e1035/ffffff?text=Logo+Design'">
@@ -263,7 +269,6 @@
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="grid grid-cols-2 md:grid-cols-5 gap-8 pb-12 border-b border-gray-800">
                 
-                <!-- Brand Info -->
                 <div class="col-span-2">
                     <a href="index.html" class="text-xl font-bold text-white mb-4 inline-block">Design<span class="text-purple-500">Mantix</span></a>
                     <p class="text-gray-400 leading-relaxed max-w-sm mb-4">
@@ -271,7 +276,6 @@
                     </p>
                 </div>
 
-                <!-- Quick Links -->
                 <div>
                     <h5 class="text-white font-semibold text-sm mb-4">Quick Links</h5>
                     <ul class="space-y-2">
@@ -283,7 +287,6 @@
                     </ul>
                 </div>
 
-                <!-- Services -->
                 <div>
                     <h5 class="text-white font-semibold text-sm mb-4">Services</h5>
                     <ul class="space-y-2">
@@ -295,7 +298,6 @@
                     </ul>
                 </div>
 
-                <!-- Socials & Contact -->
                 <div>
                     <h5 class="text-white font-semibold text-sm mb-4">Let's Connect</h5>
                     <div class="flex space-x-3 mb-4">
@@ -309,7 +311,6 @@
                 </div>
             </div>
 
-            <!-- Bottom Copyright -->
             <div class="pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 gap-4">
                 <p>&copy; 2026 DesignMantix. All Rights Reserved.</p>
                 <div class="space-x-4">
@@ -319,6 +320,46 @@
             </div>
         </div>
     </footer>
+
+    <!-- COUNTER SCRIPT (0 SE TARGET TAK NUMBER CHALNE KE LIYE) -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const counters = document.querySelectorAll('.counter');
+            const speed = 200; // Speed kitni fast ho
+
+            const startCounting = (counter) => {
+                const target = +counter.getAttribute('data-target');
+                let count = 0;
+                const inc = target / speed;
+
+                const updateCount = () => {
+                    count += inc;
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count).toLocaleString();
+                        setTimeout(updateCount, 15);
+                    } else {
+                        counter.innerText = target.toLocaleString();
+                    }
+                };
+                updateCount();
+            };
+
+            // Jab user scroll karke stats section tak pahuchega tab animation chalega
+            const section = document.getElementById('stats-section');
+            let started = false;
+
+            const observer = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting && !started) {
+                    counters.forEach(counter => startCounting(counter));
+                    started = true;
+                }
+            }, { threshold: 0.5 });
+
+            if (section) {
+                observer.observe(section);
+            }
+        });
+    </script>
 
 </body>
 </html>
