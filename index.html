@@ -3,58 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DesignMantix - Home</title>
+    <title>DesignMantix - Creative Agency</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-[#0b021a] text-white font-sans">
+<body class="bg-[#0b021a] text-white font-sans selection:bg-purple-500 selection:text-white">
 
     <!-- Navbar -->
-    <nav class="flex items-center justify-between px-8 py-5 max-w-7xl mx-auto">
-        <a href="index.html" class="text-2xl font-bold">Design<span class="text-purple-500">Mantix</span></a>
-        <div class="space-x-6 text-sm text-gray-300">
+    <nav class="flex items-center justify-between px-8 py-5 max-w-7xl mx-auto border-b border-purple-900/30">
+        <a href="index.html" class="text-2xl font-bold tracking-tight">Design<span class="text-purple-500">Mantix</span></a>
+        <div class="hidden md:flex space-x-6 text-sm text-gray-300">
             <a href="index.html" class="text-purple-400 font-semibold">Home</a>
-            <a href="design-services.html" class="hover:text-purple-400">Design Services</a>
-            <a href="publishing-services.html" class="hover:text-purple-400">Publishing Services</a>
-            <a href="portfolio.html" class="hover:text-purple-400">Portfolio</a>
-            <a href="contact.html" class="hover:text-purple-400">Contact</a>
+            <a href="design-services.html" class="hover:text-purple-400 transition">Design Services</a>
+            <a href="publishing-services.html" class="hover:text-purple-400 transition">Publishing Services</a>
+            <a href="portfolio.html" class="hover:text-purple-400 transition">Portfolio</a>
+            <a href="contact.html" class="hover:text-purple-400 transition">Contact</a>
         </div>
+        <a href="contact.html" class="bg-purple-600 hover:bg-purple-700 text-white text-xs font-semibold px-5 py-2.5 rounded-full transition">Let's Talk</a>
     </nav>
 
     <!-- Hero Section -->
-    <section class="py-20 px-8 max-w-7xl mx-auto text-center">
-        <h1 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
-            We Design Brands & <br><span class="text-purple-500">Publish Books</span> That Succeed
+    <section class="py-24 px-8 max-w-7xl mx-auto text-center relative overflow-hidden">
+        <div class="inline-block bg-purple-900/40 border border-purple-500/30 text-purple-300 text-xs px-4 py-1.5 rounded-full mb-6 font-medium">
+            🚀 All-In-One Creative & Publishing Partner
+        </div>
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight tracking-tight">
+            We Design Brands & <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">Publish Best-Sellers</span>
         </h1>
-        <p class="text-gray-400 max-w-2xl mx-auto mb-8 text-base">
-            From stunning logos, websites, and mobile apps to complete eBook ghostwriting, formatting, and marketing — we bring your vision to reality.
+        <p class="text-gray-400 max-w-2xl mx-auto mb-10 text-base md:text-lg leading-relaxed">
+            From high-converting logos, mobile app UI/UX, and web development to ghostwriting, publishing, and marketing your next eBook — we bring ideas to life.
         </p>
-        <div class="space-x-4">
-            <a href="design-services.html" class="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-3 rounded-xl transition">Explore Services</a>
-            <a href="contact.html" class="border border-purple-500 text-purple-400 hover:bg-purple-500/10 font-semibold px-6 py-3 rounded-xl transition">Get In Touch</a>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="design-services.html" class="w-full sm:w-auto bg-purple-600 hover:bg-purple-700 text-white font-semibold px-8 py-3.5 rounded-xl transition shadow-lg shadow-purple-600/30">
+                Explore Design Services
+            </a>
+            <a href="publishing-services.html" class="w-full sm:w-auto border border-purple-500/50 hover:border-purple-400 text-purple-300 hover:bg-purple-500/10 font-semibold px-8 py-3.5 rounded-xl transition">
+                eBook Publishing
+            </a>
         </div>
     </section>
 
-    <!-- Overview Categories Section -->
-    <section class="py-16 px-8 max-w-7xl mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-12">What We Do</h2>
+    <!-- Services Overview Section -->
+    <section class="py-16 px-8 max-w-7xl mx-auto border-t border-purple-900/20">
+        <h2 class="text-3xl font-bold text-center mb-4">Our Core Solutions</h2>
+        <p class="text-gray-400 text-center text-sm max-w-xl mx-auto mb-12">Choose a category to view specialized, high-impact services tailored for your goals.</p>
+        
         <div class="grid md:grid-cols-2 gap-8">
             <!-- Design Card -->
-            <div class="bg-gray-900 border border-purple-900/50 p-8 rounded-3xl text-center">
-                <i class="fas fa-palette text-purple-500 text-4xl mb-4"></i>
+            <div class="bg-gray-900/60 border border-purple-900/50 hover:border-purple-500/50 p-8 rounded-3xl transition group">
+                <div class="w-14 h-14 bg-purple-600/20 rounded-2xl flex items-center justify-center mb-6 text-purple-400 group-hover:scale-110 transition">
+                    <i class="fas fa-palette text-2xl"></i>
+                </div>
                 <h3 class="text-2xl font-bold mb-3">Design & Marketing</h3>
-                <p class="text-gray-400 text-sm mb-6">Logos, Graphics, Web Design, Social Media & Mobile App UI/UX Solutions.</p>
-                <a href="design-services.html" class="text-purple-400 hover:text-purple-300 font-semibold text-sm">View Design Services &rarr;</a>
+                <p class="text-gray-400 text-sm mb-6 leading-relaxed">Graphic Design, Logo Creation, Custom Websites, Social Media Campaigns, and Mobile App UI/UX.</p>
+                <a href="design-services.html" class="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold text-sm">
+                    Browse Design Services <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                </a>
             </div>
+
             <!-- Publishing Card -->
-            <div class="bg-gray-900 border border-purple-900/50 p-8 rounded-3xl text-center">
-                <i class="fas fa-book text-purple-500 text-4xl mb-4"></i>
-                <h3 class="text-2xl font-bold mb-3">eBook Publishing</h3>
-                <p class="text-gray-400 text-sm mb-6">Complete Ghostwriting, KDP/Print Publishing, and Reader Marketing Strategies.</p>
-                <a href="publishing-services.html" class="text-purple-400 hover:text-purple-300 font-semibold text-sm">View Publishing Services &rarr;</a>
+            <div class="bg-gray-900/60 border border-purple-900/50 hover:border-purple-500/50 p-8 rounded-3xl transition group">
+                <div class="w-14 h-14 bg-purple-600/20 rounded-2xl flex items-center justify-center mb-6 text-purple-400 group-hover:scale-110 transition">
+                    <i class="fas fa-book-open text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-3">eBook & Publishing</h3>
+                <p class="text-gray-400 text-sm mb-6 leading-relaxed">Professional Ghostwriting, Formatting for KDP/PDF/Print, Cover Design & Book Marketing Strategies.</p>
+                <a href="publishing-services.html" class="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold text-sm">
+                    Browse Publishing Services <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                </a>
             </div>
         </div>
     </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 px-8 max-w-7xl mx-auto border-t border-purple-900/20">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div class="p-4">
+                <h3 class="text-4xl font-extrabold text-purple-400 mb-1">250+</h3>
+                <p class="text-xs text-gray-400">Projects Delivered</p>
+            </div>
+            <div class="p-4">
+                <h3 class="text-4xl font-extrabold text-purple-400 mb-1">120+</h3>
+                <p class="text-xs text-gray-400">Happy Clients</p>
+            </div>
+            <div class="p-4">
+                <h3 class="text-4xl font-extrabold text-purple-400 mb-1">50+</h3>
+                <p class="text-xs text-gray-400">Published eBooks</p>
+            </div>
+            <div class="p-4">
+                <h3 class="text-4xl font-extrabold text-purple-400 mb-1">99%</h3>
+                <p class="text-xs text-gray-400">Satisfaction Rate</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Process Section -->
+    <section class="py-20 px-8 max-w-7xl mx-auto border-t border-purple-900/20">
+        <h2 class="text-3xl font-bold text-center mb-4">How We Work</h2>
+        <p class="text-gray-400 text-center text-sm max-w-lg mx-auto mb-16">A simple 4-step process designed to turn your ideas into high-performing creative assets.</p>
+
+        <div class="grid md:grid-cols-4 gap-8">
+            <div class="bg-gray-900/40 border border-purple-900/30 p-6 rounded-2xl relative">
+                <span class="text-4xl font-black text-purple-600/30 absolute top-4 right-4">01</span>
+                <h4 class="font-bold text-lg mb-2">Discovery</h4>
+                <p class="text-xs text-gray-400 leading-relaxed">We analyze your requirements, market, and goals to build a solid project roadmap.</p>
+            </div>
+            <div class="bg-gray-900/40 border border-purple-900/30 p-6 rounded-2xl relative">
+                <span class="text-4xl font-black text-purple-600/30 absolute top-4 right-4">02</span>
+                <h4 class="font-bold text-lg mb-2">Strategy & Draft</h4>
+                <p class="text-xs text-gray-400 leading-relaxed">Creating initial design concepts or manuscript outlines for your review.</p>
+            </div>
+            <div class="bg-gray-900/40 border border-purple-900/30 p-6 rounded-2xl relative">
+                <span class="text-4xl font-black text-purple-600/30 absolute top-4 right-4">03</span>
+                <h4 class="font-bold text-lg mb-2">Refinement</h4>
+                <p class="text-xs text-gray-400 leading-relaxed">Polishing every pixel, word, and element based on your direct feedback.</p>
+            </div>
+            <div class="bg-gray-900/40 border border-purple-900/30 p-6 rounded-2xl relative">
+                <span class="text-4xl font-black text-purple-600/30 absolute top-4 right-4">04</span>
+                <h4 class="font-bold text-lg mb-2">Final Launch</h4>
+                <p class="text-xs text-gray-400 leading-relaxed">Delivering final production-ready assets and launching live files/books.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Testimonials Section -->
+    <section class="py-20 px-8 max-w-7xl mx-auto border-t border-purple-900/20">
+        <h2 class="text-3xl font-bold text-center mb-4">What Our Clients Say</h2>
+        <p class="text-gray-400 text-center text-sm max-w-lg mx-auto mb-16">Real feedback from brands and authors who scaled with DesignMantix.</p>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-gray-900/50 border border-purple-900/40 p-6 rounded-2xl">
+                <div class="flex text-amber-400 text-xs mb-4">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="text-xs text-gray-300 mb-6 italic leading-relaxed">"DesignMantix transformed our brand completely. The logo and UI design for our app exceeded all expectations!"</p>
+                <div>
+                    <h5 class="font-bold text-sm">Alex Johnson</h5>
+                    <p class="text-[10px] text-purple-400">Startup Founder</p>
+                </div>
+            </div>
+
+            <div class="bg-gray-900/50 border border-purple-900/40 p-6 rounded-2xl">
+                <div class="flex text-amber-400 text-xs mb-4">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="text-xs text-gray-300 mb-6 italic leading-relaxed">"From writing support to publishing on KDP, they handled my eBook seamlessly. Hit Best-Seller in two weeks!"</p>
+                <div>
+                    <h5 class="font-bold text-sm">Sarah Jenkins</h5>
+                    <p class="text-[10px] text-purple-400">Independent Author</p>
+                </div>
+            </div>
+
+            <div class="bg-gray-900/50 border border-purple-900/40 p-6 rounded-2xl">
+                <div class="flex text-amber-400 text-xs mb-4">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="text-xs text-gray-300 mb-6 italic leading-relaxed">"Super fast turnaround on our social media graphics and website design. Top tier quality and communication."</p>
+                <div>
+                    <h5 class="font-bold text-sm">David Miller</h5>
+                    <p class="text-[10px] text-purple-400">Marketing Director</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Banner -->
+    <section class="py-16 px-8 max-w-7xl mx-auto my-12">
+        <div class="bg-gradient-to-r from-purple-900/80 to-purple-600/80 p-10 md:p-14 rounded-3xl text-center border border-purple-500/40">
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Ready to Elevate Your Project?</h2>
+            <p class="text-gray-200 text-sm max-w-xl mx-auto mb-8">Let's collaborate and bring your brand vision or eBook project to reality today.</p>
+            <a href="contact.html" class="bg-white text-purple-900 hover:bg-gray-100 font-bold px-8 py-3.5 rounded-xl transition shadow-lg inline-block text-sm">
+                Start Your Project
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-purple-900/30 py-8 text-center text-xs text-gray-500">
+        <p>&copy; 2026 DesignMantix. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
