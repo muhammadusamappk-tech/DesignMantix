@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DesignMantix - Creative Agency</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="bg-[#0b021a] text-white font-sans selection:bg-purple-500 selection:text-white">
 
     <!-- Navbar -->
-    <nav class="flex items-center justify-between px-8 py-5 max-w-7xl mx-auto border-b border-purple-900/30">
+    <nav class="flex items-center justify-between px-6 lg:px-8 py-5 max-w-7xl mx-auto border-b border-purple-900/30">
         <a href="index.html" class="text-2xl font-bold tracking-tight">Design<span class="text-purple-500">Mantix</span></a>
         <div class="hidden md:flex space-x-6 text-sm text-gray-300">
             <a href="index.html" class="text-purple-400 font-semibold">Home</a>
@@ -23,11 +25,11 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="py-24 px-8 max-w-7xl mx-auto text-center relative overflow-hidden">
+    <section class="py-20 md:py-24 px-6 lg:px-8 max-w-7xl mx-auto text-center relative overflow-hidden">
         <div class="inline-block bg-purple-900/40 border border-purple-500/30 text-purple-300 text-xs px-4 py-1.5 rounded-full mb-6 font-medium">
             🚀 All-In-One Creative & Publishing Partner
         </div>
-        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight tracking-tight">
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight tracking-tight">
             We Design Brands & <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">Publish Best-Sellers</span>
         </h1>
         <p class="text-gray-400 max-w-2xl mx-auto mb-10 text-base md:text-lg leading-relaxed">
@@ -44,7 +46,7 @@
     </section>
 
     <!-- Services Overview Section -->
-    <section class="py-16 px-8 max-w-7xl mx-auto border-t border-purple-900/20">
+    <section class="py-16 px-6 lg:px-8 max-w-7xl mx-auto border-t border-purple-900/20">
         <h2 class="text-3xl font-bold text-center mb-4">Our Core Solutions</h2>
         <p class="text-gray-400 text-center text-sm max-w-xl mx-auto mb-12">Choose a category to view specialized, high-impact services tailored for your goals.</p>
         
@@ -75,294 +77,248 @@
         </div>
     </section>
 
-   
-<!-- ========================================== -->
-<!-- 1. STATS COUNTER SECTION -->
-<!-- ========================================== -->
-<section class="stats-section py-5" style="background-color: #0b021d; color: #fff;">
-  <div class="container">
-    <div class="row text-center gy-4">
-      <div class="col-6 col-md-3">
-        <div class="p-3 rounded" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);">
-          <h2 class="fw-bold text-primary mb-1">1,200+</h2>
-          <p class="mb-0 text-muted small">Projects Completed</p>
-        </div>
-      </div>
-      <div class="col-6 col-md-3">
-        <div class="p-3 rounded" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);">
-          <h2 class="fw-bold text-primary mb-1">850+</h2>
-          <p class="mb-0 text-muted small">Happy Clients</p>
-        </div>
-      </div>
-      <div class="col-6 col-md-3">
-        <div class="p-3 rounded" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);">
-          <h2 class="fw-bold text-primary mb-1">4+</h2>
-          <p class="mb-0 text-muted small">Years of Experience</p>
-        </div>
-      </div>
-      <div class="col-6 col-md-3">
-        <div class="p-3 rounded" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);">
-          <h2 class="fw-bold text-primary mb-1">100%</h2>
-          <p class="mb-0 text-muted small">Satisfaction Rate</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ========================================== -->
-<!-- 2. PORTFOLIO SECTION -->
-<!-- ========================================== -->
-<section class="portfolio-section py-5">
-  <div class="container">
-    <div class="text-center mb-4">
-      <span class="text-primary text-uppercase fw-semibold small">Our Portfolio</span>
-      <h2 class="fw-bold">Our Latest Work</h2>
-      
-      <!-- Category Filter Buttons -->
-      <div class="d-flex justify-content-center flex-wrap gap-2 mt-3">
-        <button class="btn btn-primary btn-sm rounded-pill px-3">All</button>
-        <button class="btn btn-outline-secondary btn-sm rounded-pill px-3">Logos</button>
-        <button class="btn btn-outline-secondary btn-sm rounded-pill px-3">Branding</button>
-        <button class="btn btn-outline-secondary btn-sm rounded-pill px-3">Websites</button>
-        <button class="btn btn-outline-secondary btn-sm rounded-pill px-3">Book Covers</button>
-        <button class="btn btn-outline-secondary btn-sm rounded-pill px-3">Ebooks</button>
-        <button class="btn btn-outline-secondary btn-sm rounded-pill px-3">Social Media</button>
-      </div>
-    </div>
-
-    <!-- Portfolio Grid -->
-    <div class="row g-4">
-      <div class="col-md-4 col-sm-6">
-        <div class="card border-0 shadow-sm rounded-3 overflow-hidden">
-          <img src="images/portfolio-1.jpg" class="card-img-top" alt="Novex Logo Project">
-        </div>
-      </div>
-      <div class="col-md-4 col-sm-6">
-        <div class="card border-0 shadow-sm rounded-3 overflow-hidden">
-          <img src="images/portfolio-2.jpg" class="card-img-top" alt="Branding Project">
-        </div>
-      </div>
-      <div class="col-md-4 col-sm-6">
-        <div class="card border-0 shadow-sm rounded-3 overflow-hidden">
-          <img src="images/portfolio-3.jpg" class="card-img-top" alt="Website Design Project">
-        </div>
-      </div>
-      <div class="col-md-4 col-sm-6">
-        <div class="card border-0 shadow-sm rounded-3 overflow-hidden">
-          <img src="images/portfolio-4.jpg" class="card-img-top" alt="Book Cover Design">
-        </div>
-      </div>
-      <div class="col-md-4 col-sm-6">
-        <div class="card border-0 shadow-sm rounded-3 overflow-hidden">
-          <img src="images/portfolio-5.jpg" class="card-img-top" alt="Ebook Project">
-        </div>
-      </div>
-      <div class="col-md-4 col-sm-6">
-        <div class="card border-0 shadow-sm rounded-3 overflow-hidden">
-          <img src="images/portfolio-6.jpg" class="card-img-top" alt="Digital Marketing Agency">
-        </div>
-      </div>
-    </div>
-
-    <div class="text-center mt-4">
-      <a href="portfolio.html" class="btn btn-primary rounded-pill px-4">View Full Portfolio &rarr;</a>
-    </div>
-  </div>
-</section>
-
-<!-- ========================================== -->
-<!-- 3. HOW IT WORKS / PROCESS SECTION -->
-<!-- ========================================== -->
-<section class="process-section py-5 text-white" style="background-color: #0b021d;">
-  <div class="container text-center">
-    <span class="text-primary text-uppercase fw-semibold small">How It Works</span>
-    <h2 class="fw-bold mb-5">Our Simple 4 Step Process</h2>
-
-    <div class="row g-4">
-      <div class="col-md-3 col-sm-6">
-        <div class="p-3">
-          <div class="badge bg-primary rounded-circle mb-3 p-3 fs-5" style="width: 50px; height: 50px; display: inline-flex; align-items: center; justify-content: center;">01</div>
-          <h5 class="fw-bold">Tell Us Your Idea</h5>
-          <p class="text-muted small">Share your requirements and goals with us.</p>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <div class="p-3">
-          <div class="badge bg-primary rounded-circle mb-3 p-3 fs-5" style="width: 50px; height: 50px; display: inline-flex; align-items: center; justify-content: center;">02</div>
-          <h5 class="fw-bold">We Create</h5>
-          <p class="text-muted small">Our experts design and build the perfect solution.</p>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <div class="p-3">
-          <div class="badge bg-primary rounded-circle mb-3 p-3 fs-5" style="width: 50px; height: 50px; display: inline-flex; align-items: center; justify-content: center;">03</div>
-          <h5 class="fw-bold">You Review</h5>
-          <p class="text-muted small">Review the work and request any changes.</p>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <div class="p-3">
-          <div class="badge bg-primary rounded-circle mb-3 p-3 fs-5" style="width: 50px; height: 50px; display: inline-flex; align-items: center; justify-content: center;">04</div>
-          <h5 class="fw-bold">We Deliver</h5>
-          <p class="text-muted small">We deliver the final product and support you further.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ========================================== -->
-<!-- 4. TESTIMONIALS SECTION -->
-<!-- ========================================== -->
-<section class="testimonials-section py-5 bg-light">
-  <div class="container">
-    <div class="d-flex justify-content-between align-items-center mb-4">
-      <div>
-        <span class="text-primary text-uppercase fw-semibold small">What Our Clients Say</span>
-        <h2 class="fw-bold mb-0">Trusted By Clients Worldwide</h2>
-      </div>
-      <a href="reviews.html" class="btn btn-link text-decoration-none fw-semibold">View All Reviews &rarr;</a>
-    </div>
-
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="card h-100 border-0 shadow-sm p-4 rounded-3">
-          <div class="d-flex align-items-center mb-3">
-            <img src="images/client1.jpg" class="rounded-circle me-3" width="50" height="50" alt="Michael Johnson">
-            <div>
-              <h6 class="mb-0 fw-bold">Michael Johnson</h6>
-              <small class="text-muted">Entrepreneur</small>
+    <!-- 1. STATS COUNTER SECTION -->
+    <section class="py-12 bg-[#060112] border-y border-purple-900/20">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                <div class="p-6 bg-white/5 border border-white/10 rounded-2xl">
+                    <i class="fas fa-briefcase text-purple-400 text-2xl mb-2"></i>
+                    <h3 class="text-3xl font-extrabold text-white mb-1">1,200+</h3>
+                    <p class="text-gray-400 text-xs">Projects Completed</p>
+                </div>
+                <div class="p-6 bg-white/5 border border-white/10 rounded-2xl">
+                    <i class="fas fa-users text-purple-400 text-2xl mb-2"></i>
+                    <h3 class="text-3xl font-extrabold text-white mb-1">850+</h3>
+                    <p class="text-gray-400 text-xs">Happy Clients</p>
+                </div>
+                <div class="p-6 bg-white/5 border border-white/10 rounded-2xl">
+                    <i class="fas fa-award text-purple-400 text-2xl mb-2"></i>
+                    <h3 class="text-3xl font-extrabold text-white mb-1">4+</h3>
+                    <p class="text-gray-400 text-xs">Years Experience</p>
+                </div>
+                <div class="p-6 bg-white/5 border border-white/10 rounded-2xl">
+                    <i class="fas fa-smile text-purple-400 text-2xl mb-2"></i>
+                    <h3 class="text-3xl font-extrabold text-white mb-1">100%</h3>
+                    <p class="text-gray-400 text-xs">Satisfaction Rate</p>
+                </div>
             </div>
-          </div>
-          <p class="text-secondary small">"DesignMantix created an amazing brand identity for my business. Highly professional and very easy to work with!"</p>
-          <div class="text-warning">★★★★★</div>
         </div>
-      </div>
+    </section>
 
-      <div class="col-md-4">
-        <div class="card h-100 border-0 shadow-sm p-4 rounded-3">
-          <div class="d-flex align-items-center mb-3">
-            <img src="images/client2.jpg" class="rounded-circle me-3" width="50" height="50" alt="Sarah Williams">
-            <div>
-              <h6 class="mb-0 fw-bold">Sarah Williams</h6>
-              <small class="text-muted">Author</small>
+    <!-- 2. PORTFOLIO SECTION -->
+    <section class="py-20 max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center mb-10">
+            <span class="text-purple-400 text-xs font-semibold tracking-wider uppercase">Our Portfolio</span>
+            <h2 class="text-3xl md:text-4xl font-bold mt-2">Our Latest Work</h2>
+            
+            <!-- Category Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-2 mt-6">
+                <button class="bg-purple-600 text-white text-xs px-4 py-2 rounded-full font-medium">All</button>
+                <button class="bg-gray-800 hover:bg-gray-700 text-gray-300 text-xs px-4 py-2 rounded-full font-medium transition">Logos</button>
+                <button class="bg-gray-800 hover:bg-gray-700 text-gray-300 text-xs px-4 py-2 rounded-full font-medium transition">Branding</button>
+                <button class="bg-gray-800 hover:bg-gray-700 text-gray-300 text-xs px-4 py-2 rounded-full font-medium transition">Websites</button>
+                <button class="bg-gray-800 hover:bg-gray-700 text-gray-300 text-xs px-4 py-2 rounded-full font-medium transition">Book Covers</button>
+                <button class="bg-gray-800 hover:bg-gray-700 text-gray-300 text-xs px-4 py-2 rounded-full font-medium transition">Ebooks</button>
             </div>
-          </div>
-          <p class="text-secondary small">"They designed and published my ebook beautifully. The whole process was smooth and the results are beyond expectations!"</p>
-          <div class="text-warning">★★★★★</div>
         </div>
-      </div>
 
-      <div class="col-md-4">
-        <div class="card h-100 border-0 shadow-sm p-4 rounded-3">
-          <div class="d-flex align-items-center mb-3">
-            <img src="images/client3.jpg" class="rounded-circle me-3" width="50" height="50" alt="David Anderson">
-            <div>
-              <h6 class="mb-0 fw-bold">David Anderson</h6>
-              <small class="text-muted">Business Owner</small>
+        <!-- Portfolio Cards Grid -->
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <div class="bg-gray-900 border border-purple-900/30 rounded-2xl overflow-hidden hover:border-purple-500/50 transition">
+                <img src="images/portfolio-1.jpg" alt="Portfolio Work" class="w-full h-52 object-cover" onerror="this.src='https://via.placeholder.com/400x300/1e1035/ffffff?text=Logo+Design'">
             </div>
-          </div>
-          <p class="text-secondary small">"From logo to website, everything was perfect. Great service, fast delivery and excellent communication!"</p>
-          <div class="text-warning">★★★★★</div>
+            <div class="bg-gray-900 border border-purple-900/30 rounded-2xl overflow-hidden hover:border-purple-500/50 transition">
+                <img src="images/portfolio-2.jpg" alt="Portfolio Work" class="w-full h-52 object-cover" onerror="this.src='https://via.placeholder.com/400x300/1e1035/ffffff?text=Branding'">
+            </div>
+            <div class="bg-gray-900 border border-purple-900/30 rounded-2xl overflow-hidden hover:border-purple-500/50 transition">
+                <img src="images/portfolio-3.jpg" alt="Portfolio Work" class="w-full h-52 object-cover" onerror="this.src='https://via.placeholder.com/400x300/1e1035/ffffff?text=Website+UI'">
+            </div>
+            <div class="bg-gray-900 border border-purple-900/30 rounded-2xl overflow-hidden hover:border-purple-500/50 transition">
+                <img src="images/portfolio-4.jpg" alt="Portfolio Work" class="w-full h-52 object-cover" onerror="this.src='https://via.placeholder.com/400x300/1e1035/ffffff?text=Book+Cover'">
+            </div>
+            <div class="bg-gray-900 border border-purple-900/30 rounded-2xl overflow-hidden hover:border-purple-500/50 transition">
+                <img src="images/portfolio-5.jpg" alt="Portfolio Work" class="w-full h-52 object-cover" onerror="this.src='https://via.placeholder.com/400x300/1e1035/ffffff?text=Ebook+Formatting'">
+            </div>
+            <div class="bg-gray-900 border border-purple-900/30 rounded-2xl overflow-hidden hover:border-purple-500/50 transition">
+                <img src="images/portfolio-6.jpg" alt="Portfolio Work" class="w-full h-52 object-cover" onerror="this.src='https://via.placeholder.com/400x300/1e1035/ffffff?text=Digital+Marketing'">
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- ========================================== -->
-<!-- 5. CTA BANNER SECTION -->
-<!-- ========================================== -->
-<section class="cta-section py-4" style="background: linear-gradient(135deg, #4d12d8 0%, #1a054d 100%); color: #fff;">
-  <div class="container">
-    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
-      <div class="mb-3 mb-md-0">
-        <h4 class="fw-bold mb-1">Ready to Start Your Project?</h4>
-        <p class="mb-0 text-white-50 small">Let's bring your ideas to life with creativity and strategy.</p>
-      </div>
-      <a href="contact.html" class="btn btn-light rounded-pill px-4 font-weight-bold text-primary">Get My Free Quote &rarr;</a>
-    </div>
-  </div>
-</section>
-
-<!-- ========================================== -->
-<!-- 6. FOOTER SECTION -->
-<!-- ========================================== -->
-<footer class="footer-section py-5" style="background-color: #060112; color: #a0a0b0; font-size: 0.9rem;">
-  <div class="container">
-    <div class="row g-4 pb-4 border-bottom border-secondary border-opacity-25">
-      
-      <!-- Brand & About -->
-      <div class="col-lg-4 col-md-6">
-        <a href="index.html" class="d-inline-block mb-3 text-decoration-none">
-          <span style="font-size: 1.6rem; font-weight: 700; color: #fff;">Design<span style="color: #7b2cbf;">Mantix</span></span>
-        </a>
-        <p style="color: #a0a0b0; line-height: 1.6;">
-          We help brands and authors grow with innovation design, powerful publishing and smart digital solutions, turning ideas into powerful outcomes.
-        </p>
-      </div>
-
-      <!-- Quick Links -->
-      <div class="col-lg-2 col-md-6 col-6">
-        <h6 class="text-white fw-bold mb-3">Quick Links</h6>
-        <ul class="list-unstyled mb-0">
-          <li class="mb-2"><a href="index.html" class="text-decoration-none" style="color: #a0a0b0;">Home</a></li>
-          <li class="mb-2"><a href="design-services.html" class="text-decoration-none" style="color: #a0a0b0;">Design Services</a></li>
-          <li class="mb-2"><a href="publishing-services.html" class="text-decoration-none" style="color: #a0a0b0;">Publishing Services</a></li>
-          <li class="mb-2"><a href="portfolio.html" class="text-decoration-none" style="color: #a0a0b0;">Portfolio</a></li>
-          <li class="mb-2"><a href="pricing.html" class="text-decoration-none" style="color: #a0a0b0;">Pricing</a></li>
-        </ul>
-      </div>
-
-      <!-- Services -->
-      <div class="col-lg-2 col-md-6 col-6">
-        <h6 class="text-white fw-bold mb-3">Services</h6>
-        <ul class="list-unstyled mb-0">
-          <li class="mb-2"><a href="#" class="text-decoration-none" style="color: #a0a0b0;">Logo Design</a></li>
-          <li class="mb-2"><a href="#" class="text-decoration-none" style="color: #a0a0b0;">Branding</a></li>
-          <li class="mb-2"><a href="#" class="text-decoration-none" style="color: #a0a0b0;">Website Design</a></li>
-          <li class="mb-2"><a href="#" class="text-decoration-none" style="color: #a0a0b0;">Ebook Writing</a></li>
-          <li class="mb-2"><a href="#" class="text-decoration-none" style="color: #a0a0b0;">Book Publishing</a></li>
-        </ul>
-      </div>
-
-      <!-- Company -->
-      <div class="col-lg-2 col-md-6 col-6">
-        <h6 class="text-white fw-bold mb-3">Company</h6>
-        <ul class="list-unstyled mb-0">
-          <li class="mb-2"><a href="about.html" class="text-decoration-none" style="color: #a0a0b0;">About Us</a></li>
-          <li class="mb-2"><a href="#" class="text-decoration-none" style="color: #a0a0b0;">Our Process</a></li>
-          <li class="mb-2"><a href="#" class="text-decoration-none" style="color: #a0a0b0;">Reviews</a></li>
-          <li class="mb-2"><a href="#" class="text-decoration-none" style="color: #a0a0b0;">Blog</a></li>
-          <li class="mb-2"><a href="contact.html" class="text-decoration-none" style="color: #a0a0b0;">Contact Us</a></li>
-        </ul>
-      </div>
-
-      <!-- Let's Connect & Contact Info -->
-      <div class="col-lg-2 col-md-6">
-        <h6 class="text-white fw-bold mb-3">Let's Connect</h6>
-        <!-- Social Icons -->
-        <div class="d-flex gap-2 mb-3">
-          <a href="#" class="btn btn-sm btn-primary rounded-circle" style="width: 32px; height: 32px; padding: 0; display: flex; align-items: center; justify-content: center;">f</a>
-          <a href="#" class="btn btn-sm btn-primary rounded-circle" style="width: 32px; height: 32px; padding: 0; display: flex; align-items: center; justify-content: center;">X</a>
-          <a href="#" class="btn btn-sm btn-primary rounded-circle" style="width: 32px; height: 32px; padding: 0; display: flex; align-items: center; justify-content: center;">in</a>
-          <a href="#" class="btn btn-sm btn-primary rounded-circle" style="width: 32px; height: 32px; padding: 0; display: flex; align-items: center; justify-content: center;">yt</a>
+        <div class="text-center mt-10">
+            <a href="portfolio.html" class="inline-flex items-center bg-purple-600 hover:bg-purple-700 text-white font-medium text-sm px-6 py-3 rounded-full transition">
+                View Full Portfolio <i class="fas fa-arrow-right ml-2 text-xs"></i>
+            </a>
         </div>
-        <!-- Contact details -->
-        <p class="mb-1 small" style="color: #a0a0b0;">hello@designmantix.com</p>
-        <p class="mb-0 small" style="color: #a0a0b0;">+1 (888) 123-4567</p>
-      </div>
+    </section>
 
-    </div>
+    <!-- 3. HOW IT WORKS / PROCESS SECTION -->
+    <section class="py-20 bg-[#060112] border-t border-purple-900/20">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+            <span class="text-purple-400 text-xs font-semibold tracking-wider uppercase">How It Works</span>
+            <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-12">Our Simple 4 Step Process</h2>
 
-    <!-- Bottom Bar (Copyright) -->
-    <div class="pt-4 d-flex flex-column flex-md-row justify-content-between align-items-center small">
-      <p class="mb-2 mb-md-0" style="color: #a0a0b0;">&copy; 2026 DesignMantix. All Rights Reserved.</p>
-      <div>
-        <a href="#" class="text-decoration-none me-3" style="color: #a0a0b0;">Privacy Policy</a>
-        <a href="#" class="text-decoration-none" style="color: #a0a0b0;">Terms of Service</a>
-      </div>
-    </div>
-  </div>
-</footer>
+            <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="p-6 bg-gray-900/40 border border-purple-900/30 rounded-2xl">
+                    <div class="w-12 h-12 bg-purple-600 text-white font-bold rounded-full flex items-center justify-center mx-auto mb-4 text-lg">01</div>
+                    <h4 class="font-bold text-lg mb-2">Tell Us Your Idea</h4>
+                    <p class="text-gray-400 text-xs leading-relaxed">Share your requirements and goals with us.</p>
+                </div>
+                <div class="p-6 bg-gray-900/40 border border-purple-900/30 rounded-2xl">
+                    <div class="w-12 h-12 bg-purple-600 text-white font-bold rounded-full flex items-center justify-center mx-auto mb-4 text-lg">02</div>
+                    <h4 class="font-bold text-lg mb-2">We Create</h4>
+                    <p class="text-gray-400 text-xs leading-relaxed">Our experts design and build the perfect solution.</p>
+                </div>
+                <div class="p-6 bg-gray-900/40 border border-purple-900/30 rounded-2xl">
+                    <div class="w-12 h-12 bg-purple-600 text-white font-bold rounded-full flex items-center justify-center mx-auto mb-4 text-lg">03</div>
+                    <h4 class="font-bold text-lg mb-2">You Review</h4>
+                    <p class="text-gray-400 text-xs leading-relaxed">Review the work and request any changes.</p>
+                </div>
+                <div class="p-6 bg-gray-900/40 border border-purple-900/30 rounded-2xl">
+                    <div class="w-12 h-12 bg-purple-600 text-white font-bold rounded-full flex items-center justify-center mx-auto mb-4 text-lg">04</div>
+                    <h4 class="font-bold text-lg mb-2">We Deliver</h4>
+                    <p class="text-gray-400 text-xs leading-relaxed">We deliver the final product and support you further.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. TESTIMONIALS SECTION -->
+    <section class="py-20 max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 gap-4">
+            <div>
+                <span class="text-purple-400 text-xs font-semibold tracking-wider uppercase">What Our Clients Say</span>
+                <h2 class="text-3xl font-bold mt-1">Trusted By Clients Worldwide</h2>
+            </div>
+            <a href="contact.html" class="text-purple-400 hover:text-purple-300 font-semibold text-xs flex items-center">
+                View All Reviews <i class="fas fa-arrow-right ml-1"></i>
+            </a>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-gray-900/60 border border-purple-900/40 p-6 rounded-2xl flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-purple-600 flex items-center justify-center font-bold text-white me-3">MJ</div>
+                        <div>
+                            <h5 class="font-bold text-sm text-white">Michael Johnson</h5>
+                            <p class="text-xs text-gray-400">Entrepreneur</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-xs leading-relaxed mb-4">"DesignMantix created an amazing brand identity for my business. Highly professional and very easy to work with!"</p>
+                </div>
+                <div class="text-amber-400 text-xs space-x-0.5">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+            </div>
+
+            <div class="bg-gray-900/60 border border-purple-900/40 p-6 rounded-2xl flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-purple-600 flex items-center justify-center font-bold text-white me-3">SW</div>
+                        <div>
+                            <h5 class="font-bold text-sm text-white">Sarah Williams</h5>
+                            <p class="text-xs text-gray-400">Author</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-xs leading-relaxed mb-4">"They designed and published my ebook beautifully. The whole process was smooth and the results are beyond expectations!"</p>
+                </div>
+                <div class="text-amber-400 text-xs space-x-0.5">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+            </div>
+
+            <div class="bg-gray-900/60 border border-purple-900/40 p-6 rounded-2xl flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-purple-600 flex items-center justify-center font-bold text-white me-3">DA</div>
+                        <div>
+                            <h5 class="font-bold text-sm text-white">David Anderson</h5>
+                            <p class="text-xs text-gray-400">Business Owner</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-xs leading-relaxed mb-4">"From logo to website, everything was perfect. Great service, fast delivery and excellent communication!"</p>
+                </div>
+                <div class="text-amber-400 text-xs space-x-0.5">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. CTA BANNER SECTION -->
+    <section class="py-10 bg-gradient-to-r from-purple-900 to-indigo-900">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+                <h3 class="text-2xl font-bold text-white mb-1">Ready to Start Your Project?</h3>
+                <p class="text-purple-200 text-xs">Let's bring your ideas to life with creativity and strategy.</p>
+            </div>
+            <a href="contact.html" class="bg-white hover:bg-gray-100 text-purple-900 font-bold text-xs px-6 py-3 rounded-full transition shadow-lg">
+                Get My Free Quote <i class="fas fa-arrow-right ml-1"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- 6. FOOTER SECTION -->
+    <footer class="bg-[#05010d] text-gray-400 text-xs py-16 border-t border-purple-900/30">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8 pb-12 border-b border-gray-800">
+                
+                <!-- Brand Info -->
+                <div class="col-span-2">
+                    <a href="index.html" class="text-xl font-bold text-white mb-4 inline-block">Design<span class="text-purple-500">Mantix</span></a>
+                    <p class="text-gray-400 leading-relaxed max-w-sm mb-4">
+                        We help brands and authors grow with innovative design, powerful publishing, and smart digital solutions, turning ideas into powerful outcomes.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h5 class="text-white font-semibold text-sm mb-4">Quick Links</h5>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-purple-400 transition">Home</a></li>
+                        <li><a href="design-services.html" class="hover:text-purple-400 transition">Design Services</a></li>
+                        <li><a href="publishing-services.html" class="hover:text-purple-400 transition">Publishing Services</a></li>
+                        <li><a href="portfolio.html" class="hover:text-purple-400 transition">Portfolio</a></li>
+                        <li><a href="contact.html" class="hover:text-purple-400 transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h5 class="text-white font-semibold text-sm mb-4">Services</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-purple-400 transition">Logo Design</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition">Branding</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition">Website Design</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition">Ebook Writing</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition">Book Publishing</a></li>
+                    </ul>
+                </div>
+
+                <!-- Socials & Contact -->
+                <div>
+                    <h5 class="text-white font-semibold text-sm mb-4">Let's Connect</h5>
+                    <div class="flex space-x-3 mb-4">
+                        <a href="#" class="w-8 h-8 rounded-full bg-purple-600/30 hover:bg-purple-600 text-white flex items-center justify-center transition"><i class="fab fa-facebook-f text-xs"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-purple-600/30 hover:bg-purple-600 text-white flex items-center justify-center transition"><i class="fab fa-x-twitter text-xs"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-purple-600/30 hover:bg-purple-600 text-white flex items-center justify-center transition"><i class="fab fa-linkedin-in text-xs"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-purple-600/30 hover:bg-purple-600 text-white flex items-center justify-center transition"><i class="fab fa-youtube text-xs"></i></a>
+                    </div>
+                    <p class="text-gray-400 mb-1"><i class="fas fa-envelope me-2 text-purple-400"></i>hello@designmantix.com</p>
+                    <p class="text-gray-400"><i class="fas fa-phone me-2 text-purple-400"></i>+1 (888) 123-4567</p>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright -->
+            <div class="pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 gap-4">
+                <p>&copy; 2026 DesignMantix. All Rights Reserved.</p>
+                <div class="space-x-4">
+                    <a href="#" class="hover:text-purple-400 transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-purple-400 transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
