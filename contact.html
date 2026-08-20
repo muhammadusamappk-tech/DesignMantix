@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - DesignMantix</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#0b021a] text-white font-sans">
+    <nav class="flex items-center justify-between px-8 py-5 max-w-7xl mx-auto">
+        <a href="index.html" class="text-2xl font-bold">Design<span class="text-purple-500">Mantix</span></a>
+        <div class="space-x-6 text-sm text-gray-300">
+            <a href="index.html" class="hover:text-purple-400">Home</a>
+            <a href="services.html" class="hover:text-purple-400">Services</a>
+            <a href="portfolio.html" class="hover:text-purple-400">Portfolio</a>
+            <a href="contact.html" class="text-purple-400 font-semibold">Contact</a>
+        </div>
+    </nav>
+
+    <section class="py-16 px-8 max-w-3xl mx-auto">
+        <h1 class="text-3xl font-extrabold text-center mb-2">Get in Touch</h1>
+        <p class="text-center text-gray-400 text-sm mb-8">Have a project in mind? Let's discuss details.</p>
+        
+        <form class="bg-gray-900 p-8 rounded-2xl border border-purple-900/50 space-y-4">
+            <div>
+                <label class="block text-xs font-semibold mb-1">Your Name</label>
+                <input type="text" class="w-full bg-gray-800 border border-gray-700 p-3 rounded-xl text-sm focus:outline-none focus:border-purple-500" placeholder="John Doe">
+            </div>
+            <div>
+                <label class="block text-xs font-semibold mb-1">Your Email</label>
+                <input type="email" class="w-full bg-gray-800 border border-gray-700 p-3 rounded-xl text-sm focus:outline-none focus:border-purple-500" placeholder="john@example.com">
+            </div>
+            <div>
+                <label class="block text-xs font-semibold mb-1">Message</label>
+                <textarea rows="4" class="w-full bg-gray-800 border border-gray-700 p-3 rounded-xl text-sm focus:outline-none focus:border-purple-500" placeholder="Describe your project..."></textarea>
+            </div>
+            <button type="submit" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 rounded-xl text-sm transition">Send Message</button>
+        </form>
+    </section>
+</body>
+</html>
