@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DesignMantix - Creative, Digital Marketing & IT Agency</title>
+    <title>DesignMantix - Design, Digital Marketing & eBook Publishing Agency</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons CDN -->
@@ -33,116 +33,172 @@
             100% { transform: translateX(-50%); }
         }
 
+        .slider-container {
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+        }
+
         .slider-track {
             display: flex;
             width: max-content;
-            animation: scrollSlider 25s linear infinite;
+            animation: scrollSlider 30s linear infinite;
+            will-change: transform;
         }
 
         .slider-track:hover {
             animation-play-state: paused;
         }
+
+        /* Desktop Dropdown Styling */
+        .dropdown {
+            position: relative;
+        }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #ffffff;
+            min-width: 230px;
+            box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
+            border-radius: 12px;
+            padding: 10px 0;
+            z-index: 100;
+            border: 1px solid rgba(147, 51, 234, 0.2);
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
     </style>
 </head>
 <body class="bg-[#0b021a] text-white font-sans selection:bg-purple-500 selection:text-white">
 
-    <!-- 1. POPUP MODAL (MODE SELECTION) -->
-    <div id="serviceModal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/90 backdrop-blur-md transition-opacity duration-300">
-        <div class="relative w-full max-w-2xl bg-[#0d0322] border border-purple-500/40 rounded-3xl p-6 sm:p-10 shadow-2xl text-center overflow-hidden">
-            
-            <button onclick="selectService('all')" class="absolute top-4 right-5 text-gray-400 hover:text-white text-xs font-semibold">
-                Skip to View All <i class="fas fa-times ml-1"></i>
-            </button>
-
-            <div class="relative z-10">
-                <div class="inline-flex items-center gap-2 bg-purple-900/50 border border-purple-500/30 text-purple-200 text-xs px-4 py-1.5 rounded-full mb-4">
-                    Welcome to DesignMantix
-                </div>
-
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-white mb-2">
-                    Select What You Are Looking For
-                </h2>
-                <p class="text-gray-300 text-xs sm:text-sm max-w-md mx-auto mb-8">
-                    Selecting an option will customize the entire website according to your specific need.
-                </p>
-
-                <div class="grid sm:grid-cols-2 gap-5 text-left">
-                    <button onclick="selectService('design')" class="group bg-gray-900/80 border border-purple-900/60 hover:border-purple-500 p-6 rounded-2xl transition duration-300">
-                        <div class="w-12 h-12 bg-purple-600/20 border border-purple-500/30 rounded-xl flex items-center justify-center mb-4 text-purple-400 group-hover:bg-purple-600 group-hover:text-white transition">
-                            <i class="fas fa-laptop-code text-xl"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-white group-hover:text-purple-300 transition mb-1">Design & Digital Marketing</h3>
-                        <p class="text-gray-400 text-xs leading-relaxed">Websites, Branding, SEO, Social Media & Paid Ads.</p>
-                    </button>
-
-                    <button onclick="selectService('publishing')" class="group bg-gray-900/80 border border-purple-900/60 hover:border-purple-500 p-6 rounded-2xl transition duration-300">
-                        <div class="w-12 h-12 bg-purple-600/20 border border-purple-500/30 rounded-xl flex items-center justify-center mb-4 text-purple-400 group-hover:bg-purple-600 group-hover:text-white transition">
-                            <i class="fas fa-book-open text-xl"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-white group-hover:text-purple-300 transition mb-1">eBook & Publishing</h3>
-                        <p class="text-gray-400 text-xs leading-relaxed">Ghostwriting, Formatting, Covers & Publishing.</p>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 2. NAVBAR -->
+    <!-- 1. NAVBAR WITH RESPONSIVE MOBILE MENU -->
     <header class="bg-white text-gray-900 shadow-md sticky top-0 z-50">
         <nav class="flex items-center justify-between px-6 lg:px-8 py-4 max-w-7xl mx-auto">
             <a href="index.html" class="text-2xl font-extrabold tracking-tight text-gray-900">
                 Design<span class="text-purple-600">Mantix</span>
             </a>
+
+            <!-- Desktop Menu -->
             <div id="main-nav" class="hidden md:flex items-center space-x-6 text-sm font-semibold">
                 <a href="index.html" class="text-purple-600 border-b-2 border-purple-600 pb-1">Home</a>
                 <a href="about-us.html" class="text-gray-700 hover:text-purple-600 transition">About Us</a>
-                <a href="design-marketing.html" class="text-gray-700 hover:text-purple-600 transition">Design & Marketing</a>
-                <a href="ebook-publishing.html" class="text-gray-700 hover:text-purple-600 transition">eBook & Publishing</a>
+                
+                <!-- Design & Marketing Dropdown -->
+                <div class="dropdown py-2">
+                    <a href="design-marketing.html" class="text-gray-700 hover:text-purple-600 transition inline-flex items-center gap-1">
+                        Design & Marketing <i class="fas fa-chevron-down text-xs text-purple-600"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="design-marketing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Website Designing</a>
+                        <a href="design-marketing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Graphic Designing</a>
+                        <a href="design-marketing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Logo Designing</a>
+                        <a href="design-marketing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Social Media Marketing</a>
+                        <a href="design-marketing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Mobile Application</a>
+                    </div>
+                </div>
+
+                <!-- eBook & Publishing Dropdown -->
+                <div class="dropdown py-2">
+                    <a href="ebook-publishing.html" class="text-gray-700 hover:text-purple-600 transition inline-flex items-center gap-1">
+                        eBook & Publishing <i class="fas fa-chevron-down text-xs text-purple-600"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="ebook-publishing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Manuscript Ghostwriting</a>
+                        <a href="ebook-publishing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Professional Editing</a>
+                        <a href="ebook-publishing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Custom Book Cover</a>
+                        <a href="ebook-publishing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Global Publishing</a>
+                        <a href="ebook-publishing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Book Marketing</a>
+                    </div>
+                </div>
+
                 <a href="portfolio.html" class="text-gray-700 hover:text-purple-600 transition">Portfolio</a>
                 <a href="contact.html" class="text-gray-700 hover:text-purple-600 transition">Contact</a>
             </div>
-            <a href="contact.html" class="bg-purple-600 hover:bg-purple-700 text-white text-xs font-semibold px-5 py-2.5 rounded-full transition shadow-md hover:scale-105 transform">
-                Let's Talk
-            </a>
+
+            <!-- Desktop Right CTA & Mobile Hamburger Button -->
+            <div class="flex items-center gap-4">
+                <a href="contact.html" class="bg-purple-600 hover:bg-purple-700 text-white text-xs font-semibold px-5 py-2.5 rounded-full transition shadow-md hover:scale-105 transform">
+                    Let's Talk
+                </a>
+                <!-- Hamburger Button for Mobile -->
+                <button id="menu-btn" aria-label="Toggle Menu" class="md:hidden text-gray-800 text-2xl focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
         </nav>
+
+        <!-- Mobile Menu Dropdown Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200 px-6 py-4 space-y-3 text-sm font-semibold shadow-xl">
+            <a href="index.html" class="block text-purple-600">Home</a>
+            <a href="about-us.html" class="block text-gray-700">About Us</a>
+            
+            <div class="border-t border-gray-100 pt-2">
+                <span class="text-xs text-purple-600 uppercase tracking-wider block mb-1">Design & Marketing</span>
+                <a href="design-marketing.html" class="block pl-4 py-1 text-xs text-gray-600">Website Designing</a>
+                <a href="design-marketing.html" class="block pl-4 py-1 text-xs text-gray-600">Graphic Designing</a>
+                <a href="design-marketing.html" class="block pl-4 py-1 text-xs text-gray-600">Logo Designing</a>
+                <a href="design-marketing.html" class="block pl-4 py-1 text-xs text-gray-600">Social Media Marketing</a>
+                <a href="design-marketing.html" class="block pl-4 py-1 text-xs text-gray-600">Mobile Application</a>
+            </div>
+
+            <div class="border-t border-gray-100 pt-2">
+                <span class="text-xs text-purple-600 uppercase tracking-wider block mb-1">eBook & Publishing</span>
+                <a href="ebook-publishing.html" class="block pl-4 py-1 text-xs text-gray-600">Manuscript Ghostwriting</a>
+                <a href="ebook-publishing.html" class="block pl-4 py-1 text-xs text-gray-600">Professional Editing</a>
+                <a href="ebook-publishing.html" class="block pl-4 py-1 text-xs text-gray-600">Custom Book Cover</a>
+                <a href="ebook-publishing.html" class="block pl-4 py-1 text-xs text-gray-600">Global Publishing</a>
+                <a href="ebook-publishing.html" class="block pl-4 py-1 text-xs text-gray-600">Book Marketing</a>
+            </div>
+
+            <div class="border-t border-gray-100 pt-2 space-y-2">
+                <a href="portfolio.html" class="block text-gray-700">Portfolio</a>
+                <a href="contact.html" class="block text-gray-700">Contact</a>
+            </div>
+        </div>
     </header>
 
-    <!-- 3. HERO SECTION -->
+    <!-- 2. HERO SECTION -->
     <section class="relative py-20 md:py-28 px-6 lg:px-8 max-w-7xl mx-auto text-center overflow-hidden tech-bg-pattern rounded-3xl mt-4 border border-purple-900/40">
         <div class="absolute top-0 left-0 w-full h-full bg-black/30 pointer-events-none"></div>
         <div class="relative z-10 max-w-4xl mx-auto">
             <div class="inline-flex items-center gap-2 bg-purple-900/60 border border-purple-500/50 text-purple-200 text-xs px-4 py-2 rounded-full mb-8">
                 <span class="flex h-2.5 w-2.5 rounded-full bg-purple-400 animate-ping"></span>
-                <span>Welcome to DesignMantix Studio</span>
+                <span>Top-Rated Digital Agency & Publishing Partners</span>
             </div>
             <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
-                Empowering Your Vision
+                Transforming Brands & Publishing Bestsellers
             </h1>
             <p class="text-gray-300 max-w-2xl mx-auto mb-10 text-base md:text-lg leading-relaxed">
-                We provide end-to-end creative, digital marketing, and publishing solutions tailored to scale your brand.
+                We combine cutting-edge web design, powerful digital marketing, and professional book publishing to scale your digital presence globally.
             </p>
-            <div class="flex justify-center gap-4">
-                <a href="contact.html" class="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-8 py-3.5 rounded-xl transition shadow-lg shadow-purple-600/40">
-                    Get My Free Quote <i class="fas fa-arrow-right ml-2"></i>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="design-marketing.html" class="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-8 py-3.5 rounded-xl transition shadow-lg shadow-purple-600/40">
+                    Explore Design & Marketing <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+                <a href="ebook-publishing.html" class="bg-gray-800 hover:bg-gray-700 border border-purple-500/40 text-white font-semibold px-8 py-3.5 rounded-xl transition">
+                    Explore eBook Publishing <i class="fas fa-book ml-2"></i>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- 4. ABOUT US SECTION -->
+    <!-- 3. ABOUT US SECTION -->
     <section class="py-20 px-6 lg:px-8 max-w-7xl mx-auto">
         <div class="bg-gray-900/50 border border-purple-900/40 rounded-3xl p-8 md:p-12 relative overflow-hidden">
             <div class="grid lg:grid-cols-2 gap-10 items-center">
                 <div>
                     <span class="text-purple-400 text-xs font-semibold tracking-wider uppercase mb-2 block">Who We Are</span>
                     <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-6">
-                        Innovative Digital & Publishing Solutions Under One Roof
+                        Innovating Your Digital & Publishing Journey
                     </h2>
                     <p class="text-gray-300 text-sm leading-relaxed mb-4">
-                        At DesignMantix, we bridge the gap between creative vision and market dominance. We offer custom Web Design, UI/UX, Branding, SEO, Paid Advertising, and comprehensive eBook and Hardcover Publishing solutions.
+                        DesignMantix is a full-service creative powerhouse. Whether you are scaling an enterprise brand with cutting-edge marketing or launching your manuscript as a global bestseller, our multidisciplinary team delivers excellence at every step.
                     </p>
                     <a href="about-us.html" class="inline-flex items-center bg-purple-600 hover:bg-purple-700 text-white text-xs font-semibold px-6 py-3 rounded-xl transition mb-6">
-                        Read Full Story <i class="fas fa-arrow-right ml-2"></i>
+                        Learn More About Us <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
                 <div class="relative">
@@ -154,95 +210,144 @@
         </div>
     </section>
 
-    <!-- 5. CLIENTELE -->
-    <section class="py-12 border-t border-b border-purple-900/30 bg-black/20">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <p class="text-gray-400 text-xs uppercase tracking-widest font-semibold mb-8">Trusted by Fast-Growing Brands & Authors Worldwide</p>
-            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-70">
-                <span class="text-lg font-bold tracking-wider text-gray-300"><i class="fas fa-shield-alt text-purple-500 mr-2"></i> BrandOne</span>
-                <span class="text-lg font-bold tracking-wider text-gray-300"><i class="fas fa-feather text-purple-500 mr-2"></i> AuthorCraft</span>
-                <span class="text-lg font-bold tracking-wider text-gray-300"><i class="fas fa-globe text-purple-500 mr-2"></i> NexaDigital</span>
-                <span class="text-lg font-bold tracking-wider text-gray-300"><i class="fas fa-book text-purple-500 mr-2"></i> ApexPublish</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- 6. WORK PROCESS -->
+    <!-- 4. WHAT WE DO (SERVICES) -->
     <section class="py-20 px-6 lg:px-8 max-w-7xl mx-auto">
         <div class="text-center max-w-2xl mx-auto mb-16">
-            <span class="text-purple-400 text-xs font-semibold uppercase tracking-widest">How We Work</span>
-            <h2 class="text-3xl font-extrabold mt-2 mb-4">Our Simple 4-Step Process</h2>
+            <span class="text-purple-400 text-xs font-semibold uppercase tracking-widest">What We Do</span>
+            <h2 class="text-3xl font-extrabold mt-2 mb-4">Our Core Solutions</h2>
+            <p class="text-gray-400 text-sm">Choose a division below to learn more about how we can help you grow.</p>
         </div>
-        <div class="grid md:grid-cols-4 gap-6">
-            <div class="bg-gray-900/40 border border-purple-900/40 p-6 rounded-2xl relative">
-                <div class="text-purple-500 font-extrabold text-3xl mb-4">01</div>
-                <h3 class="text-white font-bold mb-2">Discovery</h3>
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Division 1 -->
+            <div class="bg-gray-900/60 border border-purple-900/50 p-8 rounded-2xl flex flex-col justify-between hover:border-purple-500/50 transition">
+                <div>
+                    <div class="w-12 h-12 bg-purple-600/20 text-purple-400 rounded-xl flex items-center justify-center text-xl mb-6">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Design & Digital Marketing</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed mb-6">Scale your business with high-converting custom websites, SEO optimization, brand identity design, and ROI-driven paid advertising campaigns.</p>
+                </div>
+                <a href="design-marketing.html" class="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold text-sm transition">
+                    Explore Division <i class="fas fa-arrow-right ml-2"></i>
+                </a>
             </div>
-            <div class="bg-gray-900/40 border border-purple-900/40 p-6 rounded-2xl relative">
-                <div class="text-purple-500 font-extrabold text-3xl mb-4">02</div>
-                <h3 class="text-white font-bold mb-2">Strategy & Design</h3>
-            </div>
-            <div class="bg-gray-900/40 border border-purple-900/40 p-6 rounded-2xl relative">
-                <div class="text-purple-500 font-extrabold text-3xl mb-4">03</div>
-                <h3 class="text-white font-bold mb-2">Development / Execution</h3>
-            </div>
-            <div class="bg-gray-900/40 border border-purple-900/40 p-6 rounded-2xl relative">
-                <div class="text-purple-500 font-extrabold text-3xl mb-4">04</div>
-                <h3 class="text-white font-bold mb-2">Launch & Scale</h3>
+
+            <!-- Division 2 -->
+            <div class="bg-gray-900/60 border border-purple-900/50 p-8 rounded-2xl flex flex-col justify-between hover:border-purple-500/50 transition">
+                <div>
+                    <div class="w-12 h-12 bg-purple-600/20 text-purple-400 rounded-xl flex items-center justify-center text-xl mb-6">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">eBook & Publishing Solutions</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed mb-6">Turn your manuscript into a bestseller. Professional ghostwriting, meticulous editing, striking cover designs, and global platform distribution.</p>
+                </div>
+                <a href="ebook-publishing.html" class="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold text-sm transition">
+                    Explore Division <i class="fas fa-arrow-right ml-2"></i>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- 7. IMPACT -->
+    <!-- 5. IMPACT & STATS -->
     <section id="impact-section" class="py-16 px-6 lg:px-8 max-w-7xl mx-auto">
         <div class="bg-gradient-to-r from-purple-950/40 via-gray-900/60 to-purple-950/40 border border-purple-900/40 rounded-3xl p-8 md:p-12 text-center">
-            <h2 class="text-3xl font-extrabold mb-8">Numbers That Speak For Themselves</h2>
+            <h2 class="text-3xl font-extrabold mb-8">Trusted By Brands & Authors Worldwide</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="bg-black/30 border border-purple-900/30 p-6 rounded-2xl"><div class="text-3xl font-extrabold text-purple-400"><span class="counter" data-target="250">0</span>+</div><p class="text-xs">Projects</p></div>
-                <div class="bg-black/30 border border-purple-900/30 p-6 rounded-2xl"><div class="text-3xl font-extrabold text-purple-400"><span class="counter" data-target="98">0</span>%</div><p class="text-xs">Satisfaction</p></div>
-                <div class="bg-black/30 border border-purple-900/30 p-6 rounded-2xl"><div class="text-3xl font-extrabold text-purple-400"><span class="counter" data-target="100">0</span>+</div><p class="text-xs">Books</p></div>
-                <div class="bg-black/30 border border-purple-900/30 p-6 rounded-2xl"><div class="text-3xl font-extrabold text-purple-400"><span class="counter" data-target="15">0</span>+</div><p class="text-xs">Awards</p></div>
+                <div class="bg-black/30 border border-purple-900/30 p-6 rounded-2xl"><div class="text-3xl font-extrabold text-purple-400"><span class="counter" data-target="400">0</span>+</div><p class="text-xs">Projects & Books Delivered</p></div>
+                <div class="bg-black/30 border border-purple-900/30 p-6 rounded-2xl"><div class="text-3xl font-extrabold text-purple-400"><span class="counter" data-target="98">0</span>%</div><p class="text-xs">Client Satisfaction</p></div>
+                <div class="bg-black/30 border border-purple-900/30 p-6 rounded-2xl"><div class="text-3xl font-extrabold text-purple-400"><span class="counter" data-target="50">0</span>+</div><p class="text-xs">Bestsellers Created</p></div>
+                <div class="bg-black/30 border border-purple-900/30 p-6 rounded-2xl"><div class="text-3xl font-extrabold text-purple-400"><span class="counter" data-target="10">0</span>+</div><p class="text-xs">Years Experience</p></div>
             </div>
         </div>
     </section>
 
-    <!-- 8. TESTIMONIALS SLIDER -->
-    <section class="py-20 px-6 max-w-7xl mx-auto overflow-hidden">
-        <div class="slider-track flex gap-8">
-            <!-- Review items go here -->
-            <div class="w-[350px] bg-gray-900/80 p-8 rounded-2xl border border-purple-500/30">
-                <p class="italic mb-6">"Excellent service, completely transformed our brand!"</p>
-                <h4 class="font-bold">Michael Vance</h4>
+    <!-- 6. TESTIMONIALS SLIDER WITH STARS -->
+    <section class="py-20 max-w-full overflow-hidden">
+        <div class="text-center mb-12 px-6">
+            <span class="text-purple-400 text-xs font-semibold uppercase tracking-widest">Testimonials</span>
+            <h2 class="text-3xl font-extrabold mt-2">What People Say About Us</h2>
+        </div>
+        
+        <div class="slider-container">
+            <div class="slider-track flex gap-8">
+                <!-- Card 1 -->
+                <div class="w-[350px] bg-gray-900/80 p-8 rounded-2xl border border-purple-500/35 flex-shrink-0">
+                    <div class="flex text-yellow-400 space-x-1 mb-4 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="italic text-gray-300 text-sm mb-6">"DesignMantix overhauled our company website and ran targeted ad campaigns. Our online leads have tripled within 60 days!"</p>
+                    <h4 class="font-bold text-white text-sm">David Sterling</h4>
+                    <span class="text-xs text-purple-400">CEO, NexaTech Solutions</span>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="w-[350px] bg-gray-900/80 p-8 rounded-2xl border border-purple-500/35 flex-shrink-0">
+                    <div class="flex text-yellow-400 space-x-1 mb-4 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="italic text-gray-300 text-sm mb-6">"DesignMantix transformed my rough draft into a stunning published book on Amazon. Their ghostwriting and cover team are exceptional!"</p>
+                    <h4 class="font-bold text-white text-sm">Jonathan Reed</h4>
+                    <span class="text-xs text-purple-400">Author of 'The Cyber Paradigm'</span>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="w-[350px] bg-gray-900/80 p-8 rounded-2xl border border-purple-500/35 flex-shrink-0">
+                    <div class="flex text-yellow-400 space-x-1 mb-4 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="italic text-gray-300 text-sm mb-6">"Best digital agency we've partnered with. Their SEO strategy pushed us to the first page of Google search results."</p>
+                    <h4 class="font-bold text-white text-sm">Marcus Brody</h4>
+                    <span class="text-xs text-purple-400">Director, Apex Global</span>
+                </div>
+
+                <!-- Card 4 (Duplicate for infinite loop) -->
+                <div class="w-[350px] bg-gray-900/80 p-8 rounded-2xl border border-purple-500/35 flex-shrink-0">
+                    <div class="flex text-yellow-400 space-x-1 mb-4 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="italic text-gray-300 text-sm mb-6">"DesignMantix overhauled our company website and ran targeted ad campaigns. Our online leads have tripled within 60 days!"</p>
+                    <h4 class="font-bold text-white text-sm">David Sterling</h4>
+                    <span class="text-xs text-purple-400">CEO, NexaTech Solutions</span>
+                </div>
+
+                <!-- Card 5 (Duplicate) -->
+                <div class="w-[350px] bg-gray-900/80 p-8 rounded-2xl border border-purple-500/35 flex-shrink-0">
+                    <div class="flex text-yellow-400 space-x-1 mb-4 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="italic text-gray-300 text-sm mb-6">"DesignMantix transformed my rough draft into a stunning published book on Amazon. Their ghostwriting and cover team are exceptional!"</p>
+                    <h4 class="font-bold text-white text-sm">Jonathan Reed</h4>
+                    <span class="text-xs text-purple-400">Author of 'The Cyber Paradigm'</span>
+                </div>
             </div>
-            <!-- ... -->
         </div>
     </section>
 
-    <!-- 9. FOOTER -->
+    <!-- 7. FOOTER -->
     <footer class="bg-[#05010d] text-gray-400 text-xs pt-16 pb-12 border-t border-purple-900/30">
         <div class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
             <div>
                 <a href="index.html" class="text-xl font-bold text-white mb-3 inline-block">Design<span class="text-purple-500">Mantix</span></a>
-                <p class="mb-4">Specialized solutions to scale your brand and publish globally.</p>
+                <p class="mb-4">Specialized custom web design, marketing, and global eBook publishing solutions.</p>
                 <div class="flex space-x-4 mt-4">
-                    <a href="#" class="w-8 h-8 rounded-full border border-purple-500 flex items-center justify-center"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="w-8 h-8 rounded-full border border-purple-500 flex items-center justify-center"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="w-8 h-8 rounded-full border border-purple-500 flex items-center justify-center"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full border border-purple-500/50 hover:border-purple-500 flex items-center justify-center text-gray-300 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full border border-purple-500/50 hover:border-purple-500 flex items-center justify-center text-gray-300 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full border border-purple-500/50 hover:border-purple-500 flex items-center justify-center text-gray-300 hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
             <div>
                 <h4 class="text-white font-bold text-sm mb-4">Our Services</h4>
                 <ul class="space-y-2">
-                    <li><a href="design-marketing.html">Design & Marketing</a></li>
-                    <li><a href="ebook-publishing.html">eBook & Publishing</a></li>
+                    <li><a href="design-marketing.html" class="hover:text-purple-400 transition">Design & Digital Marketing</a></li>
+                    <li><a href="ebook-publishing.html" class="hover:text-purple-400 transition">eBook & Publishing</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-white font-bold text-sm mb-4">Get In Touch</h4>
                 <ul class="space-y-3">
-                    <li><i class="fas fa-envelope mr-2"></i> support@designmantix.com</li>
-                    <li><i class="fas fa-phone mr-2"></i> +1 (555) 123-4567</li>
-                    <li><i class="fas fa-map-marker-alt mr-2"></i> New York, USA</li>
+                    <li><i class="fas fa-envelope mr-2 text-purple-400"></i> support@designmantix.com</li>
+                    <li><i class="fas fa-phone mr-2 text-purple-400"></i> +1 (555) 123-4567</li>
+                    <li><i class="fas fa-map-marker-alt mr-2 text-purple-400"></i> New York, USA</li>
                 </ul>
             </div>
         </div>
@@ -251,35 +356,49 @@
         </div>
     </footer>
 
-    <!-- SCRIPT -->
+    <!-- SCRIPTS (Counters & Mobile Menu Toggle) -->
     <script>
-        function selectService(type) {
-            if (type === 'design') {
-                window.location.href = 'design-marketing.html';
-            } else if (type === 'publishing') {
-                window.location.href = 'ebook-publishing.html';
-            } else {
-                document.getElementById('serviceModal').style.display = 'none';
-            }
-        }
-        
+        // Mobile Menu Toggle Script
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Counter Animation Script
         const counters = document.querySelectorAll('.counter');
         let animated = false;
+
         function runCounters() {
             counters.forEach(counter => {
                 const target = +counter.getAttribute('data-target');
                 let count = 0;
+                const increment = target / 40;
+
                 const updateCount = () => {
-                    count += target / 40;
-                    if (count < target) { counter.innerText = Math.ceil(count); setTimeout(updateCount, 30); }
-                    else { counter.innerText = target; }
+                    count += increment;
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count);
+                        setTimeout(updateCount, 30);
+                    } else {
+                        counter.innerText = target;
+                    }
                 };
                 updateCount();
             });
         }
+
         window.addEventListener('scroll', () => {
-            const el = document.getElementById('impact-section');
-            if (el && el.getBoundingClientRect().top < window.innerHeight && !animated) { runCounters(); animated = true; }
+            const impactSection = document.getElementById('impact-section');
+            if (impactSection) {
+                const position = impactSection.getBoundingClientRect().top;
+                const screenHeight = window.innerHeight;
+                if (position < screenHeight && !animated) {
+                    runCounters();
+                    animated = true;
+                }
+            }
         });
     </script>
 </body>
