@@ -34,7 +34,7 @@
     <div id="serviceModal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/90 backdrop-blur-md transition-opacity duration-300">
         <div class="relative w-full max-w-2xl bg-[#0d0322] border border-purple-500/40 rounded-3xl p-6 sm:p-10 shadow-2xl text-center overflow-hidden">
             
-            <button onclick="selectService('all')" class="absolute top-4 right-5 text-gray-400 hover:text-white text-xs font-semibold hover:text-purple-400">
+            <button onclick="selectService('all')" class="absolute top-4 right-5 text-gray-400 hover:text-white text-xs font-semibold">
                 Skip to View All <i class="fas fa-times ml-1"></i>
             </button>
 
@@ -51,7 +51,6 @@
                 </p>
 
                 <div class="grid sm:grid-cols-2 gap-5 text-left">
-                    <!-- Option 1: Design & Digital Marketing -->
                     <button onclick="selectService('design')" class="group bg-gray-900/80 border border-purple-900/60 hover:border-purple-500 p-6 rounded-2xl transition duration-300">
                         <div class="w-12 h-12 bg-purple-600/20 border border-purple-500/30 rounded-xl flex items-center justify-center mb-4 text-purple-400 group-hover:bg-purple-600 group-hover:text-white transition">
                             <i class="fas fa-laptop-code text-xl"></i>
@@ -60,13 +59,12 @@
                         <p class="text-gray-400 text-xs leading-relaxed">Websites, Branding, SEO, Social Media & Paid Ads.</p>
                     </button>
 
-                    <!-- Option 2: eBook -->
                     <button onclick="selectService('publishing')" class="group bg-gray-900/80 border border-purple-900/60 hover:border-purple-500 p-6 rounded-2xl transition duration-300">
                         <div class="w-12 h-12 bg-purple-600/20 border border-purple-500/30 rounded-xl flex items-center justify-center mb-4 text-purple-400 group-hover:bg-purple-600 group-hover:text-white transition">
                             <i class="fas fa-book-open text-xl"></i>
                         </div>
                         <h3 class="text-lg font-bold text-white group-hover:text-purple-300 transition mb-1">eBook & Publishing</h3>
-                        <p class="text-gray-400 text-xs leading-relaxed">Ghostwriting, Formatting, Covers (eBook, Paperback, Hardcover) & Publishing.</p>
+                        <p class="text-gray-400 text-xs leading-relaxed">Ghostwriting, Formatting, Covers & Publishing.</p>
                     </button>
                 </div>
             </div>
@@ -115,7 +113,7 @@
         </div>
     </section>
 
-    <!-- 4. ABOUT US SECTION WITH IMAGE -->
+    <!-- 4. ABOUT US SECTION WITH LOCAL IMAGE (team.avif) -->
     <section class="py-20 px-6 lg:px-8 max-w-7xl mx-auto">
         <div class="bg-gray-900/50 border border-purple-900/40 rounded-3xl p-8 md:p-12 relative overflow-hidden">
             <div class="grid lg:grid-cols-2 gap-10 items-center">
@@ -125,54 +123,161 @@
                         Innovative Digital & Publishing Solutions Under One Roof
                     </h2>
                     <p class="text-gray-300 text-sm leading-relaxed mb-4">
-                        At DesignMantix, we bridge the gap between creative vision and market dominance. We are a premier full-service creative agency and publishing studio offering custom Web Design & Development, UI/UX, Branding, SEO, Paid Advertising, as well as end-to-end eBook, Paperback, and Hardcover Publishing solutions.
+                        At DesignMantix, we bridge the gap between creative vision and market dominance. We offer custom Web Design, UI/UX, Branding, SEO, Paid Advertising, and comprehensive eBook and Hardcover Publishing solutions.
                     </p>
-                    <p class="text-gray-400 text-xs leading-relaxed mb-6">
-                        Whether you are looking to build a high-converting digital presence to scale your business or aiming to publish a global best-seller on Amazon KDP and IngramSpark, our team of expert developers, designers, strategists, and publishing specialists execute every project with perfection.
-                    </p>
-                    
                     <a href="about-us.html" class="inline-flex items-center bg-purple-600 hover:bg-purple-700 text-white text-xs font-semibold px-6 py-3 rounded-xl transition mb-6">
                         Read Full Story <i class="fas fa-arrow-right ml-2"></i>
                     </a>
-
-                    <div class="grid grid-cols-2 gap-4 border-t border-purple-900/30 pt-6">
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-lg bg-purple-600/20 flex items-center justify-center text-purple-400">
-                                <i class="fas fa-rocket"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-white text-sm font-bold">Fast Turnaround</h4>
-                                <p class="text-gray-400 text-[11px]">Agile Execution</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-lg bg-purple-600/20 flex items-center justify-center text-purple-400">
-                                <i class="fas fa-shield-alt"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-white text-sm font-bold">100% Satisfaction</h4>
-                                <p class="text-gray-400 text-[11px]">Dedicated Support</p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
-                <!-- RIGHT SIDE IMAGE -->
+                <!-- LOCAL IMAGE CONTAINER -->
                 <div class="relative">
-    <div class="rounded-2xl overflow-hidden border border-purple-500/30 shadow-2xl">
-        <img src="team.avif" alt="DesignMantix Team Collaboration" class="w-full h-[380px] object-cover hover:scale-105 transition duration-500">
-    </div>
-</div>
-
+                    <div class="rounded-2xl overflow-hidden border border-purple-500/30 shadow-2xl">
+                        <img src="team.avif" alt="DesignMantix Team Collaboration" class="w-full h-[380px] object-cover hover:scale-105 transition duration-500">
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- 5. FOOTER -->
-    <footer class="bg-[#05010d] text-gray-400 text-xs py-12 border-t border-purple-900/30">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-            <a href="index.html" class="text-xl font-bold text-white mb-2 inline-block">Design<span class="text-purple-500">Mantix</span></a>
-            <p class="text-gray-400 leading-relaxed max-w-sm mx-auto mb-4">
-                Providing specialized solutions to build digital products, scale market presence, and publish best-selling manuscripts globally.
-            </p>
+    <!-- 5. CLIENTELE / TRUSTED BRANDS SECTION -->
+    <section class="py-12 border-t border-b border-purple-900/30 bg-black/20">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-gray-400 text-xs uppercase tracking-widest font-semibold mb-8">Trusted by Fast-Growing Brands & Authors Worldwide</p>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-70">
+                <span class="text-lg font-bold tracking-wider text-gray-300"><i class="fas fa-shield-alt text-purple-500 mr-2"></i> BrandOne</span>
+                <span class="text-lg font-bold tracking-wider text-gray-300"><i class="fas fa-feather text-purple-500 mr-2"></i> AuthorCraft</span>
+                <span class="text-lg font-bold tracking-wider text-gray-300"><i class="fas fa-globe text-purple-500 mr-2"></i> NexaDigital</span>
+                <span class="text-lg font-bold tracking-wider text-gray-300"><i class="fas fa-book text-purple-500 mr-2"></i> ApexPublish</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. WORK PROCESS SECTION -->
+    <section class="py-20 px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <span class="text-purple-400 text-xs font-semibold uppercase tracking-widest">How We Work</span>
+            <h2 class="text-3xl font-extrabold mt-2 mb-4">Our Simple 4-Step Process</h2>
+            <p class="text-gray-400 text-sm">From concept to execution, we streamline everything for you.</p>
+        </div>
+        <div class="grid md:grid-cols-4 gap-6">
+            <div class="bg-gray-900/40 border border-purple-900/40 p-6 rounded-2xl relative">
+                <div class="text-purple-500 font-extrabold text-3xl mb-4">01</div>
+                <h3 class="text-white font-bold mb-2">Discovery</h3>
+                <p class="text-gray-400 text-xs">We understand your goals, target audience, and specific requirements.</p>
+            </div>
+            <div class="bg-gray-900/40 border border-purple-900/40 p-6 rounded-2xl relative">
+                <div class="text-purple-500 font-extrabold text-3xl mb-4">02</div>
+                <h3 class="text-white font-bold mb-2">Strategy & Design</h3>
+                <p class="text-gray-400 text-xs">Our team drafts a custom blueprint and creates stunning prototypes.</p>
+            </div>
+            <div class="bg-gray-900/40 border border-purple-900/40 p-6 rounded-2xl relative">
+                <div class="text-purple-500 font-extrabold text-3xl mb-4">03</div>
+                <h3 class="text-white font-bold mb-2">Development / Execution</h3>
+                <p class="text-gray-400 text-xs">We build, format, market, or publish your project with perfection.</p>
+            </div>
+            <div class="bg-gray-900/40 border border-purple-900/40 p-6 rounded-2xl relative">
+                <div class="text-purple-500 font-extrabold text-3xl mb-4">04</div>
+                <h3 class="text-white font-bold mb-2">Launch & Scale</h3>
+                <p class="text-gray-400 text-xs">Your product or book goes live to the world, ready to generate revenue.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. OUR IMPACT SECTION -->
+    <section class="py-16 px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="bg-gradient-to-r from-purple-950/40 via-gray-900/60 to-purple-950/40 border border-purple-900/40 rounded-3xl p-8 md:p-12">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-purple-400 text-xs font-semibold uppercase tracking-widest">Our Impact</span>
+                <h2 class="text-3xl font-extrabold mt-2">Numbers That Speak For Themselves</h2>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="bg-black/30 border border-purple-900/30 p-6 rounded-2xl">
+                    <div class="text-3xl md:text-4xl font-extrabold text-purple-400 mb-1">250+</div>
+                    <p class="text-gray-400 text-xs">Projects Completed</p>
+                </div>
+                <div class="bg-black/30 border border-purple-900/30 p-6 rounded-2xl">
+                    <div class="text-3xl md:text-4xl font-extrabold text-purple-400 mb-1">98%</div>
+                    <p class="text-gray-400 text-xs">Client Satisfaction</p>
+                </div>
+                <div class="bg-black/30 border border-purple-900/30 p-6 rounded-2xl">
+                    <div class="text-3xl md:text-4xl font-extrabold text-purple-400 mb-1">100+</div>
+                    <p class="text-gray-400 text-xs">Books Published</p>
+                </div>
+                <div class="bg-black/30 border border-purple-900/30 p-6 rounded-2xl">
+                    <div class="text-3xl md:text-4xl font-extrabold text-purple-400 mb-1">15+</div>
+                    <p class="text-gray-400 text-xs">Global Awards</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. TESTIMONIALS SECTION (4 REVIEWS) -->
+    <section class="py-20 px-6 lg:px-8 max-w-7xl mx-auto bg-purple-950/10 rounded-3xl my-10 border border-purple-900/20">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <span class="text-purple-400 text-xs font-semibold uppercase tracking-widest">Testimonials</span>
+            <h2 class="text-3xl font-extrabold mt-2 mb-4">What Our Clients Say</h2>
+            <p class="text-gray-400 text-sm">Hear from founders, business owners, and authors who trusted our expertise.</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-gray-900/60 border border-purple-900/50 p-8 rounded-2xl relative">
+                <div class="text-purple-400 mb-4 flex gap-1 text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p class="text-gray-300 text-sm italic mb-6">"DesignMantix transformed our digital presence completely. Their web development and marketing strategy doubled our incoming leads within a month!"</p>
+                <h4 class="text-white font-bold text-sm">Michael Vance</h4>
+                <p class="text-gray-500 text-xs">CEO, TechVance</p>
+            </div>
+            <div class="bg-gray-900/60 border border-purple-900/50 p-8 rounded-2xl relative">
+                <div class="text-purple-400 mb-4 flex gap-1 text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p class="text-gray-300 text-sm italic mb-6">"Publishing my book felt overwhelming until I handed it over to DesignMantix. The cover design and formatting were absolute top-notch."</p>
+                <h4 class="text-white font-bold text-sm">Sarah Jenkins</h4>
+                <p class="text-gray-500 text-xs">Published Author</p>
+            </div>
+            <div class="bg-gray-900/60 border border-purple-900/50 p-8 rounded-2xl relative">
+                <div class="text-purple-400 mb-4 flex gap-1 text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p class="text-gray-300 text-sm italic mb-6">"Exceptional work on our company branding and SEO! Our organic traffic has scaled tremendously. Highly professional team."</p>
+                <h4 class="text-white font-bold text-sm">David Miller</h4>
+                <p class="text-gray-500 text-xs">Founder, GrowthPulse</p>
+            </div>
+            <div class="bg-gray-900/60 border border-purple-900/50 p-8 rounded-2xl relative">
+                <div class="text-purple-400 mb-4 flex gap-1 text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p class="text-gray-300 text-sm italic mb-6">"Their KDP publishing and formatting service saved me countless hours. My book went live smoothly on Amazon without any errors."</p>
+                <h4 class="text-white font-bold text-sm">Elena Rostova</h4>
+                <p class="text-gray-500 text-xs">Bestselling Author</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. FOOTER WITH 3 COLUMNS (Details, Services, Contact Info) -->
+    <footer class="bg-[#05010d] text-gray-400 text-xs pt-16 pb-12 border-t border-purple-900/30">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
+            <!-- Column 1: About Agency -->
+            <div>
+                <a href="index.html" class="text-xl font-bold text-white mb-3 inline-block">Design<span class="text-purple-500">Mantix</span></a>
+                <p class="text-gray-400 leading-relaxed mb-4">
+                    Providing specialized solutions to build digital products, scale market presence, and publish best-selling manuscripts globally.
+                </p>
+            </div>
+            <!-- Column 2: Quick Links / Services -->
+            <div>
+                <h4 class="text-white font-bold text-sm mb-4">Our Services</h4>
+                <ul class="space-y-2">
+                    <li><a href="design-marketing.html" class="hover:text-purple-400 transition">Web Design & Development</a></li>
+                    <li><a href="design-marketing.html" class="hover:text-purple-400 transition">Digital Marketing & SEO</a></li>
+                    <li><a href="ebook-publishing.html" class="hover:text-purple-400 transition">eBook Ghostwriting & Editing</a></li>
+                    <li><a href="ebook-publishing.html" class="hover:text-purple-400 transition">Book Cover & Formatting</a></li>
+                </ul>
+            </div>
+            <!-- Column 3: Contact Info -->
+            <div>
+                <h4 class="text-white font-bold text-sm mb-4">Get In Touch</h4>
+                <ul class="space-y-3">
+                    <li class="flex items-center gap-2"><i class="fas fa-envelope text-purple-400"></i> support@designmantix.com</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-phone text-purple-400"></i> +1 (555) 123-4567</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-map-marker-alt text-purple-400"></i> New York, USA</li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center border-t border-purple-900/20 pt-6">
             <p class="text-gray-500">&copy; 2026 DesignMantix. All rights reserved.</p>
         </div>
     </footer>
