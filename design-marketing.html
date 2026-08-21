@@ -3,91 +3,328 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Design & Digital Marketing Details - DesignMantix</title>
+    <title>DesignMantix - Design & Digital Marketing Agency</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .tech-bg-pattern {
+            background-color: #0b021a;
+            background-image: 
+                radial-gradient(at 50% 0%, rgba(147, 51, 234, 0.3) 0px, transparent 75%),
+                radial-gradient(at 100% 100%, rgba(79, 70, 229, 0.25) 0px, transparent 50%),
+                linear-gradient(rgba(168, 85, 247, 0.12) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(168, 85, 247, 0.12) 1px, transparent 1px);
+            background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 0.4; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.1); }
+        }
+
+        .animate-glow { animation: pulseGlow 5s ease-in-out infinite; }
+
+        /* Testimonials Smooth Slider Animation (No Lag) */
+        @keyframes scrollSlider {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .slider-container {
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+        }
+
+        .slider-track {
+            display: flex;
+            width: max-content;
+            animation: scrollSlider 30s linear infinite;
+            will-change: transform;
+        }
+
+        .slider-track:hover {
+            animation-play-state: paused;
+        }
+    </style>
 </head>
 <body class="bg-[#0b021a] text-white font-sans selection:bg-purple-500 selection:text-white">
 
-    <!-- HEADER / NAVBAR -->
+    <!-- 1. NAVBAR -->
     <header class="bg-white text-gray-900 shadow-md sticky top-0 z-50">
         <nav class="flex items-center justify-between px-6 lg:px-8 py-4 max-w-7xl mx-auto">
             <a href="index.html" class="text-2xl font-extrabold tracking-tight text-gray-900">
                 Design<span class="text-purple-600">Mantix</span>
             </a>
-            <div class="flex items-center space-x-6 text-sm font-semibold">
+            <div id="main-nav" class="hidden md:flex items-center space-x-6 text-sm font-semibold">
                 <a href="index.html" class="text-gray-700 hover:text-purple-600 transition">Home</a>
                 <a href="about-us.html" class="text-gray-700 hover:text-purple-600 transition">About Us</a>
                 <a href="design-marketing.html" class="text-purple-600 border-b-2 border-purple-600 pb-1">Design & Marketing</a>
-                <a href="ebook-publishing.html" class="text-gray-700 hover:text-purple-600 transition">eBook Publishing</a>
-                <a href="contact.html" class="bg-purple-600 hover:bg-purple-700 text-white text-xs px-4 py-2 rounded-full transition">Contact Us</a>
+                <a href="ebook-publishing.html" class="text-gray-700 hover:text-purple-600 transition">eBook & Publishing</a>
+                <a href="portfolio.html" class="text-gray-700 hover:text-purple-600 transition">Portfolio</a>
+                <a href="contact.html" class="text-gray-700 hover:text-purple-600 transition">Contact</a>
             </div>
+            <a href="contact.html" class="bg-purple-600 hover:bg-purple-700 text-white text-xs font-semibold px-5 py-2.5 rounded-full transition shadow-md hover:scale-105 transform">
+                Let's Talk
+            </a>
         </nav>
     </header>
 
-    <!-- HERO / ABOUT SECTION -->
-    <section class="py-16 px-6 lg:px-8 max-w-5xl mx-auto">
-        <div class="bg-gray-900/60 border border-purple-900/50 p-8 md:p-12 rounded-3xl mb-12">
-            <span class="text-purple-400 text-xs font-semibold tracking-wider uppercase mb-2 block">Design & Marketing Division</span>
-            <h1 class="text-3xl md:text-5xl font-extrabold text-white mb-6">About Us</h1>
-            
-            <p class="text-gray-300 text-sm md:text-base leading-relaxed mb-4">
-                We are a global design and digital marketing agency helping businesses worldwide build powerful brands, establish a strong online presence, and achieve sustainable growth.
-            </p>
-            <p class="text-gray-300 text-sm md:text-base leading-relaxed mb-4">
-                From creative graphic design and branding to website development, social media marketing, and digital advertising, we deliver innovative solutions tailored to businesses across different industries and markets.
-            </p>
-            <p class="text-gray-300 text-sm md:text-base leading-relaxed mb-4">
-                No matter where you are in the world, our team combines creativity, strategy, and technology to turn your ideas into impactful digital experiences.
-            </p>
-            <p class="text-purple-300 text-sm md:text-base font-semibold leading-relaxed">
-                We don't just create designs—we build brands that connect, grow, and succeed worldwide.
-            </p>
-        </div>
-
-        <!-- CORE SERVICES GRID -->
-        <h2 class="text-2xl md:text-3xl font-bold text-white mb-8 text-center">Our Specialized Marketing Services</h2>
-        
-        <div class="grid md:grid-cols-2 gap-6">
-            <div class="bg-gray-900/80 border border-purple-900/60 p-6 rounded-2xl hover:border-purple-500 transition duration-300">
-                <i class="fas fa-desktop text-purple-400 text-3xl mb-4"></i>
-                <h3 class="text-xl font-bold mb-2 text-white">Web Design & Development</h3>
-                <p class="text-gray-400 text-xs leading-relaxed">Custom, responsive, and high-converting websites engineered with fast load times and clean UI/UX.</p>
+    <!-- 2. HERO SECTION (DESIGN & MARKETING FOCUSED) -->
+    <section class="relative py-20 md:py-28 px-6 lg:px-8 max-w-7xl mx-auto text-center overflow-hidden tech-bg-pattern rounded-3xl mt-4 border border-purple-900/40">
+        <div class="absolute top-0 left-0 w-full h-full bg-black/30 pointer-events-none"></div>
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <div class="inline-flex items-center gap-2 bg-purple-900/60 border border-purple-500/50 text-purple-200 text-xs px-4 py-2 rounded-full mb-8">
+                <span class="flex h-2.5 w-2.5 rounded-full bg-purple-400 animate-ping"></span>
+                <span>Creative Design & Digital Growth Experts</span>
             </div>
-
-            <div class="bg-gray-900/80 border border-purple-900/60 p-6 rounded-2xl hover:border-purple-500 transition duration-300">
-                <i class="fas fa-palette text-purple-400 text-3xl mb-4"></i>
-                <h3 class="text-xl font-bold mb-2 text-white">Branding & Graphic Design</h3>
-                <p class="text-gray-400 text-xs leading-relaxed">Logos, brand identity guidelines, marketing materials, and custom visual assets.</p>
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
+                Scale Your Brand With High-Impact Design & Marketing
+            </h1>
+            <p class="text-gray-300 max-w-2xl mx-auto mb-10 text-base md:text-lg leading-relaxed">
+                We build high-converting websites, striking brand identities, and data-driven marketing campaigns that accelerate your revenue.
+            </p>
+            <div class="flex justify-center gap-4">
+                <a href="contact.html" class="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-8 py-3.5 rounded-xl transition shadow-lg shadow-purple-600/40">
+                    Get Free Marketing Audit <i class="fas fa-arrow-right ml-2"></i>
+                </a>
             </div>
-
-            <div class="bg-gray-900/80 border border-purple-900/60 p-6 rounded-2xl hover:border-purple-500 transition duration-300">
-                <i class="fas fa-bullhorn text-purple-400 text-3xl mb-4"></i>
-                <h3 class="text-xl font-bold mb-2 text-white">Social Media Marketing & Ads</h3>
-                <p class="text-gray-400 text-xs leading-relaxed">Targeted ad campaigns on Google, Meta, and Instagram to boost brand reach and sales.</p>
-            </div>
-
-            <div class="bg-gray-900/80 border border-purple-900/60 p-6 rounded-2xl hover:border-purple-500 transition duration-300">
-                <i class="fas fa-search-dollar text-purple-400 text-3xl mb-4"></i>
-                <h3 class="text-xl font-bold mb-2 text-white">SEO & Traffic Growth</h3>
-                <p class="text-gray-400 text-xs leading-relaxed">Strategic search engine optimization to rank your business higher on Google search results.</p>
-            </div>
-        </div>
-
-        <!-- CTA BUTTON -->
-        <div class="mt-12 text-center">
-            <a href="contact.html" class="inline-block bg-purple-600 hover:bg-purple-700 text-white text-xs font-semibold px-8 py-3.5 rounded-xl transition shadow-lg shadow-purple-600/40">
-                Start Your Project With Us <i class="fas fa-arrow-right ml-2"></i>
-            </a>
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-[#05010d] text-gray-400 text-xs py-8 border-t border-purple-900/30 text-center">
-        <p>&copy; 2026 DesignMantix. All Rights Reserved.</p>
+    <!-- 3. ABOUT US SECTION -->
+    <section class="py-20 px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="bg-gray-900/50 border border-purple-900/40 rounded-3xl p-8 md:p-12 relative overflow-hidden">
+            <div class="grid lg:grid-cols-2 gap-10 items-center">
+                <div>
+                    <span class="text-purple-400 text-xs font-semibold tracking-wider uppercase mb-2 block">Design & Marketing Division</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-6">
+                        Bridging Creativity With Measurable Business Results
+                    </h2>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                        At DesignMantix, our creative and growth team combines cutting-edge web design, UI/UX, SEO, and paid performance advertising to put your business ahead of the competition.
+                    </p>
+                    <a href="contact.html" class="inline-flex items-center bg-purple-600 hover:bg-purple-700 text-white text-xs font-semibold px-6 py-3 rounded-xl transition mb-6">
+                        Speak With An Expert <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="relative">
+                    <div class="rounded-2xl overflow-hidden border border-purple-500/30 shadow-2xl">
+                        <img src="team.avif" alt="Design & Marketing Team Collaboration" class="w-full h-[380px] object-cover hover:scale-105 transition duration-500">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. WHAT WE DO (SERVICES) -->
+    <section class="py-20 px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <span class="text-purple-400 text-xs font-semibold uppercase tracking-widest">What We Do</span>
+            <h2 class="text-3xl font-extrabold mt-2 mb-4">Our Core Digital Services</h2>
+            <p class="text-gray-400 text-sm">Everything you need to dominate your market digitally.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-gray-900/60 border border-purple-900/50 p-8 rounded-2xl">
+                <div class="w-12 h-12 bg-purple-600/20 text-purple-400 rounded-xl flex items-center justify-center text-xl mb-6">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Web Design & Development</h3>
+                <p class="text-gray-400 text-xs leading-relaxed">Custom, responsive, lightning-fast websites engineered to convert visitors into loyal clients.</p>
+            </div>
+            <div class="bg-gray-900/60 border border-purple-900/50 p-8 rounded-2xl">
+                <div class="w-12 h-12 bg-purple-600/20 text-purple-400 rounded-xl flex items-center justify-center text-xl mb-6">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">SEO & Growth Marketing</h3>
+                <p class="text-gray-400 text-xs leading-relaxed">Dominate search engine rankings and drive consistent organic traffic to your platform.</p>
+            </div>
+            <div class="bg-gray-900/60 border border-purple-900/50 p-8 rounded-2xl">
+                <div class="w-12 h-12 bg-purple-600/20 text-purple-400 rounded-xl flex items-center justify-center text-xl mb-6">
+                    <i class="fas fa-bullhorn"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Paid Advertising (PPC)</h3>
+                <p class="text-gray-400 text-xs leading-relaxed">High-ROI Meta and Google ad campaigns optimized to scale your customer acquisition.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. OUR PROCESS -->
+    <section class="py-20 px-6 lg:px-8 max-w-7xl mx-auto bg-purple-950/20 border-y border-purple-900/30">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <span class="text-purple-400 text-xs font-semibold uppercase tracking-widest">Our Process</span>
+            <h2 class="text-3xl font-extrabold mt-2 mb-4">How We Deliver Results</h2>
+        </div>
+        <div class="grid md:grid-cols-4 gap-6">
+            <div class="bg-gray-900/40 border border-purple-900/40 p-6 rounded-2xl relative">
+                <div class="text-purple-500 font-extrabold text-3xl mb-4">01</div>
+                <h3 class="text-white font-bold mb-2">Discovery & Audit</h3>
+                <p class="text-gray-400 text-xs">Analyzing your brand goals, target market, and existing online footprint.</p>
+            </div>
+            <div class="bg-gray-900/40 border border-purple-900/40 p-6 rounded-2xl relative">
+                <div class="text-purple-500 font-extrabold text-3xl mb-4">02</div>
+                <h3 class="text-white font-bold mb-2">Strategy & Wireframing</h3>
+                <p class="text-gray-400 text-xs">Building custom UI/UX frameworks and structured marketing campaigns.</p>
+            </div>
+            <div class="bg-gray-900/40 border border-purple-900/40 p-6 rounded-2xl relative">
+                <div class="text-purple-500 font-extrabold text-3xl mb-4">03</div>
+                <h3 class="text-white font-bold mb-2">Execution & Build</h3>
+                <p class="text-gray-400 text-xs">Developing the website and deploying targeted ad campaigns with precision.</p>
+            </div>
+            <div class="bg-gray-900/40 border border-purple-900/40 p-6 rounded-2xl relative">
+                <div class="text-purple-500 font-extrabold text-3xl mb-4">04</div>
+                <h3 class="text-white font-bold mb-2">Scale & Optimize</h3>
+                <p class="text-gray-400 text-xs">Continuous performance tracking, A/B testing, and growth scaling.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. IMPACT & STATS -->
+    <section id="impact-section" class="py-16 px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="bg-gradient-to-r from-purple-950/40 via-gray-900/60 to-purple-950/40 border border-purple-900/40 rounded-3xl p-8 md:p-12 text-center">
+            <h2 class="text-3xl font-extrabold mb-8">Performance Metrics That Matter</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-black/30 border border-purple-900/30 p-6 rounded-2xl"><div class="text-3xl font-extrabold text-purple-400"><span class="counter" data-target="250">0</span>+</div><p class="text-xs">Projects Completed</p></div>
+                <div class="bg-black/30 border border-purple-900/30 p-6 rounded-2xl"><div class="text-3xl font-extrabold text-purple-400"><span class="counter" data-target="98">0</span>%</div><p class="text-xs">Client Satisfaction</p></div>
+                <div class="bg-black/30 border border-purple-900/30 p-6 rounded-2xl"><div class="text-3xl font-extrabold text-purple-400"><span class="counter" data-target="350">0</span>%</div><p class="text-xs">Average ROI</p></div>
+                <div class="bg-black/30 border border-purple-900/30 p-6 rounded-2xl"><div class="text-3xl font-extrabold text-purple-400"><span class="counter" data-target="15">0</span>+</div><p class="text-xs">Industry Awards</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. TESTIMONIALS SLIDER WITH STARS -->
+    <section class="py-20 max-w-full overflow-hidden">
+        <div class="text-center mb-12 px-6">
+            <span class="text-purple-400 text-xs font-semibold uppercase tracking-widest">Testimonials</span>
+            <h2 class="text-3xl font-extrabold mt-2">What Our Clients Say</h2>
+        </div>
+        
+        <div class="slider-container">
+            <div class="slider-track flex gap-8">
+                <!-- Card 1 -->
+                <div class="w-[350px] bg-gray-900/80 p-8 rounded-2xl border border-purple-500/35 flex-shrink-0">
+                    <div class="flex text-yellow-400 space-x-1 mb-4 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="italic text-gray-300 text-sm mb-6">"DesignMantix overhauled our company website and ran targeted ad campaigns. Our online leads have tripled within 60 days!"</p>
+                    <h4 class="font-bold text-white text-sm">David Sterling</h4>
+                    <span class="text-xs text-purple-400">CEO, NexaTech Solutions</span>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="w-[350px] bg-gray-900/80 p-8 rounded-2xl border border-purple-500/35 flex-shrink-0">
+                    <div class="flex text-yellow-400 space-x-1 mb-4 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="italic text-gray-300 text-sm mb-6">"Their design team captured our brand vision perfectly. Extremely professional, quick communication, and amazing results."</p>
+                    <h4 class="font-bold text-white text-sm">Elena Rostova</h4>
+                    <span class="text-xs text-purple-400">Founder, BrandOne Apparel</span>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="w-[350px] bg-gray-900/80 p-8 rounded-2xl border border-purple-500/35 flex-shrink-0">
+                    <div class="flex text-yellow-400 space-x-1 mb-4 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="italic text-gray-300 text-sm mb-6">"Best digital agency we've partnered with. Their SEO strategy pushed us to the first page of Google search results."</p>
+                    <h4 class="font-bold text-white text-sm">Marcus Brody</h4>
+                    <span class="text-xs text-purple-400">Director, Apex Global</span>
+                </div>
+
+                <!-- Card 4 (Duplicate for seamless infinite loop) -->
+                <div class="w-[350px] bg-gray-900/80 p-8 rounded-2xl border border-purple-500/35 flex-shrink-0">
+                    <div class="flex text-yellow-400 space-x-1 mb-4 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="italic text-gray-300 text-sm mb-6">"DesignMantix overhauled our company website and ran targeted ad campaigns. Our online leads have tripled within 60 days!"</p>
+                    <h4 class="font-bold text-white text-sm">David Sterling</h4>
+                    <span class="text-xs text-purple-400">CEO, NexaTech Solutions</span>
+                </div>
+
+                <!-- Card 5 (Duplicate) -->
+                <div class="w-[350px] bg-gray-900/80 p-8 rounded-2xl border border-purple-500/35 flex-shrink-0">
+                    <div class="flex text-yellow-400 space-x-1 mb-4 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="italic text-gray-300 text-sm mb-6">"Their design team captured our brand vision perfectly. Extremely professional, quick communication, and amazing results."</p>
+                    <h4 class="font-bold text-white text-sm">Elena Rostova</h4>
+                    <span class="text-xs text-purple-400">Founder, BrandOne Apparel</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FOOTER -->
+    <footer class="bg-[#05010d] text-gray-400 text-xs pt-16 pb-12 border-t border-purple-900/30">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
+            <div>
+                <a href="index.html" class="text-xl font-bold text-white mb-3 inline-block">Design<span class="text-purple-500">Mantix</span></a>
+                <p class="mb-4">Specialized custom web design, branding, and performance digital marketing solutions.</p>
+                <div class="flex space-x-4 mt-4">
+                    <a href="#" class="w-8 h-8 rounded-full border border-purple-500/50 hover:border-purple-500 flex items-center justify-center text-gray-300 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full border border-purple-500/50 hover:border-purple-500 flex items-center justify-center text-gray-300 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full border border-purple-500/50 hover:border-purple-500 flex items-center justify-center text-gray-300 hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-sm mb-4">Our Services</h4>
+                <ul class="space-y-2">
+                    <li><a href="design-marketing.html" class="hover:text-purple-400 transition">Design & Digital Marketing</a></li>
+                    <li><a href="ebook-publishing.html" class="hover:text-purple-400 transition">eBook & Publishing</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-sm mb-4">Get In Touch</h4>
+                <ul class="space-y-3">
+                    <li><i class="fas fa-envelope mr-2 text-purple-400"></i> support@designmantix.com</li>
+                    <li><i class="fas fa-phone mr-2 text-purple-400"></i> +1 (555) 123-4567</li>
+                    <li><i class="fas fa-map-marker-alt mr-2 text-purple-400"></i> New York, USA</li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 border-t border-purple-900/20 pt-6 text-center">
+            <p>&copy; 2026 DesignMantix. All rights reserved.</p>
+        </div>
     </footer>
 
+    <!-- COUNTER ANIMATION SCRIPT -->
+    <script>
+        const counters = document.querySelectorAll('.counter');
+        let animated = false;
+
+        function runCounters() {
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                let count = 0;
+                const increment = target / 40;
+
+                const updateCount = () => {
+                    count += increment;
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count);
+                        setTimeout(updateCount, 30);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCount();
+            });
+        }
+
+        window.addEventListener('scroll', () => {
+            const impactSection = document.getElementById('impact-section');
+            if (impactSection) {
+                const position = impactSection.getBoundingClientRect().top;
+                const screenHeight = window.innerHeight;
+                if (position < screenHeight && !animated) {
+                    runCounters();
+                    animated = true;
+                }
+            }
+        });
+    </script>
 </body>
 </html>

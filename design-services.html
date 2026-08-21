@@ -4,24 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Design Services - DesignMantix</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-[#0b021a] text-white font-sans">
+<body class="bg-[#0b021a] text-white font-sans selection:bg-purple-500 selection:text-white">
 
-    <!-- Navbar -->
-    <nav class="flex items-center justify-between px-8 py-5 max-w-7xl mx-auto">
-        <a href="index.html" class="text-2xl font-bold">Design<span class="text-purple-500">Mantix</span></a>
-        <div class="space-x-6 text-sm text-gray-300">
-            <a href="index.html" class="hover:text-purple-400">Home</a>
-            <a href="design-services.html" class="text-purple-400 font-semibold">Design Services</a>
-            <a href="publishing-services.html" class="hover:text-purple-400">Publishing Services</a>
-            <a href="portfolio.html" class="hover:text-purple-400">Portfolio</a>
-            <a href="contact.html" class="hover:text-purple-400">Contact</a>
-        </div>
-    </nav>
+    <!-- LOCKED HEADER / NAVBAR -->
+    <header class="bg-white text-gray-900 shadow-md sticky top-0 z-50">
+        <nav class="flex items-center justify-between px-6 lg:px-8 py-4 max-w-7xl mx-auto">
+            <a href="index.html" class="text-2xl font-extrabold tracking-tight text-gray-900">
+                Design<span class="text-purple-600">Mantix</span>
+            </a>
+            <div class="flex items-center space-x-6 text-sm font-semibold">
+                <a href="index.html" class="text-gray-700 hover:text-purple-600 transition">Home</a>
+                <a href="about-us.html" class="text-gray-700 hover:text-purple-600 transition">About Us</a>
+                <a href="design-services.html" class="text-purple-600 border-b-2 border-purple-600 pb-1">Design Services</a>
+                <a href="publishing-services.html" class="text-gray-700 hover:text-purple-600 transition">Publishing Services</a>
+                <a href="portfolio.html" class="text-gray-700 hover:text-purple-600 transition">Portfolio</a>
+                <a href="contact.html" class="bg-purple-600 hover:bg-purple-700 text-white text-xs px-4 py-2 rounded-full transition">Contact Us</a>
+            </div>
+        </nav>
+    </header>
 
-    <!-- Only Design Services -->
+    <!-- ONLY DESIGN SERVICES -->
     <section class="py-16 px-8 max-w-7xl mx-auto">
         <h1 class="text-4xl font-extrabold text-center mb-4">Our <span class="text-purple-500">Design & Marketing</span> Services</h1>
         <p class="text-gray-400 text-center max-w-2xl mx-auto mb-12">Elevate your brand with our premium UI/UX, graphic design, and marketing solutions.</p>
@@ -54,6 +61,59 @@
             </div>
         </div>
     </section>
+
+    <!-- LOCKED FOOTER -->
+    <footer class="bg-[#05010d] text-gray-400 text-xs pt-16 pb-12 border-t border-purple-900/30 mt-20">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-12 mb-12 text-center md:text-left">
+            <!-- Column 1: About Agency & Social Icons -->
+            <div class="flex flex-col items-center md:items-start">
+                <a href="index.html" class="text-xl font-bold text-white mb-3 inline-block">Design<span class="text-purple-500">Mantix</span></a>
+                <p class="text-gray-400 leading-relaxed mb-4 text-center md:text-left">
+                    Providing specialized solutions to build digital products, scale market presence, and publish best-selling manuscripts globally.
+                </p>
+                <!-- Social Media Icons -->
+                <div class="flex space-x-4 mt-2">
+                    <a href="https://facebook.com" target="_blank" class="w-9 h-9 bg-purple-950/60 border border-purple-500/30 rounded-full flex items-center justify-center text-purple-400 hover:bg-purple-600 hover:text-white transition duration-300">
+                        <i class="fab fa-facebook-f text-sm"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" class="w-9 h-9 bg-purple-950/60 border border-purple-500/30 rounded-full flex items-center justify-center text-purple-400 hover:bg-purple-600 hover:text-white transition duration-300">
+                        <i class="fab fa-instagram text-sm"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" class="w-9 h-9 bg-purple-950/60 border border-purple-500/30 rounded-full flex items-center justify-center text-purple-400 hover:bg-purple-600 hover:text-white transition duration-300">
+                        <i class="fab fa-linkedin-in text-sm"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Links / Services -->
+            <div class="flex flex-col items-center md:items-center">
+                <div class="w-full max-w-[200px] text-left">
+                    <h4 class="text-white font-bold text-sm mb-4">Our Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="design-services.html" class="hover:text-purple-400 transition">Web Design & Development</a></li>
+                        <li><a href="design-services.html" class="hover:text-purple-400 transition">Digital Marketing & SEO</a></li>
+                        <li><a href="ebook-publishing.html" class="hover:text-purple-400 transition">eBook Ghostwriting & Editing</a></li>
+                        <li><a href="ebook-publishing.html" class="hover:text-purple-400 transition">Book Cover & Formatting</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Column 3: Contact Info -->
+            <div class="flex flex-col items-center md:items-start">
+                <div class="w-full max-w-[220px] text-left">
+                    <h4 class="text-white font-bold text-sm mb-4">Get In Touch</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-2.5"><i class="fas fa-envelope text-purple-400 w-4"></i> support@designmantix.com</li>
+                        <li class="flex items-center gap-2.5"><i class="fas fa-phone text-purple-400 w-4"></i> +1 (555) 123-4567</li>
+                        <li class="flex items-center gap-2.5"><i class="fas fa-map-marker-alt text-purple-400 w-4"></i> New York, USA</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center border-t border-purple-900/20 pt-6">
+            <p class="text-gray-500">&copy; 2026 DesignMantix. All rights reserved.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
