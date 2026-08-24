@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DesignMantix - eBook & Publishing Solutions</title>
+    <title>eBook & Publishing Solutions - DesignMantix</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons CDN -->
@@ -27,7 +27,6 @@
 
         .animate-glow { animation: pulseGlow 5s ease-in-out infinite; }
 
-        /* Testimonials Smooth Slider Animation (No Lag) */
         @keyframes scrollSlider {
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
@@ -49,6 +48,26 @@
         .slider-track:hover {
             animation-play-state: paused;
         }
+
+        .dropdown {
+            position: relative;
+        }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #ffffff;
+            min-width: 230px;
+            box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
+            border-radius: 12px;
+            padding: 10px 0;
+            z-index: 100;
+            border: 1px solid rgba(147, 51, 234, 0.2);
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
     </style>
 </head>
 <body class="bg-[#0b021a] text-white font-sans selection:bg-purple-500 selection:text-white">
@@ -59,125 +78,286 @@
             <a href="index.html" class="text-2xl font-extrabold tracking-tight text-gray-900">
                 Design<span class="text-purple-600">Mantix</span>
             </a>
+
+            <!-- Desktop Menu -->
             <div id="main-nav" class="hidden md:flex items-center space-x-6 text-sm font-semibold">
                 <a href="index.html" class="text-gray-700 hover:text-purple-600 transition">Home</a>
                 <a href="about-us.html" class="text-gray-700 hover:text-purple-600 transition">About Us</a>
-                <a href="design-marketing.html" class="text-gray-700 hover:text-purple-600 transition">Design & Marketing</a>
-                <a href="ebook-publishing.html" class="text-purple-600 border-b-2 border-purple-600 pb-1">eBook & Publishing</a>
+                
+                <!-- Design & Marketing Dropdown -->
+                <div class="dropdown py-2">
+                    <a href="design-marketing.html" class="text-gray-700 hover:text-purple-600 transition inline-flex items-center gap-1">
+                        Design & Marketing <i class="fas fa-chevron-down text-xs text-purple-600"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="design-marketing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Website Designing</a>
+                        <a href="design-marketing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Graphic Designing</a>
+                        <a href="design-marketing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Logo Designing</a>
+                        <a href="design-marketing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Social Media Marketing</a>
+                        <a href="design-marketing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Mobile Application</a>
+                    </div>
+                </div>
+
+                <!-- eBook & Publishing Dropdown -->
+                <div class="dropdown py-2">
+                    <a href="ebook-publishing.html" class="text-purple-600 border-b-2 border-purple-600 pb-1 inline-flex items-center gap-1">
+                        eBook & Publishing <i class="fas fa-chevron-down text-xs text-purple-600"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="ebook-publishing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Manuscript Ghostwriting</a>
+                        <a href="ebook-publishing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Professional Editing</a>
+                        <a href="ebook-publishing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Custom Book Cover</a>
+                        <a href="ebook-publishing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Global Publishing</a>
+                        <a href="ebook-publishing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Book Marketing</a>
+                    </div>
+                </div>
+
                 <a href="portfolio.html" class="text-gray-700 hover:text-purple-600 transition">Portfolio</a>
                 <a href="contact.html" class="text-gray-700 hover:text-purple-600 transition">Contact</a>
             </div>
-            <a href="contact.html" class="bg-purple-600 hover:bg-purple-700 text-white text-xs font-semibold px-5 py-2.5 rounded-full transition shadow-md hover:scale-105 transform">
-                Let's Talk
-            </a>
+
+            <!-- Right CTA & Hamburger -->
+            <div class="flex items-center gap-4">
+                <a href="contact.html" class="bg-purple-600 hover:bg-purple-700 text-white text-xs font-semibold px-5 py-2.5 rounded-full transition shadow-md hover:scale-105 transform">
+                    Let's Talk
+                </a>
+                <button id="menu-btn" aria-label="Toggle Menu" class="md:hidden text-gray-800 text-2xl focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
         </nav>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200 px-6 py-4 space-y-3 text-sm font-semibold shadow-xl">
+            <a href="index.html" class="block text-gray-700">Home</a>
+            <a href="about-us.html" class="block text-gray-700">About Us</a>
+            
+            <div class="border-t border-gray-100 pt-2">
+                <span class="text-xs text-purple-600 uppercase tracking-wider block mb-1">Design & Marketing</span>
+                <a href="design-marketing.html" class="block pl-4 py-1 text-xs text-gray-600">Website Designing</a>
+                <a href="design-marketing.html" class="block pl-4 py-1 text-xs text-gray-600">Graphic Designing</a>
+                <a href="design-marketing.html" class="block pl-4 py-1 text-xs text-gray-600">Logo Designing</a>
+                <a href="design-marketing.html" class="block pl-4 py-1 text-xs text-gray-600">Social Media Marketing</a>
+                <a href="design-marketing.html" class="block pl-4 py-1 text-xs text-gray-600">Mobile Application</a>
+            </div>
+
+            <div class="border-t border-gray-100 pt-2">
+                <span class="text-xs text-purple-600 uppercase tracking-wider block mb-1">eBook & Publishing</span>
+                <a href="ebook-publishing.html" class="block pl-4 py-1 text-xs text-purple-600 font-bold">Manuscript Ghostwriting</a>
+                <a href="ebook-publishing.html" class="block pl-4 py-1 text-xs text-gray-600">Professional Editing</a>
+                <a href="ebook-publishing.html" class="block pl-4 py-1 text-xs text-gray-600">Custom Book Cover</a>
+                <a href="ebook-publishing.html" class="block pl-4 py-1 text-xs text-gray-600">Global Publishing</a>
+                <a href="ebook-publishing.html" class="block pl-4 py-1 text-xs text-gray-600">Book Marketing</a>
+            </div>
+
+            <div class="border-t border-gray-100 pt-2 space-y-2">
+                <a href="portfolio.html" class="block text-gray-700">Portfolio</a>
+                <a href="contact.html" class="block text-gray-700">Contact</a>
+            </div>
+        </div>
     </header>
 
-    <!-- 2. HERO SECTION (EBOOK FOCUSED) -->
-    <section class="relative py-20 md:py-28 px-6 lg:px-8 max-w-7xl mx-auto text-center overflow-hidden tech-bg-pattern rounded-3xl mt-4 border border-purple-900/40">
-        <div class="absolute top-0 left-0 w-full h-full bg-black/30 pointer-events-none"></div>
-        <div class="relative z-10 max-w-4xl mx-auto">
-            <div class="inline-flex items-center gap-2 bg-purple-900/60 border border-purple-500/50 text-purple-200 text-xs px-4 py-2 rounded-full mb-8">
-                <span class="flex h-2.5 w-2.5 rounded-full bg-purple-400 animate-ping"></span>
-                <span>Professional eBook & Publishing Solutions</span>
+    <!-- 2. ORIGINAL HERO SECTION -->
+    <section class="relative py-16 md:py-24 px-6 lg:px-8 max-w-7xl mx-auto tech-bg-pattern overflow-hidden">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <div class="inline-flex items-center gap-2 bg-purple-950/80 border border-purple-500/40 text-purple-300 text-xs px-4 py-2 rounded-full mb-6 shadow-md">
+                    <span class="w-2 h-2 rounded-full bg-purple-400"></span>
+                    <span class="font-semibold tracking-wide">#1 Rated Book Publishing & Marketing Agency</span>
+                </div>
+                <h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight tracking-tight text-white font-serif">
+                    Get Your Book Published & Distributed Worldwide
+                </h1>
+                <p class="text-gray-300 text-sm md:text-base leading-relaxed mb-8">
+                    We turn raw manuscripts into global bestsellers. From ghostwriting and professional editing to dynamic book covers and distribution on Amazon, Barnes & Noble, and Apple Books.
+                </p>
+                <div class="flex flex-wrap items-center gap-4">
+                    <a href="contact.html" class="bg-purple-600 hover:bg-purple-700 text-white font-bold text-xs md:text-sm px-7 py-3.5 rounded-xl transition shadow-lg shadow-purple-600/40 inline-flex items-center gap-2">
+                        Get Free Consultation <i class="fas fa-arrow-right text-xs"></i>
+                    </a>
+                    <a href="portfolio.html" class="bg-gray-900/80 hover:bg-gray-800 border border-purple-500/30 text-white font-bold text-xs md:text-sm px-7 py-3.5 rounded-xl transition shadow-lg">
+                        View Bestsellers
+                    </a>
+                </div>
             </div>
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
-                Turn Your Manuscript Into A Bestseller
-            </h1>
-            <p class="text-gray-300 max-w-2xl mx-auto mb-10 text-base md:text-lg leading-relaxed">
-                From expert ghostwriting, professional formatting, striking cover design to global publishing—we bring your author journey to life.
-            </p>
-            <div class="flex justify-center gap-4">
-                <a href="contact.html" class="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-8 py-3.5 rounded-xl transition shadow-lg shadow-purple-600/40">
-                    Publish Your Book Now <i class="fas fa-arrow-right ml-2"></i>
-                </a>
+
+            <div class="bg-gray-950/80 border border-purple-500/30 rounded-3xl p-6 md:p-8 shadow-2xl backdrop-blur-md">
+                <h3 class="text-xl font-bold mb-2 text-white">Speak With a Publishing Consultant</h3>
+                <p class="text-gray-400 text-xs mb-6">Fill out your details to get a custom roadmap for your book release.</p>
+                
+                <form action="contact.html" method="POST" class="space-y-4">
+                    <div>
+                        <input type="text" name="name" placeholder="Your Full Name" required class="w-full bg-[#0f0724] border border-purple-900/60 focus:border-purple-500 rounded-xl px-4 py-3 text-xs text-white placeholder-gray-500 focus:outline-none transition">
+                    </div>
+                    <div>
+                        <input type="email" name="email" placeholder="Email Address" required class="w-full bg-[#0f0724] border border-purple-900/60 focus:border-purple-500 rounded-xl px-4 py-3 text-xs text-white placeholder-gray-500 focus:outline-none transition">
+                    </div>
+                    <div>
+                        <input type="tel" name="phone" placeholder="Phone Number" required class="w-full bg-[#0f0724] border border-purple-900/60 focus:border-purple-500 rounded-xl px-4 py-3 text-xs text-white placeholder-gray-500 focus:outline-none transition">
+                    </div>
+                    <button type="submit" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold text-xs py-3.5 rounded-xl transition shadow-lg shadow-purple-600/30 tracking-wide mt-2">
+                        Claim Your Free Quote
+                    </button>
+                </form>
             </div>
         </div>
     </section>
 
-    <!-- 3. ABOUT US SECTION (EBOOK FOCUSED) -->
-    <section class="py-20 px-6 lg:px-8 max-w-7xl mx-auto">
-        <div class="bg-gray-900/50 border border-purple-900/40 rounded-3xl p-8 md:p-12 relative overflow-hidden">
-            <div class="grid lg:grid-cols-2 gap-10 items-center">
-                <div>
-                    <span class="text-purple-400 text-xs font-semibold tracking-wider uppercase mb-2 block">About Our Publishing Division</span>
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-6">
-                        Empowering Authors to Share Their Stories Worldwide
-                    </h2>
-                    <p class="text-gray-300 text-sm leading-relaxed mb-4">
-                        At DesignMantix Publishing, we understand the dedication it takes to write a book. Our expert team of editors, ghostwriters, cover designers, and publishing strategists handle every detail so your book achieves the professional polish it deserves.
-                    </p>
-                    <a href="contact.html" class="inline-flex items-center bg-purple-600 hover:bg-purple-700 text-white text-xs font-semibold px-6 py-3 rounded-xl transition mb-6">
-                        Consult With An Editor <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
+    <!-- 3. NEW SECTION ADDED EXACTLY FROM YOUR IMAGE (MATCHING DARK PURPLE THEME) -->
+    <section class="py-16 px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="bg-gray-900/90 border border-purple-500/30 rounded-[2.5rem] p-6 md:p-12 shadow-2xl backdrop-blur-md">
+            <div class="grid lg:grid-cols-2 gap-8 items-center">
+                
+                <!-- Left: Stacked Book Image Container (Rounded with matching dark aura) -->
+                <div class="bg-black/40 border border-purple-500/30 rounded-[2rem] p-4 flex items-center justify-center shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=80" alt="Publishing Support Book Stack" class="w-full h-[380px] md:h-[420px] object-cover rounded-[1.5rem] opacity-95">
                 </div>
-                <div class="relative">
-                    <div class="rounded-2xl overflow-hidden border border-purple-500/30 shadow-2xl">
-                        <img src="team.avif" alt="Authors and Publishing Team" class="w-full h-[380px] object-cover hover:scale-105 transition duration-500">
+
+                <!-- Right: Publishing Services Content Card (Matching your screenshot style) -->
+                <div class="bg-black/60 border border-purple-500/30 rounded-[2rem] p-8 md:p-10 shadow-xl relative overflow-hidden">
+                    
+                    <!-- Top Badge -->
+                    <div class="inline-flex items-center gap-2 bg-purple-950/80 border border-purple-500/40 text-purple-300 text-[11px] px-3.5 py-1.5 rounded-full mb-6 shadow-sm">
+                        <i class="fas fa-sparkles text-xs text-purple-400"></i>
+                        <span class="font-semibold tracking-wider uppercase">Publishing Services</span>
+                    </div>
+
+                    <h2 class="text-2xl md:text-3xl font-bold mb-6 font-serif tracking-tight text-white leading-tight">
+                        Publishing Support Services Designed Around Your Goals
+                    </h2>
+                    
+                    <div class="space-y-3 text-gray-300 text-xs md:text-sm leading-relaxed mb-8">
+                        <p class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-purple-400 rounded-full"></span> Transparent, scope-based publishing support</p>
+                        <p class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-purple-400 rounded-full"></span> No misleading claims or guaranteed outcomes</p>
+                        <p class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-purple-400 rounded-full"></span> Authors retain ownership and publishing control</p>
+                        <p class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-purple-400 rounded-full"></span> Clear documentation and defined deliverables</p>
+                        <p class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-purple-400 rounded-full"></span> Professional and compliance-focused support</p>
+                    </div>
+
+                    <div class="flex flex-wrap items-center gap-4">
+                        <a href="contact.html" class="bg-transparent hover:bg-purple-900/30 border border-purple-400/60 text-white font-bold text-xs px-7 py-3 rounded-full transition shadow-md">
+                            Chat with Us
+                        </a>
+                        <a href="contact.html" class="bg-transparent hover:bg-purple-900/30 border border-purple-400/60 text-white font-bold text-xs px-7 py-3 rounded-full transition shadow-md">
+                            Request Consultation
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. HOW OUR PUBLISHING SUPPORT WORKS SECTION -->
+    <section class="py-20 px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-8 items-start">
+            <div class="bg-gray-900/70 border border-purple-500/30 rounded-3xl p-8 md:p-10 shadow-2xl backdrop-blur-md">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-white font-serif tracking-tight">
+                    How Our Publishing Support Works
+                </h2>
+                <p class="text-gray-300 text-xs md:text-sm leading-relaxed mb-8">
+                    Our process is designed to give authors clarity, organization, and practical assistance throughout the publishing preparation journey.
+                </p>
+                
+                <div class="space-y-8">
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-8 rounded-lg bg-purple-600 text-white font-bold text-xs flex items-center justify-center shadow-md">1</span>
+                            <h4 class="text-base font-bold text-white">Project Evaluation</h4>
+                        </div>
+                        <p class="text-gray-400 text-xs leading-relaxed pl-11">
+                            We review your manuscript status, publishing objectives, book format, target audience, and current stage to outline an effective path forward.
+                        </p>
+                    </div>
+
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-8 rounded-lg bg-purple-600 text-white font-bold text-xs flex items-center justify-center shadow-md">2</span>
+                            <h4 class="text-base font-bold text-white">Service Planning</h4>
+                        </div>
+                        <p class="text-gray-400 text-xs leading-relaxed pl-11">
+                            Before work begins, we prepare a written scope outlining the selected deliverables, project timeline, revision terms, responsibilities, and expectations.
+                        </p>
+                    </div>
+
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-8 rounded-lg bg-purple-600 text-white font-bold text-xs flex items-center justify-center shadow-md">3</span>
+                            <h4 class="text-base font-bold text-white">Publishing Preparation</h4>
+                        </div>
+                        <p class="text-gray-400 text-xs leading-relaxed pl-11">
+                            We help organize files, metadata, book information, and supporting materials according to the selected publishing objectives. We do not claim affiliation with third-party platforms.
+                        </p>
+                    </div>
+
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-8 rounded-lg bg-purple-600 text-white font-bold text-xs flex items-center justify-center shadow-md">4</span>
+                            <h4 class="text-base font-bold text-white">Ongoing Assistance</h4>
+                        </div>
+                        <p class="text-gray-400 text-xs leading-relaxed pl-11">
+                            Where included in the agreed scope, support may continue through updates, revisions, file adjustments, and additional publishing-preparation requirements.
+                        </p>
                     </div>
                 </div>
             </div>
+
+            <div class="space-y-6">
+                <div class="bg-gray-900/70 border border-purple-500/30 rounded-3xl p-6 md:p-8 shadow-2xl backdrop-blur-md flex items-center justify-center">
+                    <div class="w-full h-[580px] rounded-2xl overflow-hidden border border-purple-900/40 bg-gray-800/80 flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1495640388908-05fa85288e61?auto=format&fit=crop&w=800&q=80" alt="Stack of Books Aesthetic" class="w-full h-full object-cover opacity-90">
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap items-center justify-center gap-4">
+                    <a href="contact.html" class="bg-transparent hover:bg-purple-900/30 border border-purple-400/60 text-white font-bold text-xs px-8 py-3.5 rounded-full transition shadow-md">
+                        Chat with Us
+                    </a>
+                    <a href="contact.html" class="bg-transparent hover:bg-purple-900/30 border border-purple-400/60 text-white font-bold text-xs px-8 py-3.5 rounded-full transition shadow-md">
+                        Request Consultation
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- 4. WHAT WE DO (SERVICES) -->
+    <!-- 5. PUBLISHING SERVICES GRID -->
     <section class="py-20 px-6 lg:px-8 max-w-7xl mx-auto">
         <div class="text-center max-w-2xl mx-auto mb-16">
-            <span class="text-purple-400 text-xs font-semibold uppercase tracking-widest">What We Do</span>
-            <h2 class="text-3xl font-extrabold mt-2 mb-4">Comprehensive Publishing Services</h2>
-            <p class="text-gray-400 text-sm">Everything you need to take your book from draft to global bestseller stores.</p>
+            <span class="text-purple-400 text-xs font-semibold uppercase tracking-widest">Our Expertise</span>
+            <h2 class="text-3xl font-extrabold mt-2 mb-4">Complete Publishing Solutions</h2>
+            <p class="text-gray-400 text-sm">Everything you need to bring your book from a raw idea to a published masterpiece.</p>
         </div>
         <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-gray-900/60 border border-purple-900/50 p-8 rounded-2xl">
-                <div class="w-12 h-12 bg-purple-600/20 text-purple-400 rounded-xl flex items-center justify-center text-xl mb-6">
-                    <i class="fas fa-feather-alt"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-3">Ghostwriting & Editing</h3>
-                <p class="text-gray-400 text-xs leading-relaxed">Professional writers to capture your voice and meticulous editors to perfect your prose.</p>
+            <div class="bg-gray-900/60 border border-purple-900/50 p-8 rounded-2xl hover:border-purple-500/50 transition">
+                <div class="w-12 h-12 bg-purple-600/20 text-purple-400 rounded-xl flex items-center justify-center text-xl mb-6"><i class="fas fa-feather-alt"></i></div>
+                <h3 class="text-xl font-bold mb-3">Manuscript Ghostwriting</h3>
+                <p class="text-gray-400 text-xs leading-relaxed">Have an idea but no time to write? Our professional authors turn your thoughts into a compelling book.</p>
             </div>
-            <div class="bg-gray-900/60 border border-purple-900/50 p-8 rounded-2xl">
-                <div class="w-12 h-12 bg-purple-600/20 text-purple-400 rounded-xl flex items-center justify-center text-xl mb-6">
-                    <i class="fas fa-paint-brush"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-3">Cover & Interior Design</h3>
-                <p class="text-gray-400 text-xs leading-relaxed">Eye-catching eBook & print covers paired with seamless interior formatting.</p>
+            <div class="bg-gray-900/60 border border-purple-900/50 p-8 rounded-2xl hover:border-purple-500/50 transition">
+                <div class="w-12 h-12 bg-purple-600/20 text-purple-400 rounded-xl flex items-center justify-center text-xl mb-6"><i class="fas fa-edit"></i></div>
+                <h3 class="text-xl font-bold mb-3">Professional Editing</h3>
+                <p class="text-gray-400 text-xs leading-relaxed">Ensure your book is flawless with line editing, proofreading, developmental editing, and formatting.</p>
             </div>
-            <div class="bg-gray-900/60 border border-purple-900/50 p-8 rounded-2xl">
-                <div class="w-12 h-12 bg-purple-600/20 text-purple-400 rounded-xl flex items-center justify-center text-xl mb-6">
-                    <i class="fas fa-globe"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-3">Global Publishing & Distribution</h3>
-                <p class="text-gray-400 text-xs leading-relaxed">Get your title published on Amazon, Barnes & Noble, Apple Books, and worldwide retailers.</p>
+            <div class="bg-gray-900/60 border border-purple-900/50 p-8 rounded-2xl hover:border-purple-500/50 transition">
+                <div class="w-12 h-12 bg-purple-600/20 text-purple-400 rounded-xl flex items-center justify-center text-xl mb-6"><i class="fas fa-paint-brush"></i></div>
+                <h3 class="text-xl font-bold mb-3">Custom Book Cover</h3>
+                <p class="text-gray-400 text-xs leading-relaxed">Grab readers' attention instantly with eye-catching, professionally designed eBook and paperback covers.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- 5. OUR PROCESS -->
-    <section class="py-20 px-6 lg:px-8 max-w-7xl mx-auto bg-purple-950/20 border-y border-purple-900/30">
-        <div class="text-center max-w-2xl mx-auto mb-16">
-            <span class="text-purple-400 text-xs font-semibold uppercase tracking-widest">Our Process</span>
-            <h2 class="text-3xl font-extrabold mt-2 mb-4">How We Publish Your Book</h2>
-        </div>
-        <div class="grid md:grid-cols-4 gap-6">
-            <div class="bg-gray-900/40 border border-purple-900/40 p-6 rounded-2xl relative">
-                <div class="text-purple-500 font-extrabold text-3xl mb-4">01</div>
-                <h3 class="text-white font-bold mb-2">Manuscript Review</h3>
-                <p class="text-gray-400 text-xs">We analyze your draft and map out a tailored publishing roadmap.</p>
+            <div class="bg-gray-900/60 border border-purple-900/50 p-8 rounded-2xl hover:border-purple-500/50 transition">
+                <div class="w-12 h-12 bg-purple-600/20 text-purple-400 rounded-xl flex items-center justify-center text-xl mb-6"><i class="fas fa-globe"></i></div>
+                <h3 class="text-xl font-bold mb-3">Global Distribution</h3>
+                <p class="text-gray-400 text-xs leading-relaxed">Publish your book globally on Amazon Kindle, Barnes & Noble, Apple Books, Google Play, and IngramSpark.</p>
             </div>
-            <div class="bg-gray-900/40 border border-purple-900/40 p-6 rounded-2xl relative">
-                <div class="text-purple-500 font-extrabold text-3xl mb-4">02</div>
-                <h3 class="text-white font-bold mb-2">Editing & Cover Art</h3>
-                <p class="text-gray-400 text-xs">Refining your words and creating a stunning, high-impact cover design.</p>
+            <div class="bg-gray-900/60 border border-purple-900/50 p-8 rounded-2xl hover:border-purple-500/50 transition">
+                <div class="w-12 h-12 bg-purple-600/20 text-purple-400 rounded-xl flex items-center justify-center text-xl mb-6"><i class="fas fa-bullhorn"></i></div>
+                <h3 class="text-xl font-bold mb-3">Book Marketing & PR</h3>
+                <p class="text-gray-400 text-xs leading-relaxed">Drive massive readership with targeted social media campaigns, author websites, and promotional press releases.</p>
             </div>
-            <div class="bg-gray-900/40 border border-purple-900/40 p-6 rounded-2xl relative">
-                <div class="text-purple-500 font-extrabold text-3xl mb-4">03</div>
-                <h3 class="text-white font-bold mb-2">Formatting & Proofing</h3>
-                <p class="text-gray-400 text-xs">Preparing digital files for flawless reading across all e-readers and print.</p>
-            </div>
-            <div class="bg-gray-900/40 border border-purple-900/40 p-6 rounded-2xl relative">
-                <div class="text-purple-500 font-extrabold text-3xl mb-4">04</div>
-                <h3 class="text-white font-bold mb-2">Global Launch</h3>
-                <p class="text-gray-400 text-xs">Releasing your book to worldwide platforms and activating marketing campaigns.</p>
+            <div class="bg-gray-900/60 border border-purple-900/50 p-8 rounded-2xl hover:border-purple-500/50 transition">
+                <div class="w-12 h-12 bg-purple-600/20 text-purple-400 rounded-xl flex items-center justify-center text-xl mb-6"><i class="fas fa-award"></i></div>
+                <h3 class="text-xl font-bold mb-3">Author Branding</h3>
+                <p class="text-gray-400 text-xs leading-relaxed">Establish yourself as an authority in your niche with a powerful personal brand and media kit.</p>
             </div>
         </div>
     </section>
@@ -185,17 +365,17 @@
     <!-- 6. IMPACT & STATS -->
     <section id="impact-section" class="py-16 px-6 lg:px-8 max-w-7xl mx-auto">
         <div class="bg-gradient-to-r from-purple-950/40 via-gray-900/60 to-purple-950/40 border border-purple-900/40 rounded-3xl p-8 md:p-12 text-center">
-            <h2 class="text-3xl font-extrabold mb-8">Publishing Milestones That Speak Volumes</h2>
+            <h2 class="text-3xl font-extrabold mb-8">Trusted By Bestselling Authors Worldwide</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="bg-black/30 border border-purple-900/30 p-6 rounded-2xl"><div class="text-3xl font-extrabold text-purple-400"><span class="counter" data-target="150">0</span>+</div><p class="text-xs">Books Published</p></div>
-                <div class="bg-black/30 border border-purple-900/30 p-6 rounded-2xl"><div class="text-3xl font-extrabold text-purple-400"><span class="counter" data-target="99">0</span>%</div><p class="text-xs">Author Satisfaction</p></div>
+                <div class="bg-black/30 border border-purple-900/30 p-6 rounded-2xl"><div class="text-3xl font-extrabold text-purple-400"><span class="counter" data-target="400">0</span>+</div><p class="text-xs">Books Published</p></div>
+                <div class="bg-black/30 border border-purple-900/30 p-6 rounded-2xl"><div class="text-3xl font-extrabold text-purple-400"><span class="counter" data-target="98">0</span>%</div><p class="text-xs">Author Satisfaction</p></div>
                 <div class="bg-black/30 border border-purple-900/30 p-6 rounded-2xl"><div class="text-3xl font-extrabold text-purple-400"><span class="counter" data-target="50">0</span>+</div><p class="text-xs">Bestsellers Created</p></div>
                 <div class="bg-black/30 border border-purple-900/30 p-6 rounded-2xl"><div class="text-3xl font-extrabold text-purple-400"><span class="counter" data-target="10">0</span>+</div><p class="text-xs">Years Experience</p></div>
             </div>
         </div>
     </section>
 
-    <!-- 7. TESTIMONIALS SLIDER WITH STARS -->
+    <!-- 7. TESTIMONIALS SLIDER -->
     <section class="py-20 max-w-full overflow-hidden">
         <div class="text-center mb-12 px-6">
             <span class="text-purple-400 text-xs font-semibold uppercase tracking-widest">Testimonials</span>
@@ -204,54 +384,25 @@
         
         <div class="slider-container">
             <div class="slider-track flex gap-8">
-                <!-- Card 1 -->
                 <div class="w-[350px] bg-gray-900/80 p-8 rounded-2xl border border-purple-500/35 flex-shrink-0">
-                    <div class="flex text-yellow-400 space-x-1 mb-4 text-sm">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
+                    <div class="flex text-yellow-400 space-x-1 mb-4 text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                     <p class="italic text-gray-300 text-sm mb-6">"DesignMantix transformed my rough draft into a stunning published book on Amazon. Their ghostwriting and cover team are exceptional!"</p>
                     <h4 class="font-bold text-white text-sm">Jonathan Reed</h4>
                     <span class="text-xs text-purple-400">Author of 'The Cyber Paradigm'</span>
                 </div>
 
-                <!-- Card 2 -->
                 <div class="w-[350px] bg-gray-900/80 p-8 rounded-2xl border border-purple-500/35 flex-shrink-0">
-                    <div class="flex text-yellow-400 space-x-1 mb-4 text-sm">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="italic text-gray-300 text-sm mb-6">"The formatting and publishing process was so smooth. They handled everything from start to finish with absolute professionalism."</p>
+                    <div class="flex text-yellow-400 space-x-1 mb-4 text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="italic text-gray-300 text-sm mb-6">"The editing and global distribution service was seamless. My book reached international readers within weeks of launch."</p>
                     <h4 class="font-bold text-white text-sm">Sarah Jenkins</h4>
-                    <span class="text-xs text-purple-400">Fiction Author</span>
+                    <span class="text-xs text-purple-400">Author of 'Beyond the Horizon'</span>
                 </div>
 
-                <!-- Card 3 -->
                 <div class="w-[350px] bg-gray-900/80 p-8 rounded-2xl border border-purple-500/35 flex-shrink-0">
-                    <div class="flex text-yellow-400 space-x-1 mb-4 text-sm">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="italic text-gray-300 text-sm mb-6">"I hit the bestseller list within weeks of launch! Highly recommend their global distribution and marketing package."</p>
-                    <h4 class="font-bold text-white text-sm">Dr. Marcus Vance</h4>
-                    <span class="text-xs text-purple-400">Non-Fiction Author</span>
-                </div>
-
-                <!-- Card 4 (Duplicate for seamless infinite loop) -->
-                <div class="w-[350px] bg-gray-900/80 p-8 rounded-2xl border border-purple-500/35 flex-shrink-0">
-                    <div class="flex text-yellow-400 space-x-1 mb-4 text-sm">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="italic text-gray-300 text-sm mb-6">"DesignMantix transformed my rough draft into a stunning published book on Amazon. Their ghostwriting and cover team are exceptional!"</p>
-                    <h4 class="font-bold text-white text-sm">Jonathan Reed</h4>
-                    <span class="text-xs text-purple-400">Author of 'The Cyber Paradigm'</span>
-                </div>
-
-                <!-- Card 5 (Duplicate) -->
-                <div class="w-[350px] bg-gray-900/80 p-8 rounded-2xl border border-purple-500/35 flex-shrink-0">
-                    <div class="flex text-yellow-400 space-x-1 mb-4 text-sm">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="italic text-gray-300 text-sm mb-6">"The formatting and publishing process was so smooth. They handled everything from start to finish with absolute professionalism."</p>
-                    <h4 class="font-bold text-white text-sm">Sarah Jenkins</h4>
-                    <span class="text-xs text-purple-400">Fiction Author</span>
+                    <div class="flex text-yellow-400 space-x-1 mb-4 text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="italic text-gray-300 text-sm mb-6">"Professional team with great attention to detail. The cover design exceeded my expectations completely."</p>
+                    <h4 class="font-bold text-white text-sm">Michael Vance</h4>
+                    <span class="text-xs text-purple-400">Author of 'The Last Empire'</span>
                 </div>
             </div>
         </div>
@@ -262,11 +413,11 @@
         <div class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
             <div>
                 <a href="index.html" class="text-xl font-bold text-white mb-3 inline-block">Design<span class="text-purple-500">Mantix</span></a>
-                <p class="mb-4">Specialized eBook ghostwriting, editing, and global publishing solutions for authors worldwide.</p>
+                <p class="mb-4">Specialized custom web design, marketing, and global eBook publishing solutions.</p>
                 <div class="flex space-x-4 mt-4">
-                    <a href="#" class="w-8 h-8 rounded-full border border-purple-500/50 hover:border-purple-500 flex items-center justify-center text-gray-300 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="w-8 h-8 rounded-full border border-purple-500/50 hover:border-purple-500 flex items-center justify-center text-gray-300 hover:text-white transition"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="w-8 h-8 rounded-full border border-purple-500/50 hover:border-purple-500 flex items-center justify-center text-gray-300 hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full border border-purple-500/50 flex items-center justify-center text-gray-300 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full border border-purple-500/50 flex items-center justify-center text-gray-300 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full border border-purple-500/50 flex items-center justify-center text-gray-300 hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
             <div>
@@ -290,8 +441,15 @@
         </div>
     </footer>
 
-    <!-- COUNTER ANIMATION SCRIPT -->
+    <!-- SCRIPTS -->
     <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
         const counters = document.querySelectorAll('.counter');
         let animated = false;
 
