@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Portfolio - DesignMantix</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .tech-bg-pattern {
+            background-color: #0b021a;
+            background-image: 
+                radial-gradient(at 50% 0%, rgba(147, 51, 234, 0.3) 0px, transparent 75%),
+                radial-gradient(at 100% 100%, rgba(79, 70, 229, 0.25) 0px, transparent 50%),
+                linear-gradient(rgba(168, 85, 247, 0.12) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(168, 85, 247, 0.12) 1px, transparent 1px);
+            background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #ffffff;
+            min-width: 230px;
+            box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
+            border-radius: 12px;
+            padding: 10px 0;
+            z-index: 100;
+            border: 1px solid rgba(147, 51, 234, 0.2);
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        
+        .filter-btn.active {
+            background-color: #9333ea;
+            color: white;
+            border-color: #9333ea;
+        }
+    </style>
+</head>
+<body class="bg-[#0b021a] text-white font-sans selection:bg-purple-500 selection:text-white">
+
+    <!-- 1. NAVBAR -->
+    <header class="bg-white text-gray-900 shadow-md sticky top-0 z-50">
+        <nav class="flex items-center justify-between px-6 lg:px-8 py-4 max-w-7xl mx-auto">
+            <a href="index.html" class="text-2xl font-extrabold tracking-tight text-gray-900">
+                Design<span class="text-purple-600">Mantix</span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div id="main-nav" class="hidden md:flex items-center space-x-6 text-sm font-semibold">
+                <a href="index.html" class="text-gray-700 hover:text-purple-600 transition">Home</a>
+                <a href="about-us.html" class="text-gray-700 hover:text-purple-600 transition">About Us</a>
+                
+                <!-- Design & Marketing Dropdown -->
+                <div class="dropdown py-2">
+                    <a href="design-marketing.html" class="text-gray-700 hover:text-purple-600 transition inline-flex items-center gap-1">
+                        Design & Marketing <i class="fas fa-chevron-down text-xs text-purple-600"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="design-marketing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Website Designing</a>
+                        <a href="design-marketing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Graphic Designing</a>
+                        <a href="design-marketing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Logo Designing</a>
+                        <a href="design-marketing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Social Media Marketing</a>
+                        <a href="design-marketing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Mobile Application</a>
+                    </div>
+                </div>
+
+                <!-- eBook & Publishing Dropdown -->
+                <div class="dropdown py-2">
+                    <a href="ebook-publishing.html" class="text-gray-700 hover:text-purple-600 transition inline-flex items-center gap-1">
+                        eBook & Publishing <i class="fas fa-chevron-down text-xs text-purple-600"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="ebook-publishing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Manuscript Ghostwriting</a>
+                        <a href="ebook-publishing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Professional Editing</a>
+                        <a href="ebook-publishing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Custom Book Cover</a>
+                        <a href="ebook-publishing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Global Publishing</a>
+                        <a href="ebook-publishing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Book Marketing</a>
+                    </div>
+                </div>
+
+                <a href="portfolio-design.html" class="text-purple-600 border-b-2 border-purple-600 pb-1 transition">Portfolio</a>
+                <a href="contact.html" class="text-gray-700 hover:text-purple-600 transition">Contact</a>
+            </div>
+
+            <!-- Right CTA & Hamburger -->
+            <div class="flex items-center gap-4">
+                <a href="contact.html" class="bg-purple-600 hover:bg-purple-700 text-white text-xs font-semibold px-5 py-2.5 rounded-full transition shadow-md hover:scale-105 transform">
+                    Let's Talk
+                </a>
+                <button id="menu-btn" aria-label="Toggle Menu" class="md:hidden text-gray-800 text-2xl focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200 px-6 py-4 space-y-3 text-sm font-semibold shadow-xl">
+            <a href="index.html" class="block text-gray-700">Home</a>
+            <a href="about-us.html" class="block text-gray-700">About Us</a>
+            <div class="border-t border-gray-100 pt-2">
+                <span class="text-xs text-purple-600 uppercase tracking-wider block mb-1">Design & Marketing</span>
+                <a href="design-marketing.html" class="block pl-4 py-1 text-xs text-gray-600">Website Designing</a>
+                <a href="design-marketing.html" class="block pl-4 py-1 text-xs text-gray-600">Graphic Designing</a>
+                <a href="design-marketing.html" class="block pl-4 py-1 text-xs text-gray-600">Logo Designing</a>
+            </div>
+            <div class="border-t border-gray-100 pt-2">
+                <span class="text-xs text-purple-600 uppercase tracking-wider block mb-1">eBook & Publishing</span>
+                <a href="ebook-publishing.html" class="block pl-4 py-1 text-xs text-gray-600">Manuscript Ghostwriting</a>
+                <a href="ebook-publishing.html" class="block pl-4 py-1 text-xs text-gray-600">Custom Book Cover</a>
+            </div>
+            <div class="border-t border-gray-100 pt-2 space-y-2">
+                <a href="portfolio-design.html" class="block text-purple-600 font-bold">Portfolio</a>
+                <a href="contact.html" class="block text-gray-700">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. HERO SECTION -->
+    <section class="relative py-16 md:py-24 px-6 lg:px-8 max-w-7xl mx-auto text-center tech-bg-pattern overflow-hidden">
+        <div class="inline-flex items-center gap-2 bg-purple-950/80 border border-purple-500/40 text-purple-300 text-xs px-4 py-2 rounded-full mb-6 shadow-md">
+            <span class="w-2 h-2 rounded-full bg-purple-400"></span>
+            <span class="font-semibold tracking-wide">Creative Design Showcase</span>
+        </div>
+        <h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight tracking-tight text-white font-serif">
+            Explore Our Graphic & Brand Design Portfolio
+        </h1>
+        <p class="text-gray-300 text-sm md:text-base max-w-3xl mx-auto leading-relaxed mb-8">
+            Browse through our extensive collection of custom logo designs, branding materials, marketing collateral, and digital interfaces crafted to elevate modern brands.
+        </p>
+    </section>
+
+    <!-- 3. DESIGN PORTFOLIO GRID & CATEGORY FILTER -->
+    <section class="py-16 px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="bg-gray-900/80 border border-purple-500/30 rounded-[2.5rem] p-6 md:p-12 shadow-2xl backdrop-blur-md">
+            
+            <!-- Category Tabs / Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12">
+                <button onclick="filterPortfolio('all')" class="filter-btn active px-5 py-2.5 rounded-full text-xs font-semibold border border-purple-500/30 bg-black/40 text-gray-300 transition hover:bg-purple-600 hover:text-white">All Designs</button>
+                <button onclick="filterPortfolio('logo')" class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold border border-purple-500/30 bg-black/40 text-gray-300 transition hover:bg-purple-600 hover:text-white">Logo Design</button>
+                <button onclick="filterPortfolio('branding')" class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold border border-purple-500/30 bg-black/40 text-gray-300 transition hover:bg-purple-600 hover:text-white">Brand Identity</button>
+                <button onclick="filterPortfolio('marketing')" class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold border border-purple-500/30 bg-black/40 text-gray-300 transition hover:bg-purple-600 hover:text-white">Marketing Collateral</button>
+                <button onclick="filterPortfolio('web')" class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold border border-purple-500/30 bg-black/40 text-gray-300 transition hover:bg-purple-600 hover:text-white">Website UI/UX</button>
+            </div>
+
+            <!-- Portfolio Grid Items (Expanded Layout) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Item 1: Logo -->
+                <div class="portfolio-card logo bg-black/50 border border-purple-900/50 rounded-2xl overflow-hidden shadow-xl group hover:border-purple-500 transition duration-300">
+                    <div class="h-60 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1626785774625-b3d9f9db558d?auto=format&fit=crop&w=700&q=80" alt="Logo Design" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-4 left-4 bg-purple-900/80 border border-purple-400/40 text-purple-200 text-[10px] uppercase font-bold px-3 py-1 rounded-full">Logo Design</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-white mb-2">Vortex Tech Logo Concept</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed mb-4">A futuristic, clean vector logo designed for a next-gen software tech company.</p>
+                        <a href="contact.html" class="inline-flex items-center gap-1 text-xs text-purple-400 font-semibold hover:text-purple-300">Inquire Similar Design <i class="fas fa-arrow-right text-[10px]"></i></a>
+                    </div>
+                </div>
+
+                <!-- Item 2: Branding -->
+                <div class="portfolio-card branding bg-black/50 border border-purple-900/50 rounded-2xl overflow-hidden shadow-xl group hover:border-purple-500 transition duration-300">
+                    <div class="h-60 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1541462608143-67571c6738dd?auto=format&fit=crop&w=700&q=80" alt="Brand Identity" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-4 left-4 bg-purple-900/80 border border-purple-400/40 text-purple-200 text-[10px] uppercase font-bold px-3 py-1 rounded-full">Brand Identity</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-white mb-2">Lumina Corporate Stationery</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed mb-4">Complete brand kit including business cards, letterheads, envelopes, and brand guidelines.</p>
+                        <a href="contact.html" class="inline-flex items-center gap-1 text-xs text-purple-400 font-semibold hover:text-purple-300">Inquire Similar Design <i class="fas fa-arrow-right text-[10px]"></i></a>
+                    </div>
+                </div>
+
+                <!-- Item 3: Marketing -->
+                <div class="portfolio-card marketing bg-black/50 border border-purple-900/50 rounded-2xl overflow-hidden shadow-xl group hover:border-purple-500 transition duration-300">
+                    <div class="h-60 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=700&q=80" alt="Marketing Collateral" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-4 left-4 bg-purple-900/80 border border-purple-400/40 text-purple-200 text-[10px] uppercase font-bold px-3 py-1 rounded-full">Marketing Collateral</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-white mb-2">Elevate Annual Event Brochure</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed mb-4">Tri-fold product catalog and corporate event flyer design layout with striking visual hierarchy.</p>
+                        <a href="contact.html" class="inline-flex items-center gap-1 text-xs text-purple-400 font-semibold hover:text-purple-300">Inquire Similar Design <i class="fas fa-arrow-right text-[10px]"></i></a>
+                    </div>
+                </div>
+
+                <!-- Item 4: Web UI/UX -->
+                <div class="portfolio-card web bg-black/50 border border-purple-900/50 rounded-2xl overflow-hidden shadow-xl group hover:border-purple-500 transition duration-300">
+                    <div class="h-60 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=700&q=80" alt="Website UI/UX" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-4 left-4 bg-purple-900/80 border border-purple-400/40 text-purple-200 text-[10px] uppercase font-bold px-3 py-1 rounded-full">Website UI/UX</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-white mb-2">Nexus SaaS Dashboard UI</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed mb-4">Modern dark-mode analytics dashboard interface designed with user experience optimization.</p>
+                        <a href="contact.html" class="inline-flex items-center gap-1 text-xs text-purple-400 font-semibold hover:text-purple-300">Inquire Similar Design <i class="fas fa-arrow-right text-[10px]"></i></a>
+                    </div>
+                </div>
+
+                <!-- Item 5: Logo -->
+                <div class="portfolio-card logo bg-black/50 border border-purple-900/50 rounded-2xl overflow-hidden shadow-xl group hover:border-purple-500 transition duration-300">
+                    <div class="h-60 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?auto=format&fit=crop&w=700&q=80" alt="Logo Design" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-4 left-4 bg-purple-900/80 border border-purple-400/40 text-purple-200 text-[10px] uppercase font-bold px-3 py-1 rounded-full">Logo Design</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-white mb-2">Apex Fitness Emblem</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed mb-4">Strong, masculine fitness center logomark built for merchandise and apparel branding.</p>
+                        <a href="contact.html" class="inline-flex items-center gap-1 text-xs text-purple-400 font-semibold hover:text-purple-300">Inquire Similar Design <i class="fas fa-arrow-right text-[10px]"></i></a>
+                    </div>
+                </div>
+
+                <!-- Item 6: Marketing -->
+                <div class="portfolio-card marketing bg-black/50 border border-purple-900/50 rounded-2xl overflow-hidden shadow-xl group hover:border-purple-500 transition duration-300">
+                    <div class="h-60 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1611162617474-5baf1e8bb933?auto=format&fit=crop&w=700&q=80" alt="Social Media Creative" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-4 left-4 bg-purple-900/80 border border-purple-400/40 text-purple-200 text-[10px] uppercase font-bold px-3 py-1 rounded-full">Marketing Collateral</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-white mb-2">Social Media Ad Campaign Post</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed mb-4">High-conversion promotional carousel graphics created for high-growth e-commerce brands.</p>
+                        <a href="contact.html" class="inline-flex items-center gap-1 text-xs text-purple-400 font-semibold hover:text-purple-300">Inquire Similar Design <i class="fas fa-arrow-right text-[10px]"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. LOCKED FOOTER -->
+    <footer class="bg-[#05010d] text-gray-400 text-xs pt-16 pb-12 border-t border-purple-900/30">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
+            <div>
+                <a href="index.html" class="text-xl font-bold text-white mb-3 inline-block">Design<span class="text-purple-500">Mantix</span></a>
+                <p class="mb-4">Specialized custom web design, marketing, and global eBook publishing solutions.</p>
+                <div class="flex space-x-4 mt-4">
+                    <a href="#" class="w-8 h-8 rounded-full border border-purple-500/50 flex items-center justify-center text-gray-300 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full border border-purple-500/50 flex items-center justify-center text-gray-300 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full border border-purple-500/50 flex items-center justify-center text-gray-300 hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-sm mb-4">Our Services</h4>
+                <ul class="space-y-2">
+                    <li><a href="design-marketing.html" class="hover:text-purple-400 transition">Design & Digital Marketing</a></li>
+                    <li><a href="ebook-publishing.html" class="hover:text-purple-400 transition">eBook & Publishing</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-sm mb-4">Get In Touch</h4>
+                <ul class="space-y-3">
+                    <li><i class="fas fa-envelope mr-2 text-purple-400"></i> support@designmantix.com</li>
+                    <li><i class="fas fa-phone mr-2 text-purple-400"></i> +1 (555) 123-4567</li>
+                    <li><i class="fas fa-map-marker-alt mr-2 text-purple-400"></i> New York, USA</li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 border-t border-purple-900/20 pt-6 text-center">
+            <p>&copy; 2026 DesignMantix. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Portfolio Category Filter Logic
+        function filterPortfolio(category) {
+            const cards = document.querySelectorAll('.portfolio-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            // Update active button state
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Show/Hide cards based on category
+            cards.forEach(card => {
+                if (category === 'all' || card.classList.contains(category)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
