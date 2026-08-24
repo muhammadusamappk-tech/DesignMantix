@@ -59,7 +59,8 @@
                         Design & Marketing <i class="fas fa-chevron-down text-xs text-purple-600"></i>
                     </a>
                     <div class="dropdown-menu">
-<a href="website-page.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Website Designing</a>                        <a href="design-marketing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Graphic Designing</a>
+                        <a href="website-page.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Website Designing</a>
+                        <a href="design-marketing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Graphic Designing</a>
                         <a href="design-marketing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Logo Designing</a>
                         <a href="design-marketing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Social Media Marketing</a>
                         <a href="design-marketing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Mobile Application</a>
@@ -81,15 +82,15 @@
                 </div>
 
                 <!-- Portfolio Dropdown in Navbar -->
-<div class="dropdown py-2">
-    <a href="#" class="text-gray-700 hover:text-purple-600 transition inline-flex items-center gap-1">
-        Portfolio <i class="fas fa-chevron-down text-xs text-purple-600"></i>
-    </a>
-    <div class="dropdown-menu">
-        <a href="portfolio-design.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Design Portfolio</a>
-        <a href="portfolio-ebook.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">eBook & Publishing Portfolio</a>
-    </div>
-</div>
+                <div class="dropdown py-2">
+                    <a href="#" class="text-gray-700 hover:text-purple-600 transition inline-flex items-center gap-1">
+                        Portfolio <i class="fas fa-chevron-down text-xs text-purple-600"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="portfolio-design.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Design Portfolio</a>
+                        <a href="portfolio-ebook.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">eBook & Publishing Portfolio</a>
+                    </div>
+                </div>
                 <a href="contact.html" class="bg-purple-600 hover:bg-purple-700 text-white text-xs px-4 py-2 rounded-full transition">Contact Us</a>
             </div>
         </nav>
@@ -98,8 +99,10 @@
     <!-- ABOUT US MAIN CONTENT SECTION -->
     <section class="py-20 px-6 lg:px-8 max-w-7xl mx-auto">
         <div class="bg-gray-900/50 border border-purple-900/40 rounded-3xl p-8 md:p-12 relative overflow-hidden tech-bg-pattern shadow-xl">
-            <div class="grid lg:grid-cols-2 gap-10 items-center">
-                <div>
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- LEFT SIDE: TITLE & CONTENT ALIGNED PROPERLY -->
+                <div class="flex flex-col justify-center">
                     <span id="about-badge" class="text-purple-400 text-xs font-semibold tracking-wider uppercase mb-2 block">Who We Are</span>
                     <h1 id="about-title" class="text-3xl md:text-5xl font-extrabold text-white mb-6">
                         Innovative Digital & Publishing Solutions Under One Roof
@@ -111,7 +114,7 @@
                         Whether you are looking to build a high-converting digital presence to scale your business or aiming to publish a global best-seller on Amazon KDP and IngramSpark, our team of expert developers, designers, strategists, and publishing specialists execute every project with perfection.
                     </p>
 
-                    <div class="grid grid-cols-2 gap-4 border-t border-purple-900/30 pt-6">
+                    <div class="grid grid-cols-2 gap-4 border-t border-purple-900/30 pt-6 mt-4">
                         <div class="flex items-center gap-3">
                             <div class="w-10 h-10 rounded-lg bg-purple-600/20 flex items-center justify-center text-purple-400">
                                 <i class="fas fa-rocket"></i>
@@ -133,28 +136,49 @@
                     </div>
                 </div>
 
-                <!-- OPTION 1 TRUST BADGE CARD -->
-                <div class="relative">
-                    <div class="w-full h-80 bg-gradient-to-tr from-purple-900/40 to-indigo-900/20 rounded-2xl border border-purple-500/30 p-6 flex flex-col justify-center items-center text-center relative overflow-hidden shadow-2xl">
-                        <!-- Background Glow Effects -->
-                        <div class="absolute -top-10 -right-10 w-36 h-36 bg-purple-500/20 rounded-full blur-2xl"></div>
-                        <div class="absolute -bottom-10 -left-10 w-36 h-36 bg-indigo-500/20 rounded-full blur-2xl"></div>
+                <!-- RIGHT SIDE: PROPERLY FITTED PRODUCTS IMAGE (NO CROPPING) -->
+                <div class="relative flex items-center justify-center w-full">
+                    <img src="about-designmantix-setup.png" alt="DesignMantix Agency Workspace & Services" class="w-full h-auto rounded-2xl shadow-2xl border border-purple-500/30 object-contain">
+                </div>
 
-                        <!-- Glowing Shield & Check Badge -->
-                        <div class="relative mb-5">
-                            <div class="w-24 h-24 rounded-full bg-purple-600/20 border border-purple-400/40 flex items-center justify-center text-purple-300 text-4xl shadow-lg shadow-purple-500/20">
-                                <i class="fas fa-shield-halved"></i>
-                            </div>
-                            <!-- Small Checkmark Badge -->
-                            <div class="absolute bottom-0 right-0 w-8 h-8 bg-purple-500 rounded-full border-2 border-[#0b021a] flex items-center justify-center text-white text-xs shadow-md">
-                                <i class="fas fa-check"></i>
-                            </div>
-                        </div>
+            </div>
+        </div>
+    </section>
 
-                        <h3 class="text-xl font-bold text-white mb-2">100% Trusted Agency</h3>
-                        <p class="text-gray-300 text-xs max-w-xs leading-relaxed">Empowering 1000+ global clients with top-tier security, quality execution, and guaranteed results.</p>
+    <!-- NEW DEDICATED BADGE SECTION -->
+    <section class="py-16 px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="bg-gradient-to-r from-purple-950/40 via-gray-900/60 to-purple-950/40 border border-purple-500/30 rounded-3xl p-8 md:p-12 shadow-2xl backdrop-blur-md">
+            <div class="grid lg:grid-cols-2 gap-10 items-center">
+                
+                <!-- Badge Image Left Side -->
+                <div class="flex justify-center">
+                    <div class="max-w-md rounded-2xl overflow-hidden shadow-2xl border border-purple-500/40 bg-purple-950/30">
+                        <img src="trusted-agency-badge.png" alt="100% Trusted Agency Verified & Reliable" class="w-full h-auto object-contain">
                     </div>
                 </div>
+
+                <!-- Badge Related Content Right Side -->
+                <div>
+                    <span class="text-purple-400 text-xs font-semibold tracking-wider uppercase mb-2 block">Verified Excellence</span>
+                    <h2 class="text-2xl md:text-4xl font-extrabold text-white mb-4">
+                        A Name You Can Trust for Quality, Security & Results
+                    </h2>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-6">
+                        At DesignMantix, our verified and reliable status reflects our unwavering commitment to delivering top-tier digital products and publishing services. We follow rigorous security protocols, maintain absolute transparency, and ensure that every milestone we achieve translates into measurable success for your brand.
+                    </p>
+                    <div class="flex flex-wrap gap-4 text-xs font-semibold text-purple-300">
+                        <div class="flex items-center gap-2 bg-purple-900/40 border border-purple-500/30 px-4 py-2 rounded-full">
+                            <i class="fas fa-check-circle text-purple-400"></i> Top-Tier Security
+                        </div>
+                        <div class="flex items-center gap-2 bg-purple-900/40 border border-purple-500/30 px-4 py-2 rounded-full">
+                            <i class="fas fa-check-circle text-purple-400"></i> Quality Execution
+                        </div>
+                        <div class="flex items-center gap-2 bg-purple-900/40 border border-purple-500/30 px-4 py-2 rounded-full">
+                            <i class="fas fa-check-circle text-purple-400"></i> Guaranteed Results
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
