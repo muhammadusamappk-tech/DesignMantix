@@ -45,8 +45,7 @@
         .discount-badge {
             background: #990000;
             border: 3px dashed #ffffff;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-            position: relative;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
         }
     </style>
 </head>
@@ -179,9 +178,9 @@
         </div>
     </section>
 
-    <!-- "NOT SURE WHAT TO DO?" SECTION WITH HUGE SAVING STAMP -->
-    <section class="py-20 px-6 lg:px-8 max-w-7xl mx-auto relative">
-        <div class="bg-white text-gray-900 rounded-3xl p-8 md:p-14 shadow-2xl relative overflow-hidden">
+    <!-- "NOT SURE WHAT TO DO?" SECTION WITH FORM & DISCOUNT STAMP -->
+    <section class="py-20 px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="bg-white text-gray-900 rounded-3xl p-8 md:p-14 shadow-2xl relative overflow-visible">
             
             <!-- Heading & Phone Number -->
             <div class="text-center mb-12">
@@ -189,72 +188,63 @@
                 <a href="tel:18556620245" class="text-green-600 font-bold text-lg md:text-xl hover:underline inline-block">US +1-855-662-0245</a>
             </div>
 
-            <div class="grid lg:grid-cols-12 gap-8 items-center">
+            <div class="relative max-w-5xl mx-auto">
                 
-                <!-- Main Form Inputs Area (Span 10) -->
-                <div class="lg:col-span-10">
-                    <form action="#" method="POST" class="space-y-6">
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <!-- Name -->
-                            <div>
-                                <input type="text" required placeholder="Name" class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-purple-600 transition">
-                            </div>
-                            <!-- Select Query Type -->
-                            <div>
-                                <select class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3.5 text-sm text-gray-600 focus:outline-none focus:border-purple-600 transition">
-                                    <option value="">Select query type</option>
-                                    <option value="web">Website Designing</option>
-                                    <option value="graphic">Graphic Designing</option>
-                                    <option value="marketing">Marketing</option>
-                                </select>
-                            </div>
+                <form action="#" method="POST" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <input type="text" required placeholder="Name" class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-purple-600 transition">
                         </div>
-
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <!-- Email -->
-                            <div>
-                                <input type="email" required placeholder="Email" class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-purple-600 transition">
-                            </div>
-                            <!-- Insert Comments / Message -->
-                            <div>
-                                <textarea rows="3" placeholder="Insert Comments" class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-purple-600 transition resize-none"></textarea>
-                            </div>
+                        <div>
+                            <select class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3.5 text-sm text-gray-600 focus:outline-none focus:border-purple-600 transition">
+                                <option value="">Select query type</option>
+                                <option value="web">Website Designing</option>
+                                <option value="graphic">Graphic Designing</option>
+                                <option value="marketing">Marketing</option>
+                            </select>
                         </div>
+                    </div>
 
-                        <div class="grid md:grid-cols-2 gap-6 items-center">
-                            <!-- Select Country -->
-                            <div>
-                                <select class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3.5 text-sm text-gray-600 focus:outline-none focus:border-purple-600 transition">
-                                    <option value="">Select Country</option>
-                                    <option value="usa">United States</option>
-                                    <option value="uk">United Kingdom</option>
-                                    <option value="ca">Canada</option>
-                                </select>
-                            </div>
-                            <!-- Phone with country code -->
-                            <div class="flex">
-                                <span class="bg-gray-100 border border-r-0 border-gray-300 rounded-l-lg px-4 py-3.5 text-sm text-gray-500 font-medium">+00</span>
-                                <input type="tel" placeholder="Phone" class="w-full bg-gray-50 border border-gray-300 rounded-r-lg px-4 py-3.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-purple-600 transition">
-                            </div>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <input type="email" required placeholder="Email" class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-purple-600 transition">
                         </div>
-
-                        <!-- Call Me Button -->
-                        <div class="text-center pt-4">
-                            <button type="submit" class="bg-[#43b02a] hover:bg-[#389622] text-white font-bold text-lg px-12 py-3.5 rounded-lg shadow-lg transition uppercase tracking-wide">
-                                Call Me
-                            </button>
+                        <div>
+                            <input type="text" placeholder="Insert Comments" class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-purple-600 transition">
                         </div>
-                    </form>
-                </div>
+                    </div>
 
-                <!-- HUGE SAVING STAMP (Right Side) -->
-                <div class="lg:col-span-2 flex justify-center items-center">
-                    <div class="discount-badge w-40 h-40 rounded-full flex flex-col items-center justify-center text-center p-3 text-white transform rotate-6 hover:rotate-0 transition duration-300">
-                        <div class="text-[10px] tracking-widest uppercase font-semibold mb-0.5">★★★★★</div>
+                    <div class="grid md:grid-cols-2 gap-6 items-center">
+                        <div>
+                            <select class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3.5 text-sm text-gray-600 focus:outline-none focus:border-purple-600 transition">
+                                <option value="">Select Country</option>
+                                <option value="usa">United States</option>
+                                <option value="uk">United Kingdom</option>
+                                <option value="ca">Canada</option>
+                            </select>
+                        </div>
+                        <div class="flex">
+                            <span class="bg-gray-100 border border-r-0 border-gray-300 rounded-l-lg px-4 py-3.5 text-sm text-gray-500 font-medium">+00</span>
+                            <input type="tel" placeholder="Phone" class="w-full bg-gray-50 border border-gray-300 rounded-r-lg px-4 py-3.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-purple-600 transition">
+                        </div>
+                    </div>
+
+                    <!-- Call Me Button -->
+                    <div class="text-center pt-6">
+                        <button type="submit" class="bg-[#43b02a] hover:bg-[#389622] text-white font-bold text-lg px-12 py-3.5 rounded-lg shadow-lg transition uppercase tracking-wide">
+                            Call Me
+                        </button>
+                    </div>
+                </form>
+
+                <!-- ABSOLUTE DISCOUNT BADGE (Right Side Floating Nicely Inside) -->
+                <div class="hidden xl:flex absolute -right-12 top-1/2 -translate-y-1/2 items-center justify-center pointer-events-none">
+                    <div class="discount-badge w-36 h-36 rounded-full flex flex-col items-center justify-center text-center p-3 text-white transform rotate-6 shadow-xl">
+                        <div class="text-[9px] tracking-widest uppercase font-semibold mb-0.5">★★★★★</div>
                         <div class="text-xs font-black tracking-wider uppercase leading-tight mb-0.5">HUGE</div>
-                        <div class="text-[9px] font-bold tracking-tight uppercase">SAVING UP TO</div>
-                        <div class="text-3xl font-black tracking-tighter my-0.5">50%</div>
-                        <div class="text-[10px] font-black tracking-widest uppercase">DISCOUNT</div>
+                        <div class="text-[8px] font-bold tracking-tight uppercase">SAVING UP TO</div>
+                        <div class="text-2xl font-black tracking-tighter my-0.5">50%</div>
+                        <div class="text-[9px] font-black tracking-widest uppercase">DISCOUNT</div>
                     </div>
                 </div>
 
