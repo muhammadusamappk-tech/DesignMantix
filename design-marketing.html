@@ -49,6 +49,27 @@
         .slider-track:hover {
             animation-play-state: paused;
         }
+
+        /* Dropdown Styling */
+        .dropdown {
+            position: relative;
+        }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #ffffff;
+            min-width: 230px;
+            box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
+            border-radius: 12px;
+            padding: 10px 0;
+            z-index: 100;
+            border: 1px solid rgba(147, 51, 234, 0.2);
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
     </style>
 </head>
 <body class="bg-[#0b021a] text-white font-sans selection:bg-purple-500 selection:text-white">
@@ -62,8 +83,22 @@
             <div id="main-nav" class="hidden md:flex items-center space-x-6 text-sm font-semibold">
                 <a href="index.html" class="text-gray-700 hover:text-purple-600 transition">Home</a>
                 <a href="about-us.html" class="text-gray-700 hover:text-purple-600 transition">About Us</a>
-                <a href="design-marketing.html" class="text-purple-600 border-b-2 border-purple-600 pb-1">Design & Marketing</a>
-            <a href="portfolio-design.html" class="text-gray-700 hover:text-purple-600 transition">Design Portfolio</a>
+                
+                <!-- Design & Marketing Dropdown -->
+                <div class="dropdown py-2">
+                    <a href="design-marketing.html" class="text-gray-700 hover:text-purple-600 transition inline-flex items-center gap-1">
+                        Design & Marketing <i class="fas fa-chevron-down text-xs text-purple-600"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="design-marketing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Website Designing</a>
+                        <a href="design-marketing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Graphic Designing</a>
+                        <a href="design-marketing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Logo Designing</a>
+                        <a href="design-marketing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Social Media Marketing</a>
+                        <a href="design-marketing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Mobile Application</a>
+                    </div>
+                </div>
+
+                <a href="portfolio-design.html" class="text-gray-700 hover:text-purple-600 transition">Design Portfolio</a>
                 <a href="contact.html" class="text-gray-700 hover:text-purple-600 transition">Contact</a>
             </div>
             <a href="contact.html" class="bg-purple-600 hover:bg-purple-700 text-white text-xs font-semibold px-5 py-2.5 rounded-full transition shadow-md hover:scale-105 transform">
