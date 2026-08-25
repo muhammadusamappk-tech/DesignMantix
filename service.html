@@ -8,6 +8,28 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .dropdown {
+            position: relative;
+        }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #ffffff;
+            min-width: 230px;
+            box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
+            border-radius: 12px;
+            padding: 10px 0;
+            z-index: 100;
+            border: 1px solid rgba(147, 51, 234, 0.2);
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+    </style>
 </head>
 <body class="bg-[#0b021a] text-white font-sans selection:bg-purple-500 selection:text-white">
 
@@ -17,14 +39,71 @@
             <a href="index.html" class="text-2xl font-extrabold tracking-tight text-gray-900">
                 Design<span class="text-purple-600">Mantix</span>
             </a>
-            <div class="flex items-center space-x-6 text-sm font-semibold">
+
+            <!-- Desktop Menu -->
+            <div id="main-nav" class="hidden md:flex items-center space-x-6 text-sm font-semibold">
                 <a href="index.html" class="text-gray-700 hover:text-purple-600 transition">Home</a>
                 <a href="about-us.html" class="text-gray-700 hover:text-purple-600 transition">About Us</a>
-                <a href="services.html" class="text-purple-600 border-b-2 border-purple-600 pb-1">Services</a>
-                <a href="portfolio.html" class="text-gray-700 hover:text-purple-600 transition">Portfolio</a>
-                <a href="contact.html" class="bg-purple-600 hover:bg-purple-700 text-white text-xs px-4 py-2 rounded-full transition">Contact Us</a>
+                
+                <!-- Design & Marketing Dropdown -->
+                <div class="dropdown py-2">
+                    <a href="design-marketing.html" class="text-gray-700 hover:text-purple-600 transition inline-flex items-center gap-1">
+                        Design & Marketing <i class="fas fa-chevron-down text-xs text-purple-600"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="design-marketing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Website Designing</a>
+                        <a href="design-marketing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Graphic Designing</a>
+                        <a href="design-marketing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Logo Designing</a>
+                        <a href="design-marketing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Social Media Marketing</a>
+                        <a href="design-marketing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Mobile Application</a>
+                    </div>
+                </div>
+
+                <!-- Portfolio Dropdown -->
+                <div class="dropdown py-2">
+                    <a href="#" class="text-gray-700 hover:text-purple-600 transition inline-flex items-center gap-1">
+                        Portfolio <i class="fas fa-chevron-down text-xs text-purple-600"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="portfolio-design.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Design Portfolio</a>
+                        <a href="portfolio-ebook.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">eBook & Publishing Portfolio</a>
+                    </div>
+                </div>
+
+                <a href="contact.html" class="text-gray-700 hover:text-purple-600 transition">Contact</a>
+            </div>
+
+            <!-- Right CTA & Hamburger -->
+            <div class="flex items-center gap-4">
+                <a href="contact.html" class="bg-purple-600 hover:bg-purple-700 text-white text-xs font-semibold px-5 py-2.5 rounded-full transition shadow-md hover:scale-105 transform">
+                    Let's Talk
+                </a>
+                <button id="menu-btn" aria-label="Toggle Menu" class="md:hidden text-gray-800 text-2xl focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </nav>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200 px-6 py-4 space-y-3 text-sm font-semibold shadow-xl">
+            <a href="index.html" class="block text-gray-700">Home</a>
+            <a href="about-us.html" class="block text-gray-700">About Us</a>
+            <div class="border-t border-gray-100 pt-2">
+                <span class="text-xs text-purple-600 uppercase tracking-wider block mb-1">Design & Marketing</span>
+                <a href="design-marketing.html" class="block pl-4 py-1 text-xs text-gray-600">Website Designing</a>
+                <a href="design-marketing.html" class="block pl-4 py-1 text-xs text-gray-600">Graphic Designing</a>
+                <a href="design-marketing.html" class="block pl-4 py-1 text-xs text-gray-600">Logo Designing</a>
+            </div>
+            <div class="border-t border-gray-100 pt-2">
+                <span class="text-xs text-purple-600 uppercase tracking-wider block mb-1">eBook & Publishing</span>
+                <a href="ebook-publishing.html" class="block pl-4 py-1 text-xs text-gray-600">Manuscript Ghostwriting</a>
+                <a href="ebook-publishing.html" class="block pl-4 py-1 text-xs text-gray-600">Custom Book Cover</a>
+            </div>
+            <div class="border-t border-gray-100 pt-2 space-y-2">
+                <a href="portfolio-design.html" class="block text-gray-700">Portfolio</a>
+                <a href="contact.html" class="block text-gray-700">Contact</a>
+            </div>
+        </div>
     </header>
 
     <!-- SERVICES SECTION -->
@@ -103,5 +182,14 @@
         </div>
     </footer>
 
+    <!-- SCRIPTS -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>

@@ -20,7 +20,7 @@
             background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
         }
 
-        /* Dropdown Styling */
+        /* Desktop Dropdown Styling */
         .dropdown {
             position: relative;
         }
@@ -44,17 +44,25 @@
 </head>
 <body class="bg-[#0b021a] text-white font-sans selection:bg-purple-500 selection:text-white">
 
-    <!-- LOCKED HEADER / NAVBAR -->
+    <!-- RESPONSIVE HEADER / NAVBAR -->
     <header class="bg-white text-gray-900 shadow-md sticky top-0 z-50">
         <nav class="flex items-center justify-between px-6 lg:px-8 py-4 max-w-7xl mx-auto">
             <a href="index.html" class="text-2xl font-extrabold tracking-tight text-gray-900">
                 Design<span class="text-purple-600">Mantix</span>
             </a>
-            <div class="flex items-center space-x-6 text-sm font-semibold">
-                <a href="index.html" class="text-gray-700 hover:text-purple-600 transition">Home</a>
-                <a href="about-us.html" class="text-purple-600 border-b-2 border-purple-600 pb-1">About Us</a>
-                               <!-- Design & Marketing Dropdown -->
-                <div class="dropdown py-2">
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="block lg:hidden text-gray-700 focus:outline-none text-xl">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Desktop & Mobile Navigation Links -->
+            <div id="menu" class="hidden lg:flex flex-col lg:flex-row lg:items-center lg:space-x-6 text-sm font-semibold absolute lg:static top-full left-0 w-full lg:w-auto bg-white lg:bg-transparent shadow-md lg:shadow-none p-6 lg:p-0 border-t lg:border-t-0 border-gray-200">
+                <a href="index.html" class="block py-2 lg:py-0 text-gray-700 hover:text-purple-600 transition">Home</a>
+                <a href="about-us.html" class="block py-2 lg:py-0 text-purple-600 lg:border-b-2 lg:border-purple-600 pb-1">About Us</a>
+                
+                <!-- Design & Marketing Dropdown -->
+                <div class="dropdown py-2 lg:py-0">
                     <a href="design-marketing.html" class="text-gray-700 hover:text-purple-600 transition inline-flex items-center gap-1">
                         Design & Marketing <i class="fas fa-chevron-down text-xs text-purple-600"></i>
                     </a>
@@ -68,7 +76,7 @@
                 </div>
 
                 <!-- eBook & Publishing Dropdown -->
-                <div class="dropdown py-2">
+                <div class="dropdown py-2 lg:py-0">
                     <a href="ebook-publishing.html" class="text-gray-700 hover:text-purple-600 transition inline-flex items-center gap-1">
                         eBook & Publishing <i class="fas fa-chevron-down text-xs text-purple-600"></i>
                     </a>
@@ -82,7 +90,7 @@
                 </div>
 
                 <!-- Portfolio Dropdown in Navbar -->
-                <div class="dropdown py-2">
+                <div class="dropdown py-2 lg:py-0">
                     <a href="#" class="text-gray-700 hover:text-purple-600 transition inline-flex items-center gap-1">
                         Portfolio <i class="fas fa-chevron-down text-xs text-purple-600"></i>
                     </a>
@@ -91,7 +99,9 @@
                         <a href="portfolio-ebook.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">eBook & Publishing Portfolio</a>
                     </div>
                 </div>
-                <a href="contact.html" class="bg-purple-600 hover:bg-purple-700 text-white text-xs px-4 py-2 rounded-full transition">Contact Us</a>
+                <div class="pt-3 lg:pt-0">
+                    <a href="contact.html" class="inline-block bg-purple-600 hover:bg-purple-700 text-white text-xs px-4 py-2 rounded-full transition">Contact Us</a>
+                </div>
             </div>
         </nav>
     </header>
@@ -236,5 +246,14 @@
         </div>
     </footer>
 
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const menu = document.getElementById('menu');
+
+        menuBtn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
