@@ -126,14 +126,13 @@
                 <a href="contact.html" class="bg-purple-600 hover:bg-purple-700 text-white text-xs font-semibold px-5 py-2.5 rounded-full transition shadow-md hover:scale-105 transform">
                     Let's Talk
                 </a>
-                <!-- Hamburger Button for Mobile -->
                 <button id="menu-btn" aria-label="Toggle Menu" class="md:hidden text-gray-800 text-2xl focus:outline-none">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
         </nav>
 
-        <!-- Mobile Menu Dropdown Drawer -->
+        <!-- Mobile Menu Dropdown Drawer (Fixed & Fully Synchronized) -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200 px-6 py-4 space-y-3 text-sm font-semibold shadow-xl">
             <a href="index.html" class="block text-purple-600">Home</a>
             <a href="about-us.html" class="block text-gray-700">About Us</a>
@@ -156,18 +155,21 @@
                 <a href="ebook-publishing.html" class="block pl-4 py-1 text-xs text-gray-600">Book Marketing</a>
             </div>
 
+            <div class="border-t border-gray-100 pt-2">
+                <span class="text-xs text-purple-600 uppercase tracking-wider block mb-1">Portfolio</span>
+                <a href="portfolio-design.html" class="block pl-4 py-1 text-xs text-gray-600">Design Portfolio</a>
+                <a href="portfolio-ebook.html" class="block pl-4 py-1 text-xs text-gray-600">eBook & Publishing Portfolio</a>
+            </div>
+
             <div class="border-t border-gray-100 pt-2 space-y-2">
-                <a href="portfolio.html" class="block text-gray-700">Portfolio</a>
                 <a href="contact.html" class="block text-gray-700">Contact</a>
             </div>
         </div>
     </header>
 
-    <!-- 2. HERO SECTION WITH DESIGN TORA STYLE STAR GLAZING AND DIRECT QUICK OPTIONS -->
+    <!-- 2. HERO SECTION WITH STAR GLAZING CANVAS & QUICK OPTIONS -->
     <section id="hero-section" class="relative py-24 md:py-34 px-6 lg:px-8 max-w-7xl mx-auto text-center overflow-hidden tech-bg-pattern rounded-3xl mt-4 border border-purple-900/40">
-        <!-- Interactive High-End Motion Video-Like Star Glazing Canvas -->
         <canvas id="star-canvas" class="absolute inset-0 z-0 pointer-events-auto"></canvas>
-        
         <div class="absolute inset-0 bg-black/15 pointer-events-none z-1"></div>
         
         <div class="relative z-10 max-w-4xl mx-auto">
@@ -192,7 +194,7 @@
                 </a>
             </div>
 
-            <!-- Secondary Compact Quick Action Options (Live Chat & Talk to Consultant) as Requested -->
+            <!-- Secondary Compact Quick Action Options -->
             <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
                 <a href="https://wa.me/" target="_blank" class="inline-flex items-center gap-2 bg-emerald-950/60 hover:bg-emerald-900/80 border border-emerald-500/40 text-emerald-300 text-xs font-semibold px-4 py-2 rounded-lg transition backdrop-blur-md shadow">
                     <i class="fab fa-whatsapp text-emerald-400 text-sm"></i> Live Chat with Expert
@@ -237,7 +239,6 @@
             <p class="text-gray-400 text-sm">Choose a division below to learn more about how we can help you grow.</p>
         </div>
         <div class="grid md:grid-cols-2 gap-8">
-            <!-- Division 1 -->
             <div class="bg-gray-900/60 border border-purple-900/50 p-8 rounded-2xl flex flex-col justify-between hover:border-purple-500/50 transition">
                 <div>
                     <div class="w-12 h-12 bg-purple-600/20 text-purple-400 rounded-xl flex items-center justify-center text-xl mb-6">
@@ -251,7 +252,6 @@
                 </a>
             </div>
 
-            <!-- Division 2 -->
             <div class="bg-gray-900/60 border border-purple-900/50 p-8 rounded-2xl flex flex-col justify-between hover:border-purple-500/50 transition">
                 <div>
                     <div class="w-12 h-12 bg-purple-600/20 text-purple-400 rounded-xl flex items-center justify-center text-xl mb-6">
@@ -276,28 +276,21 @@
         </div>
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <!-- Step 1 -->
             <div class="bg-gray-900/40 border border-purple-900/40 p-6 rounded-2xl relative hover:border-purple-500/50 transition">
                 <div class="text-purple-500 font-extrabold text-4xl mb-4 opacity-40">01</div>
                 <h3 class="text-lg font-bold text-white mb-2">Discovery & Strategy</h3>
                 <p class="text-gray-400 text-xs leading-relaxed">We understand your goals, target audience, and project scope to build a comprehensive roadmap.</p>
             </div>
-
-            <!-- Step 2 -->
             <div class="bg-gray-900/40 border border-purple-900/40 p-6 rounded-2xl relative hover:border-purple-500/50 transition">
                 <div class="text-purple-500 font-extrabold text-4xl mb-4 opacity-40">02</div>
                 <h3 class="text-lg font-bold text-white mb-2">Design & Creation</h3>
                 <p class="text-gray-400 text-xs leading-relaxed">Our creative experts craft stunning designs, write compelling content, or build your manuscript.</p>
             </div>
-
-            <!-- Step 3 -->
             <div class="bg-gray-900/40 border border-purple-900/40 p-6 rounded-2xl relative hover:border-purple-500/50 transition">
                 <div class="text-purple-500 font-extrabold text-4xl mb-4 opacity-40">03</div>
                 <h3 class="text-lg font-bold text-white mb-2">Testing & Review</h3>
                 <p class="text-gray-400 text-xs leading-relaxed">We rigorously review and test everything with you to ensure absolute perfection before release.</p>
             </div>
-
-            <!-- Step 4 -->
             <div class="bg-gray-900/40 border border-purple-900/40 p-6 rounded-2xl relative hover:border-purple-500/50 transition">
                 <div class="text-purple-500 font-extrabold text-4xl mb-4 opacity-40">04</div>
                 <h3 class="text-lg font-bold text-white mb-2">Launch & Scale</h3>
@@ -306,15 +299,15 @@
         </div>
     </section>
 
-    <!-- 6. IMPACT & STATS -->
+    <!-- 6. IMPACT & STATS (WITH WORKING COUNTERS) -->
     <section id="impact-section" class="py-16 px-6 lg:px-8 max-w-7xl mx-auto">
         <div class="bg-gradient-to-r from-purple-950/40 via-gray-900/60 to-purple-950/40 border border-purple-900/40 rounded-3xl p-8 md:p-12 text-center">
             <h2 class="text-3xl font-extrabold mb-8">Trusted By Brands & Authors Worldwide</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="bg-black/30 border border-purple-900/30 p-6 rounded-2xl"><div class="text-3xl font-extrabold text-purple-400"><span class="counter" data-target="400">400</span>+</div><p class="text-xs">Projects & Books Delivered</p></div>
-                <div class="bg-black/30 border border-purple-900/30 p-6 rounded-2xl"><div class="text-3xl font-extrabold text-purple-400"><span class="counter" data-target="98">98</span>%</div><p class="text-xs">Client Satisfaction</p></div>
-                <div class="bg-black/30 border border-purple-900/30 p-6 rounded-2xl"><div class="text-3xl font-extrabold text-purple-400"><span class="counter" data-target="50">50</span>+</div><p class="text-xs">Bestsellers Created</p></div>
-                <div class="bg-black/30 border border-purple-900/30 p-6 rounded-2xl"><div class="text-3xl font-extrabold text-purple-400"><span class="counter" data-target="10">10</span>+</div><p class="text-xs">Years Experience</p></div>
+                <div class="bg-black/30 border border-purple-900/30 p-6 rounded-2xl"><div class="text-3xl font-extrabold text-purple-400"><span class="counter" data-target="400">0</span>+</div><p class="text-xs">Projects & Books Delivered</p></div>
+                <div class="bg-black/30 border border-purple-900/30 p-6 rounded-2xl"><div class="text-3xl font-extrabold text-purple-400"><span class="counter" data-target="98">0</span>%</div><p class="text-xs">Client Satisfaction</p></div>
+                <div class="bg-black/30 border border-purple-900/30 p-6 rounded-2xl"><div class="text-3xl font-extrabold text-purple-400"><span class="counter" data-target="50">0</span>+</div><p class="text-xs">Bestsellers Created</p></div>
+                <div class="bg-black/30 border border-purple-900/30 p-6 rounded-2xl"><div class="text-3xl font-extrabold text-purple-400"><span class="counter" data-target="10">0</span>+</div><p class="text-xs">Years Experience</p></div>
             </div>
         </div>
     </section>
@@ -328,7 +321,6 @@
         
         <div class="slider-container">
             <div class="slider-track flex gap-8">
-                <!-- Card 1 -->
                 <div class="w-[350px] bg-gray-900/80 p-8 rounded-2xl border border-purple-500/35 flex-shrink-0">
                     <div class="flex text-yellow-400 space-x-1 mb-4 text-sm">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -337,8 +329,6 @@
                     <h4 class="font-bold text-white text-sm">David Sterling</h4>
                     <span class="text-xs text-purple-400">CEO, NexaTech Solutions</span>
                 </div>
-
-                <!-- Card 2 -->
                 <div class="w-[350px] bg-gray-900/80 p-8 rounded-2xl border border-purple-500/35 flex-shrink-0">
                     <div class="flex text-yellow-400 space-x-1 mb-4 text-sm">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -347,8 +337,6 @@
                     <h4 class="font-bold text-white text-sm">Jonathan Reed</h4>
                     <span class="text-xs text-purple-400">Author of 'The Cyber Paradigm'</span>
                 </div>
-
-                <!-- Card 3 -->
                 <div class="w-[350px] bg-gray-900/80 p-8 rounded-2xl border border-purple-500/35 flex-shrink-0">
                     <div class="flex text-yellow-400 space-x-1 mb-4 text-sm">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -357,8 +345,7 @@
                     <h4 class="font-bold text-white text-sm">Marcus Brody</h4>
                     <span class="text-xs text-purple-400">Director, Apex Global</span>
                 </div>
-
-                <!-- Card 4 (Duplicate for infinite loop) -->
+                <!-- Duplicates for Infinite Loop -->
                 <div class="w-[350px] bg-gray-900/80 p-8 rounded-2xl border border-purple-500/35 flex-shrink-0">
                     <div class="flex text-yellow-400 space-x-1 mb-4 text-sm">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -367,8 +354,6 @@
                     <h4 class="font-bold text-white text-sm">David Sterling</h4>
                     <span class="text-xs text-purple-400">CEO, NexaTech Solutions</span>
                 </div>
-
-                <!-- Card 5 (Duplicate) -->
                 <div class="w-[350px] bg-gray-900/80 p-8 rounded-2xl border border-purple-500/35 flex-shrink-0">
                     <div class="flex text-yellow-400 space-x-1 mb-4 text-sm">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -384,8 +369,6 @@
     <!-- 8. SPLIT SECTION: CONTACT FORM & FAQ ACCORDION -->
     <section class="py-20 relative overflow-hidden bg-[#030008]">
         <div class="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 rounded-3xl overflow-hidden border border-purple-900/40 shadow-2xl">
-            
-            <!-- Left Side: Dark Contact Form Panel -->
             <div class="bg-[#080213] p-8 md:p-14 flex flex-col justify-between relative">
                 <div>
                     <h2 class="text-2xl md:text-3xl font-extrabold text-white leading-snug mb-6">
@@ -394,18 +377,12 @@
                     
                     <form action="#" method="POST" class="space-y-6">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div>
-                                <input type="text" placeholder="Full Name" required class="w-full bg-transparent border-b border-gray-600 focus:border-purple-400 py-3 text-sm text-white placeholder-gray-400 focus:outline-none transition">
-                            </div>
-                            <div>
-                                <input type="email" placeholder="Email" required class="w-full bg-transparent border-b border-gray-600 focus:border-purple-400 py-3 text-sm text-white placeholder-gray-400 focus:outline-none transition">
-                            </div>
+                            <div><input type="text" placeholder="Full Name" required class="w-full bg-transparent border-b border-gray-600 focus:border-purple-400 py-3 text-sm text-white placeholder-gray-400 focus:outline-none transition"></div>
+                            <div><input type="email" placeholder="Email" required class="w-full bg-transparent border-b border-gray-600 focus:border-purple-400 py-3 text-sm text-white placeholder-gray-400 focus:outline-none transition"></div>
                         </div>
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div>
-                                <input type="tel" placeholder="Phone Number" required class="w-full bg-transparent border-b border-gray-600 focus:border-purple-400 py-3 text-sm text-white placeholder-gray-400 focus:outline-none transition">
-                            </div>
+                            <div><input type="tel" placeholder="Phone Number" required class="w-full bg-transparent border-b border-gray-600 focus:border-purple-400 py-3 text-sm text-white placeholder-gray-400 focus:outline-none transition"></div>
                             <div>
                                 <select required class="w-full bg-transparent border-b border-gray-600 focus:border-purple-400 py-3 text-sm text-gray-400 focus:outline-none transition">
                                     <option value="" disabled selected class="bg-gray-900 text-gray-400">Please Select Service</option>
@@ -417,16 +394,13 @@
                             </div>
                         </div>
 
-                        <div>
-                            <textarea rows="3" placeholder="Type in your message..." class="w-full bg-transparent border-b border-gray-600 focus:border-purple-400 py-3 text-sm text-white placeholder-gray-400 focus:outline-none transition resize-none"></textarea>
-                        </div>
+                        <div><textarea rows="3" placeholder="Type in your message..." class="w-full bg-transparent border-b border-gray-600 focus:border-purple-400 py-3 text-sm text-white placeholder-gray-400 focus:outline-none transition resize-none"></textarea></div>
 
                         <div class="flex items-center gap-2 text-xs text-gray-400 pt-2">
                             <input type="checkbox" id="terms" required class="accent-purple-600 rounded">
                             <label for="terms">I agree and accept all <a href="#" class="text-purple-400 hover:underline">Terms & Conditions</a></label>
                         </div>
 
-                        <!-- Mock reCAPTCHA Box -->
                         <div class="bg-white text-gray-800 p-3 rounded-lg flex items-center justify-between max-w-[300px] shadow-md">
                             <div class="flex items-center gap-3">
                                 <input type="checkbox" id="robot" required class="w-5 h-5 accent-purple-600">
@@ -439,76 +413,45 @@
                         </div>
 
                         <div>
-                            <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white font-extrabold px-10 py-3.5 rounded-full transition shadow-lg text-sm tracking-wide shadow-purple-600/40">
-                                Send
-                            </button>
+                            <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white font-extrabold px-10 py-3.5 rounded-full transition shadow-lg text-sm tracking-wide shadow-purple-600/40">Send</button>
                         </div>
                     </form>
                 </div>
             </div>
 
-            <!-- Right Side: Theme-Matched Purple Gradient FAQ Panel -->
             <div class="bg-gradient-to-br from-purple-900 via-indigo-950 to-[#080213] p-8 md:p-14 text-white flex flex-col justify-between relative border-l border-purple-900/40">
                 <div>
-                    <h2 class="text-2xl md:text-3xl font-extrabold mb-8 tracking-tight">
-                        Frequently Asked Questions
-                    </h2>
-
-                    <!-- FAQ Accordions -->
+                    <h2 class="text-2xl md:text-3xl font-extrabold mb-8 tracking-tight">Frequently Asked Questions</h2>
                     <div class="space-y-4">
-                        <!-- FAQ Item 1 -->
                         <div class="border-b border-purple-500/35 pb-4 faq-item">
                             <button class="w-full flex justify-between items-center text-left font-semibold text-sm md:text-base py-2 focus:outline-none faq-question">
-                                <span>Why every business needs a website?</span>
-                                <span class="text-xl font-bold faq-icon text-purple-400">+</span>
+                                <span>Why every business needs a website?</span><span class="text-xl font-bold faq-icon text-purple-400">+</span>
                             </button>
-                            <div class="faq-answer hidden text-xs md:text-sm text-gray-300 pt-2 pb-1 leading-relaxed">
-                                A website acts as your 24/7 digital storefront, establishing credibility, expanding your market reach globally, and turning casual visitors into loyal customers.
-                            </div>
+                            <div class="faq-answer hidden text-xs md:text-sm text-gray-300 pt-2 pb-1 leading-relaxed">A website acts as your 24/7 digital storefront, establishing credibility, expanding your market reach globally, and turning casual visitors into loyal customers.</div>
                         </div>
-
-                        <!-- FAQ Item 2 -->
                         <div class="border-b border-purple-500/35 pb-4 faq-item">
                             <button class="w-full flex justify-between items-center text-left font-semibold text-sm md:text-base py-2 focus:outline-none faq-question">
-                                <span>How long will it take to get to the 1st page of Google?</span>
-                                <span class="text-xl font-bold faq-icon text-purple-400">+</span>
+                                <span>How long will it take to get to the 1st page of Google?</span><span class="text-xl font-bold faq-icon text-purple-400">+</span>
                             </button>
-                            <div class="faq-answer hidden text-xs md:text-sm text-gray-300 pt-2 pb-1 leading-relaxed">
-                                SEO results typically manifest within 3 to 6 months depending on competition, keyword difficulty, and industry landscape.
-                            </div>
+                            <div class="faq-answer hidden text-xs md:text-sm text-gray-300 pt-2 pb-1 leading-relaxed">SEO results typically manifest within 3 to 6 months depending on competition, keyword difficulty, and industry landscape.</div>
                         </div>
-
-                        <!-- FAQ Item 3 -->
                         <div class="border-b border-purple-500/35 pb-4 faq-item">
                             <button class="w-full flex justify-between items-center text-left font-semibold text-sm md:text-base py-2 focus:outline-none faq-question">
-                                <span>Will you help me update my website which is built by another web development company?</span>
-                                <span class="text-xl font-bold faq-icon text-purple-400">+</span>
+                                <span>Will you help me update my website which is built by another web development company?</span><span class="text-xl font-bold faq-icon text-purple-400">+</span>
                             </button>
-                            <div class="faq-answer hidden text-xs md:text-sm text-gray-300 pt-2 pb-1 leading-relaxed">
-                                Yes! Our expert developers can audit, redesign, and manage existing websites built on WordPress, Shopify, or custom frameworks.
-                            </div>
+                            <div class="faq-answer hidden text-xs md:text-sm text-gray-300 pt-2 pb-1 leading-relaxed">Yes! Our expert developers can audit, redesign, and manage existing websites built on WordPress, Shopify, or custom frameworks.</div>
                         </div>
-
-                        <!-- FAQ Item 4 -->
                         <div class="border-b border-purple-500/35 pb-4 faq-item">
                             <button class="w-full flex justify-between items-center text-left font-semibold text-sm md:text-base py-2 focus:outline-none faq-question">
-                                <span>How does this website process work?</span>
-                                <span class="text-xl font-bold faq-icon text-purple-400">+</span>
+                                <span>How does this website process work?</span><span class="text-xl font-bold faq-icon text-purple-400">+</span>
                             </button>
-                            <div class="faq-answer hidden text-xs md:text-sm text-gray-300 pt-2 pb-1 leading-relaxed">
-                                We start with discovery & strategy, move into wireframing & custom design, develop with modern frameworks, rigorously test, and finally launch.
-                            </div>
+                            <div class="faq-answer hidden text-xs md:text-sm text-gray-300 pt-2 pb-1 leading-relaxed">We start with discovery & strategy, move into wireframing & custom design, develop with modern frameworks, rigorously test, and finally launch.</div>
                         </div>
-
-                        <!-- FAQ Item 5 -->
                         <div class="border-b border-purple-500/35 pb-4 faq-item">
                             <button class="w-full flex justify-between items-center text-left font-semibold text-sm md:text-base py-2 focus:outline-none faq-question">
-                                <span>Will you provide a full copy/backup of the website if requested?</span>
-                                <span class="text-xl font-bold faq-icon text-purple-400">+</span>
+                                <span>Will you provide a full copy/backup of the website if requested?</span><span class="text-xl font-bold faq-icon text-purple-400">+</span>
                             </button>
-                            <div class="faq-answer hidden text-xs md:text-sm text-gray-300 pt-2 pb-1 leading-relaxed">
-                                Absolutely. Once the project is completed and fully paid, you hold 100% ownership rights with complete code backups provided.
-                            </div>
+                            <div class="faq-answer hidden text-xs md:text-sm text-gray-300 pt-2 pb-1 leading-relaxed">Absolutely. Once the project is completed and fully paid, you hold 100% ownership rights with complete code backups provided.</div>
                         </div>
                     </div>
                 </div>
@@ -551,7 +494,7 @@
 
     <!-- SCRIPTS -->
     <script>
-        // Mobile Menu Toggle Script
+        // Mobile Menu Toggle
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
 
@@ -559,7 +502,7 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        // FAQ Accordion Toggle Script
+        // FAQ Accordion
         const faqItems = document.querySelectorAll('.faq-item');
         faqItems.forEach(item => {
             const btn = item.querySelector('.faq-question');
@@ -581,7 +524,7 @@
             });
         });
 
-        // Advanced Design Tora Style Fluid Motion Graphic Star Glazing Canvas Animation
+        // Star Glazing Canvas Script
         const canvas = document.getElementById('star-canvas');
         const ctx = canvas.getContext('2d');
         const heroSection = document.getElementById('hero-section');
@@ -596,7 +539,7 @@
         let mouse = {
             x: null,
             y: null,
-            radius: 160
+            radius: 130
         };
 
         heroSection.addEventListener('mousemove', (e) => {
@@ -611,17 +554,17 @@
         });
 
         const particlesArray = [];
-        const numberOfParticles = Math.floor((canvas.width * canvas.height) / 5500);
+        const numberOfParticles = Math.floor((canvas.width * canvas.height) / 12000);
 
         for (let i = 0; i < numberOfParticles; i++) {
             particlesArray.push({
                 x: Math.random() * canvas.width,
                 y: Math.random() * canvas.height,
-                vx: (Math.random() - 0.5) * 0.8,
-                vy: (Math.random() - 0.5) * 0.8,
-                radius: Math.random() * 2.2 + 0.6,
-                alpha: Math.random() * 0.8 + 0.2,
-                twinkleSpeed: Math.random() * 0.025 + 0.008
+                vx: (Math.random() - 0.5) * 0.6,
+                vy: (Math.random() - 0.5) * 0.6,
+                radius: Math.random() * 2 + 0.5,
+                alpha: Math.random() * 0.7 + 0.3,
+                twinkleSpeed: Math.random() * 0.02 + 0.005
             });
         }
 
@@ -638,15 +581,13 @@
                 if (p.y < 0 || p.y > canvas.height) p.vy = -p.vy;
 
                 p.alpha += p.twinkleSpeed;
-                if (p.alpha > 1 || p.alpha < 0.15) {
+                if (p.alpha > 1 || p.alpha < 0.2) {
                     p.twinkleSpeed = -p.twinkleSpeed;
                 }
 
                 ctx.beginPath();
                 ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
                 ctx.fillStyle = `rgba(216, 180, 254, ${p.alpha})`;
-                ctx.shadowBlur = 14;
-                ctx.shadowColor = '#c084fc';
                 ctx.fill();
 
                 for (let j = i + 1; j < particlesArray.length; j++) {
@@ -655,10 +596,10 @@
                     let dy = p.y - p2.y;
                     let dist = Math.sqrt(dx * dx + dy * dy);
 
-                    if (dist < 110) {
+                    if (dist < 90) {
                         ctx.beginPath();
-                        ctx.strokeStyle = `rgba(168, 85, 247, ${0.22 * (1 - dist / 110)})`;
-                        ctx.lineWidth = 0.6;
+                        ctx.strokeStyle = `rgba(168, 85, 247, ${0.18 * (1 - dist / 90)})`;
+                        ctx.lineWidth = 0.5;
                         ctx.moveTo(p.x, p.y);
                         ctx.lineTo(p2.x, p2.y);
                         ctx.stroke();
@@ -672,8 +613,8 @@
 
                     if (mDist < mouse.radius) {
                         ctx.beginPath();
-                        ctx.strokeStyle = `rgba(233, 213, 255, ${0.5 * (1 - mDist / mouse.radius)})`;
-                        ctx.lineWidth = 1;
+                        ctx.strokeStyle = `rgba(233, 213, 255, ${0.4 * (1 - mDist / mouse.radius)})`;
+                        ctx.lineWidth = 0.8;
                         ctx.moveTo(p.x, p.y);
                         ctx.lineTo(mouse.x, mouse.y);
                         ctx.stroke();
@@ -682,9 +623,9 @@
             }
             requestAnimationFrame(animateStarGlazing);
         }
-        animateStarGlazing();
+        requestAnimationFrame(animateStarGlazing);
 
-        // Counter Animation Script
+        // Stats Counters Animation (Fully Fixed & Working)
         const counters = document.querySelectorAll('.counter');
         let animated = false;
 
