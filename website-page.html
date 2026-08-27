@@ -49,7 +49,7 @@
         }
     </style>
 </head>
-<body class="bg-[#0b021a] text-white font-sans selection:bg-purple-500 selection:text-white">
+<body class="bg-[#0b021a] text-white font-sans selection:bg-purple-500 selection:text-white text-sm md:text-base">
 
     <!-- 1. HEADER / NAVBAR -->
     <header class="bg-white text-gray-900 shadow-md sticky top-0 z-50">
@@ -70,10 +70,10 @@
                     </a>
                     <div class="dropdown-menu">
                         <a href="website-page.html" class="block px-4 py-2 text-xs text-purple-600 font-bold bg-purple-50">Website Designing</a>
-                        <a href="design-services.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Graphic Designing</a>
-                        <a href="design-services.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Logo Designing</a>
-                        <a href="design-services.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Social Media Marketing</a>
-                        <a href="design-services.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Mobile Application</a>
+                        <a href="graphics-designing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Graphic Designing</a>
+                        <a href="logo-designing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Logo Designing</a>
+                        <a href="social-media-marketing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Social Media Marketing</a>
+                        <a href="mobile-application.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Mobile Application</a>
                     </div>
                 </div>
 
@@ -109,15 +109,24 @@
             <div class="border-t border-gray-100 pt-2">
                 <span class="text-xs text-purple-600 uppercase tracking-wider block mb-1">Design & Marketing</span>
                 <a href="website-page.html" class="block pl-4 py-1 text-xs text-purple-600 font-bold">Website Designing</a>
-                <a href="design-services.html" class="block pl-4 py-1 text-xs text-gray-600">Graphic & Logo Designing</a>
-            </div>
-            <div class="border-t border-gray-100 pt-2">
-                <span class="text-xs text-purple-600 uppercase tracking-wider block mb-1">Publishing Services</span>
-                <a href="publishing-services.html" class="block pl-4 py-1 text-xs text-gray-600">eBook Ghostwriting & Editing</a>
-            </div>
+                <a href="graphics-designing.html" class="block pl-4 py-1 text-xs text-gray-600">Graphic & Logo Designing</a>
+                <a href="logo-designing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Logo Designing</a>
+                <a href="social-media-marketing.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Social Media Marketing</a>
+                <a href="mobile-application.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Mobile Application</a>
+                    </div>
+    
             <div class="border-t border-gray-100 pt-2 space-y-2">
-                <a href="portfolio.html" class="block text-gray-700">Portfolio</a>
+                <!-- Portfolio Dropdown -->
+                <div class="dropdown py-2">
+                    <a href="portfolio-design.html" class="text-gray-700 hover:text-purple-600 transition inline-flex items-center gap-1">
+                        Portfolio <i class="fas fa-chevron-down text-xs text-purple-600"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="portfolio.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">Design Portfolio</a>
+                        <a href="portfolio-ebook.html" class="block px-4 py-2 text-xs text-gray-700 hover:bg-purple-50 hover:text-purple-600 font-medium">eBook & Publishing Portfolio</a>
+                    </div>
                 <a href="contact.html" class="block text-gray-700">Contact</a>
+                
             </div>
         </div>
     </header>
@@ -172,7 +181,7 @@
                     </p>
 
                     <!-- Checklist -->
-                    <ul class="space-y-3.5 text-sm font-semibold text-gray-800">
+                    <ul class="space-y-3.5 text-sm md:text-base font-semibold text-gray-800">
                         <li class="flex items-center gap-3">
                             <i class="fas fa-check text-green-600 text-base"></i> Responsive web design
                         </li>
@@ -220,10 +229,10 @@
                 <form action="#" method="POST" class="space-y-6">
                     <div class="grid md:grid-cols-2 gap-6">
                         <div>
-                            <input type="text" required placeholder="Name" class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-purple-600 transition">
+                            <input type="text" required placeholder="Name" class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3.5 text-sm md:text-base text-gray-900 placeholder-gray-400 focus:outline-none focus:border-purple-600 transition">
                         </div>
                         <div>
-                            <select class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3.5 text-sm text-gray-600 focus:outline-none focus:border-purple-600 transition">
+                            <select class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3.5 text-sm md:text-base text-gray-600 focus:outline-none focus:border-purple-600 transition">
                                 <option value="">Select query type</option>
                                 <option value="web">Website Designing</option>
                                 <option value="graphic">Graphic Designing</option>
@@ -234,16 +243,16 @@
 
                     <div class="grid md:grid-cols-2 gap-6">
                         <div>
-                            <input type="email" required placeholder="Email" class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-purple-600 transition">
+                            <input type="email" required placeholder="Email" class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3.5 text-sm md:text-base text-gray-900 placeholder-gray-400 focus:outline-none focus:border-purple-600 transition">
                         </div>
                         <div>
-                            <input type="text" placeholder="Insert Comments" class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-purple-600 transition">
+                            <input type="text" placeholder="Insert Comments" class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3.5 text-sm md:text-base text-gray-900 placeholder-gray-400 focus:outline-none focus:border-purple-600 transition">
                         </div>
                     </div>
 
                     <div class="grid md:grid-cols-2 gap-6 items-center">
                         <div>
-                            <select class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3.5 text-sm text-gray-600 focus:outline-none focus:border-purple-600 transition">
+                            <select class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3.5 text-sm md:text-base text-gray-600 focus:outline-none focus:border-purple-600 transition">
                                 <option value="">Select Country</option>
                                 <option value="usa">United States</option>
                                 <option value="uk">United Kingdom</option>
@@ -251,8 +260,8 @@
                             </select>
                         </div>
                         <div class="flex">
-                            <span class="bg-gray-100 border border-r-0 border-gray-300 rounded-l-lg px-4 py-3.5 text-sm text-gray-500 font-medium">+00</span>
-                            <input type="tel" placeholder="Phone" class="w-full bg-gray-50 border border-gray-300 rounded-r-lg px-4 py-3.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-purple-600 transition">
+                            <span class="bg-gray-100 border border-r-0 border-gray-300 rounded-l-lg px-4 py-3.5 text-sm md:text-base text-gray-500 font-medium">+00</span>
+                            <input type="tel" placeholder="Phone" class="w-full bg-gray-50 border border-gray-300 rounded-r-lg px-4 py-3.5 text-sm md:text-base text-gray-900 placeholder-gray-400 focus:outline-none focus:border-purple-600 transition">
                         </div>
                     </div>
 
@@ -280,7 +289,7 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-[#05010d] text-gray-400 text-xs pt-16 pb-12 border-t border-purple-900/30 mt-20">
+    <footer class="bg-[#05010d] text-gray-400 text-sm pt-16 pb-12 border-t border-purple-900/30 mt-20">
         <div class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-12 mb-12 text-center md:text-left">
             <!-- Column 1 -->
             <div class="flex flex-col items-center md:items-start">
@@ -289,7 +298,7 @@
                     Providing specialized solutions to build digital products, scale market presence, and publish best-selling manuscripts globally.
                 </p>
                 <!-- Social Media Icons -->
-                <div class="flex space-x-4 mt-2">
+                <div class="flex space-x-4 mt-2 justify-center md:justify-start">
                     <a href="https://facebook.com" target="_blank" class="w-9 h-9 bg-purple-950/60 border border-purple-500/30 rounded-full flex items-center justify-center text-purple-400 hover:bg-purple-600 hover:text-white transition duration-300">
                         <i class="fab fa-facebook-f text-sm"></i>
                     </a>
@@ -304,8 +313,8 @@
 
             <!-- Column 2 -->
             <div class="flex flex-col items-center md:items-center">
-                <div class="w-full max-w-[200px] text-left">
-                    <h4 class="text-white font-bold text-sm mb-4">Our Services</h4>
+                <div class="w-full max-w-[220px] text-center md:text-left">
+                    <h4 class="text-white font-bold text-sm md:text-base mb-4">Our Services</h4>
                     <ul class="space-y-2">
                         <li><a href="website-page.html" class="text-purple-400 transition font-semibold">Web Design & Development</a></li>
                         <li><a href="design-services.html" class="hover:text-purple-400 transition">Digital Marketing & SEO</a></li>
@@ -317,12 +326,12 @@
 
             <!-- Column 3 -->
             <div class="flex flex-col items-center md:items-start">
-                <div class="w-full max-w-[220px] text-left">
-                    <h4 class="text-white font-bold text-sm mb-4">Get In Touch</h4>
+                <div class="w-full max-w-[240px] text-center md:text-left">
+                    <h4 class="text-white font-bold text-sm md:text-base mb-4">Get In Touch</h4>
                     <ul class="space-y-3">
-                        <li class="flex items-center gap-2.5"><i class="fas fa-envelope text-purple-400 w-4"></i> support@designmantix.com</li>
-                        <li class="flex items-center gap-2.5"><i class="fas fa-phone text-purple-400 w-4"></i> +1 (555) 123-4567</li>
-                        <li class="flex items-center gap-2.5"><i class="fas fa-map-marker-alt text-purple-400 w-4"></i> New York, USA</li>
+                        <li class="flex items-center justify-center md:justify-start gap-2.5"><i class="fas fa-envelope text-purple-400 w-4"></i> support@designmantix.com</li>
+                        <li class="flex items-center justify-center md:justify-start gap-2.5"><i class="fas fa-phone text-purple-400 w-4"></i> +1 (555) 123-4567</li>
+                        <li class="flex items-center justify-center md:justify-start gap-2.5"><i class="fas fa-map-marker-alt text-purple-400 w-4"></i> New York, USA</li>
                     </ul>
                 </div>
             </div>
