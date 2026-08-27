@@ -100,24 +100,34 @@
             </div>
         </nav>
 
-        <!-- Mobile Menu Drawer -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200 px-6 py-4 space-y-3 text-sm font-semibold shadow-xl">
-            <a href="index.html" class="block text-gray-700">Home</a>
-            <a href="about-us.html" class="block text-gray-700">About Us</a>
-            <div class="border-t border-gray-100 pt-2">
-                <span class="text-xs text-purple-600 uppercase tracking-wider block mb-1">Design & Marketing</span>
-                <a href="design-marketing.html" class="block pl-4 py-1 text-xs text-gray-600">Website Designing</a>
-                <a href="design-marketing.html" class="block pl-4 py-1 text-xs text-gray-600">Graphic Designing</a>
-                <a href="design-marketing.html" class="block pl-4 py-1 text-xs text-gray-600">Logo Designing</a>
+             <!-- Mobile Menu Drawer (Fixed Alignment & Spacing) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200 px-6 py-4 space-y-4 text-sm font-semibold shadow-xl">
+            <a href="index.html" class="block text-gray-700 hover:text-purple-600 transition">Home</a>
+            <a href="about-us.html" class="block text-gray-700 hover:text-purple-600 transition">About Us</a>
+            
+            <!-- Mobile Design & Marketing Links -->
+            <div class="space-y-2 pt-1 border-t border-gray-100">
+                <p class="text-purple-600 text-xs font-bold uppercase tracking-wider pt-2">Design & Marketing</p>
+                <div class="pl-3 flex flex-col space-y-2">
+                    <a href="design-services.html" class="block text-xs text-purple-600 font-bold bg-purple-50 px-2 py-1 rounded">Graphic Designing</a>
+                    <a href="website-page.html" class="block text-xs text-gray-700 hover:text-purple-600 transition px-2 py-1">Website Designing</a>
+                    <a href="design-services.html" class="block text-xs text-gray-700 hover:text-purple-600 transition px-2 py-1">Logo Designing</a>
+                    <a href="design-services.html" class="block text-xs text-gray-700 hover:text-purple-600 transition px-2 py-1">Social Media Marketing</a>
+                    <a href="design-services.html" class="block text-xs text-gray-700 hover:text-purple-600 transition px-2 py-1">Mobile Application</a>
+                </div>
             </div>
-            <div class="border-t border-gray-100 pt-2">
-                <span class="text-xs text-purple-600 uppercase tracking-wider block mb-1">eBook & Publishing</span>
-                <a href="ebook-publishing.html" class="block pl-4 py-1 text-xs text-gray-600">Manuscript Ghostwriting</a>
-                <a href="ebook-publishing.html" class="block pl-4 py-1 text-xs text-gray-600">Custom Book Cover</a>
+
+            <!-- Mobile Portfolio Links -->
+            <div class="space-y-2 pt-2 border-t border-gray-100">
+                <p class="text-purple-600 text-xs font-bold uppercase tracking-wider pt-2">Portfolio</p>
+                <div class="pl-3 flex flex-col space-y-2">
+                    <a href="portfolio.html" class="block text-xs text-gray-700 hover:text-purple-600 transition px-2 py-1">Design Portfolio</a>
+                    <a href="portfolio-ebook.html" class="block text-xs text-gray-700 hover:text-purple-600 transition px-2 py-1">eBook & Publishing Portfolio</a>
+                </div>
             </div>
-            <div class="border-t border-gray-100 pt-2 space-y-2">
-                <a href="portfolio-design.html" class="block text-purple-600 font-bold">Portfolio</a>
-                <a href="contact.html" class="block text-gray-700">Contact</a>
+
+            <div class="pt-2 border-t border-gray-100">
+                <a href="contact.html" class="block text-gray-700 hover:text-purple-600 transition py-1">Contact</a>
             </div>
         </div>
     </header>
