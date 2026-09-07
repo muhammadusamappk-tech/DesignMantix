@@ -174,9 +174,9 @@
                 
                <!-- Left Side: Video Animation -->
             <div class="lg:col-span-7 flex justify-center items-center">
-                <video id="myVideo" autoplay muted loop playsinline preload="auto" class="w-full h-auto">
-                <source src="graphic-design-animation.mp4" type="video/mp4">
-            </video>                
+                <video id="myVideo" autoplay muted loop playsinline webkit-playsinline preload="auto" class="w-full h-auto">
+                    <source src="graphic-design-animation.mp4" type="video/mp4">
+                </video>              
             </div>
 
                 <!-- Right Side: Features / Checklist & Talk to Us Button -->
@@ -292,7 +292,8 @@
             </div>
         </div>
     </section>
-<!-- FOOTER -->
+
+    <!-- FOOTER -->
     <footer class="bg-[#05010d] text-gray-400 text-xs pt-16 pb-12 border-t border-purple-900/30 mt-20">
         <div class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-12 mb-12 text-left">
             <!-- Column 1 -->
@@ -345,7 +346,7 @@
         </div>
     </footer>
 
-  <!-- SCRIPTS -->
+    <!-- SCRIPTS -->
     <script>
         // Mobile Menu Script
         const menuBtn = document.getElementById('menu-btn');
@@ -356,13 +357,22 @@
             });
         }
 
-        // Video Autoplay Script
+        // Video Autoplay & iOS Fallback Script
         document.addEventListener("DOMContentLoaded", function() {
             var video = document.getElementById("myVideo");
             if (video) {
-                video.play().catch(function(error) {
-                    console.log("Autoplay blocked:", error);
-                });
+                var playPromise = video.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(function(error) {
+                        // iOS fallback: Agar browser autoplay roke, toh screen par pehla touch/scroll padte hi video chala do
+                        document.addEventListener('touchstart', function() {
+                            video.play();
+                        }, {once: true});
+                        document.addEventListener('scroll', function() {
+                            video.play();
+                        }, {once: true});
+                    });
+                }
             }
         });
     </script>
