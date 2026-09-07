@@ -345,12 +345,25 @@
         </div>
     </footer>
 
-    <!-- MOBILE MENU SCRIPT -->
+  <!-- SCRIPTS -->
     <script>
+        // Mobile Menu Script
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Video Autoplay Script
+        document.addEventListener("DOMContentLoaded", function() {
+            var video = document.getElementById("myVideo");
+            if (video) {
+                video.play().catch(function(error) {
+                    console.log("Autoplay blocked:", error);
+                });
+            }
         });
     </script>
 </body>
